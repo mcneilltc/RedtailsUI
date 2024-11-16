@@ -19,3 +19,22 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Add these styles to customize the calendar appearance */
+.react-calendar {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.react-calendar__tile--active {
+  background: #2563eb !important;
+  color: white;
+}
+
+.react-calendar__tile--now {
+  background: #dbeafe;
+}

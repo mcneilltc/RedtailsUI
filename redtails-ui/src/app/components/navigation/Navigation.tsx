@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { useCart } from '../../../context/CartContext'
 import { FaShoppingCart } from 'react-icons/fa'
+import ThemeToggle from '../ThemeToggle';
 
 export default function Navigation() {
     const { cartItems } = useCart();
@@ -10,9 +11,10 @@ export default function Navigation() {
     <nav className="bg-white shadow-md p-4 dark:bg-gray-800">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold text-foreground">
-          Redtails Outdoors
+          Red Tails Outdoors
         </Link>
-        <div className="space-x-6">
+        <div className="space-x-6 flex items-center">
+            <ThemeToggle />
           <Link 
             href="/" 
             className="text-foreground hover:text-gray-600 transition-colors"
@@ -29,7 +31,7 @@ export default function Navigation() {
             href="/book" 
             className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
           >
-            Book With Us
+            Make a Reservation
           </Link>
           <Link 
             href="/cart" 

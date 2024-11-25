@@ -41,7 +41,7 @@ const kayaks: Kayak[] = [
     id: 1,
     name: "Explorer 12",
     description: "Stable recreational kayak perfect for beginners",
-    imageUrl: "/images/kayaks/explorer-12.jpg",
+    imageUrl: "/images/kayaks/aaron-burden.jpg",
     pricePerHour: 35,
     capacity: "1 Person",
     availability: true,
@@ -51,7 +51,7 @@ const kayaks: Kayak[] = [
     id: 2,
     name: "Tandem Adventure",
     description: "Two-person kayak ideal for shared experiences",
-    imageUrl: "/images/kayaks/tandem-adventure.jpg",
+    imageUrl: "/images/kayaks/autumn-kuney.jpg",
     pricePerHour: 45,
     capacity: "2 Person",
     availability: true,
@@ -61,7 +61,7 @@ const kayaks: Kayak[] = [
     id: 3,
     name: "Fisher Pro",
     description: "Specialized fishing kayak with rod holders",
-    imageUrl: "/images/kayaks/fisher-pro.jpg",
+    imageUrl: "/images/kayaks/dapo-olusola.jpg",
     pricePerHour: 40,
     capacity: "1 Person",
     availability: true,
@@ -71,7 +71,7 @@ const kayaks: Kayak[] = [
     id: 4,
     name: "River Runner",
     description: "Agile kayak perfect for river exploration",
-    imageUrl: "/images/kayaks/river-runner.jpg",
+    imageUrl: "/images/kayaks/john-salvino.jpg",
     pricePerHour: 35,
     capacity: "1 Person",
     availability: true,
@@ -81,7 +81,7 @@ const kayaks: Kayak[] = [
     id: 5,
     name: "Family Cruiser",
     description: "Stable and spacious family kayak",
-    imageUrl: "/images/kayaks/family-cruiser.jpg",
+    imageUrl: "/images/kayaks/kelsey-dody.jpg",
     pricePerHour: 50,
     capacity: "2-3 Person",
     availability: true,
@@ -91,7 +91,7 @@ const kayaks: Kayak[] = [
     id: 6,
     name: "Sport Elite",
     description: "Performance kayak for experienced paddlers",
-    imageUrl: "/images/kayaks/sport-elite.jpg",
+    imageUrl: "/images/kayaks/matthew-ma.jpg",
     pricePerHour: 45,
     capacity: "1 Person",
     availability: true,
@@ -108,6 +108,8 @@ const BookingPage = () => {
   const [showTimeSlots, setShowTimeSlots] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const { addItem } = useCart();
+  const [showDuration, setShowDuration] = useState(false);
+  const [showTime, setShowTime] = useState(false);
   const [sections, setSections] = useState({
     calendar: { isOpen: true, isComplete: false },
     kayaks: { isOpen: false, isComplete: false },
@@ -293,57 +295,47 @@ const BookingPage = () => {
           </div>
         )}
 
-        {/* Step 3 & 4: Duration and Time Selection */}
-        {(sections.timeSlots.isOpen || sections.timeSlots.isComplete) && selectedKayak && (
-  <div className="max-w-2xl mx-auto mb-4">
-    <div 
-      className="bg-white rounded-lg shadow-md overflow-hidden"
-      onClick={() => handleSectionToggle('timeSlots')}
-    >
-      <div className="p-4 bg-gray-50 flex justify-between items-center cursor-pointer">
-        <h3 className="text-lg font-semibold">
-          3. Select Time & Duration
-          {sections.timeSlots.isComplete && !sections.timeSlots.isOpen && 
-            <span className="ml-2 text-sm text-gray-600">
-              ({selectedTime}, {duration} hours)
-            </span>
-          }
-        </h3>
-        <button className="text-blue-600">
-          {sections.timeSlots.isOpen ? '−' : '+'}
-        </button>
-      </div>
-              
-      {sections.timeSlots.isOpen && (
-        <div className="p-6">
-          {selectedKayak && (
-            <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
-              {/* Duration Selection */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold mb-4">3. Select Duration</h3>
-                <div className="grid grid-cols-4 gap-3">
-                  {durationOptions.map((hours) => (
-                    <button
-                      key={hours}
-                      onClick={() => handleDurationSelect(hours)}
-                      className={`p-2 rounded ${
-                        duration === hours
-                          ? "bg-blue-600 text-white"
-                          : "bg-gray-100 hover:bg-gray-200"
-                      }`}
-                    >
-                      {hours} {hours === 1 ? "hour" : "hours"}
-                    </button>
-                  ))}
-                </div>
+        {/* Step 3: Duration Selection */}
+        {selectedKayak && (
+          <div className="max-w-2xl mx-auto mb-4">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="p-4 bg-gray-50 flex justify-between items-center cursor-pointer" onClick={() => setShowDuration(!showDuration)}>
+                <h3 className="text-lg font-semibold">3. Select Duration</h3>
+                <button className="text-blue-600">{showDuration ? '−' : '+'}</button>
               </div>
+              {showDuration && (
+                <div className="p-6">
+                  <div className="grid grid-cols-4 gap-3">
+                    {durationOptions.map((hours) => (
+                      <button
+                        key={hours}
+                        onClick={() => handleDurationSelect(hours)}
+                        className={`p-2 rounded ${
+                          duration === hours
+                            ? "bg-blue-600 text-white"
+                            : "bg-gray-100 hover:bg-gray-200"
+                        }`}
+                      >
+                        {hours} {hours === 1 ? "hour" : "hours"}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
-                      {/* Time Slots - Now controlled by showTimeSlots */}
-                      {showTimeSlots && (
-                <div>
-                  <h3 className="text-lg font-semibold mb-4">
-                    4. Select Start Time
-                  </h3>
+        {/* Step 4: Time Selection */}
+        {showDuration && selectedKayak && (
+          <div className="max-w-2xl mx-auto mb-4">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="p-4 bg-gray-50 flex justify-between items-center cursor-pointer" onClick={() => setShowTime(!showTime)}>
+                <h3 className="text-lg font-semibold">4. Select Start Time</h3>
+                <button className="text-blue-600">{showTime ? '−' : '+'}</button>
+              </div>
+              {showTime && (
+                <div className="p-6">
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                     {getAvailableTimeSlots(duration).map((slot) => (
                       <button
@@ -368,38 +360,33 @@ const BookingPage = () => {
                 </div>
               )}
             </div>
-          )}
-        </div>
-      )}
-    </div>
-  </div>
-)}
+          </div>
+        )}
 
         {/* Booking Summary */}
         {sections.calendar.isComplete && 
- sections.kayaks.isComplete && 
- sections.timeSlots.isComplete && (
-  <div className="max-w-2xl mx-auto">
-    {selectedTime && (
-      <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-        <h3 className="text-lg font-semibold mb-2">Reservation Summary</h3>
-        <p>Date: {selectedDate?.toLocaleDateString()}</p>
-        <p>Kayak: {selectedKayak.name}</p>
-        <p>
-          Time: {selectedTime} ({duration}{" "}
-          {duration === 1 ? "hour" : "hours"})
-        </p>
-        <p>Price: ${calculateTotalPrice()}</p>
-        <button 
-          className="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
-          onClick={handleConfirmBooking} 
-        >
-          Confirm Reservation
-        </button>
-      </div>
-    )}
-  </div>
-)}
+         sections.kayaks.isComplete && 
+         selectedTime && (
+          <div className="max-w-2xl mx-auto">
+            <div className="mt-8 p-4 bg-gray-50 rounded-lg">
+              <h3 className="text-lg font-semibold mb-2">Reservation Summary</h3>
+              <p>Date: {selectedDate?.toLocaleDateString()}</p>
+              <p>Kayak: {selectedKayak?.name}</p>
+              <p>
+                Time: {selectedTime} ({duration}{" "}
+                {duration === 1 ? "hour" : "hours"})
+              </p>
+              <p>Price: ${calculateTotalPrice()}</p>
+              <button 
+                className="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
+                onClick={handleConfirmBooking} 
+              >
+                Confirm Reservation
+              </button>
+            </div>
+          </div>
+        )}
+   
 
         {/* Add Modal */}
         {showModal && (

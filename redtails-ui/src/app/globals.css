@@ -3,19 +3,50 @@
 @tailwind utilities;
 
 :root {
+  /* Light theme variables */
   --background: #ffffff;
-  --foreground: #171717;
+  --background-secondary: #f3f4f6;
+  --foreground: #111827;
+  --foreground-secondary: #4b5563;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  /* Dark theme variables */
+  --background: #111827;
+  --background-secondary: #1f2937;
+  --foreground: #057ef8;
+  --foreground-secondary: #045b12;
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+  --accent: #8b5cf6;
+  --accent-hover: #a78bfa;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Add these styles to customize the calendar appearance */
+.react-calendar {
+  width: 100%;
+  max-width: 400px;
+  background: var(--background);
+  border: 1px solid var(--foreground-secondary);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.react-calendar__tile--active {
+  background: #2563eb !important;
+  color: white;
+}
+
+.react-calendar__tile--now {
+  background: #484849;
 }

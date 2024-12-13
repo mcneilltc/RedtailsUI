@@ -10,7 +10,7 @@ const AboutUsPage = () => {
       <div className="relative h-[400px] bg-gray-900">
         <div className="absolute inset-0 bg-black/50 z-10" />
         <Image
-          src="/images/about-hero.jpg" // You'll need to add this image
+          src="/images/scenes/shoreshot.png" // You'll need to add this image
           alt="Red Tails Outdoors"
           fill
           className="object-cover"
@@ -28,9 +28,7 @@ const AboutUsPage = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Mission</h2>
           <p className="text-lg text-gray-700 max-w-3xl">
-            Red Tails Aviation is dedicated to providing exceptional flight training and aviation
-            services while honoring the legacy of the Tuskegee Airmen. We strive to make aviation
-            accessible to all, fostering a new generation of diverse pilots and aviation professionals.
+          Red Tails Outdoors is an outdoor recreation company providing high-quality kayak and paddleboard rentals in western North Carolina. With a commitment to inclusivity, sustainability, and safety, the company offers self-guided tours, special events, and outdoor experiences that cater to families, tourists, and outdoor enthusiasts. Through innovative services, strategic partnerships, and an environmentally conscious approach, Red Tails Outdoors aims to become a trusted name in outdoor recreation.  
           </p>
         </div>
       </section>
@@ -71,8 +69,8 @@ const AboutUsPage = () => {
             <div className="text-center">
               <div className="relative w-48 h-48 mx-auto mb-4">
                 <Image
-                  src="/images/team-member-1.jpg" // You'll need to add this image
-                  alt="Team Member Name"
+                  src="/images/headshots/aaron.png" // You'll need to add this image
+                  alt="Aaron McNeill"
                   fill
                   className="object-cover rounded-full"
                 />

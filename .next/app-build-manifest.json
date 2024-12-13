@@ -1,64 +1,43 @@
 {
   "pages": {
     "/_not-found/page": [
-      "static/chunks/webpack-ac5637720cf1bdc8.js",
-      "static/chunks/4bd1b696-f9914ff70d390e9a.js",
-      "static/chunks/517-8e84c90ce8d103e9.js",
-      "static/chunks/main-app-aa8ef96e607d53d2.js",
-      "static/chunks/app/_not-found/page-794a22b6f5250613.js"
+      "static/chunks/webpack-9f9d947a63484a6e.js",
+      "static/chunks/4bd1b696-ad4e26069d95d65e.js",
+      "static/chunks/517-bc37da7b8521f0c8.js",
+      "static/chunks/main-app-83646ff401f51deb.js",
+      "static/chunks/app/_not-found/page-121534b87f130bcf.js"
     ],
     "/layout": [
-      "static/chunks/webpack-ac5637720cf1bdc8.js",
-      "static/chunks/4bd1b696-f9914ff70d390e9a.js",
-      "static/chunks/517-8e84c90ce8d103e9.js",
-      "static/chunks/main-app-aa8ef96e607d53d2.js",
-      "static/css/0fa2f65bef63bf54.css",
-      "static/chunks/8e1d74a4-c5522faf325d1a69.js",
-      "static/chunks/855-c53b3adce280950d.js",
-      "static/chunks/app/layout-646c5c3bd28d48b3.js"
+      "static/chunks/webpack-9f9d947a63484a6e.js",
+      "static/chunks/4bd1b696-ad4e26069d95d65e.js",
+      "static/chunks/517-bc37da7b8521f0c8.js",
+      "static/chunks/main-app-83646ff401f51deb.js",
+      "static/css/2afa7fee836ec70c.css",
+      "static/chunks/8e1d74a4-a41c7d377e4ce28c.js",
+      "static/chunks/855-15c3448b71439a8d.js",
+      "static/chunks/app/layout-62b735e77f476bfe.js"
     ],
     "/about/page": [
-      "static/chunks/webpack-ac5637720cf1bdc8.js",
-      "static/chunks/4bd1b696-f9914ff70d390e9a.js",
-      "static/chunks/517-8e84c90ce8d103e9.js",
-      "static/chunks/main-app-aa8ef96e607d53d2.js",
-      "static/chunks/565-f9dc41dbe494181d.js",
-      "static/chunks/app/about/page-6b938d85a7e44736.js"
-    ],
-    "/book/page": [
-      "static/chunks/webpack-ac5637720cf1bdc8.js",
-      "static/chunks/4bd1b696-f9914ff70d390e9a.js",
-      "static/chunks/517-8e84c90ce8d103e9.js",
-      "static/chunks/main-app-aa8ef96e607d53d2.js",
-      "static/css/20fc84e825709a2d.css",
-      "static/chunks/565-f9dc41dbe494181d.js",
-      "static/chunks/48-a271f298b8be5c05.js",
-      "static/chunks/app/book/page-411a34099c681684.js"
-    ],
-    "/cart/page": [
-      "static/chunks/webpack-ac5637720cf1bdc8.js",
-      "static/chunks/4bd1b696-f9914ff70d390e9a.js",
-      "static/chunks/517-8e84c90ce8d103e9.js",
-      "static/chunks/main-app-aa8ef96e607d53d2.js",
-      "static/css/44491df69b1d0570.css",
-      "static/chunks/8e1d74a4-c5522faf325d1a69.js",
-      "static/chunks/e8686b1f-65ce18b5bba44164.js",
-      "static/chunks/640-c155e1d7d3bec5e8.js",
-      "static/chunks/app/cart/page-14a7a586fd4f40d7.js"
+      "static/chunks/webpack-9f9d947a63484a6e.js",
+      "static/chunks/4bd1b696-ad4e26069d95d65e.js",
+      "static/chunks/517-bc37da7b8521f0c8.js",
+      "static/chunks/main-app-83646ff401f51deb.js",
+      "static/chunks/565-10d8b8e88bbe790f.js",
+      "static/chunks/app/about/page-b3f4603bbb43ac22.js"
     ],
     "/page": [
-      "static/chunks/webpack-ac5637720cf1bdc8.js",
-      "static/chunks/4bd1b696-f9914ff70d390e9a.js",
-      "static/chunks/517-8e84c90ce8d103e9.js",
-      "static/chunks/main-app-aa8ef96e607d53d2.js",
-      "static/chunks/app/page-b6c1b93bf7713843.js"
+      "static/chunks/webpack-9f9d947a63484a6e.js",
+      "static/chunks/4bd1b696-ad4e26069d95d65e.js",
+      "static/chunks/517-bc37da7b8521f0c8.js",
+      "static/chunks/main-app-83646ff401f51deb.js",
+      "static/chunks/app/page-626a45b8ada38949.js"
     ],
     "/programs/page": [
-      "static/chunks/webpack-ac5637720cf1bdc8.js",
-      "static/chunks/4bd1b696-f9914ff70d390e9a.js",
-      "static/chunks/517-8e84c90ce8d103e9.js",
-      "static/chunks/main-app-aa8ef96e607d53d2.js",
-      "static/chunks/app/programs/page-6fb3e761541b397b.js"
+      "static/chunks/webpack-9f9d947a63484a6e.js",
+      "static/chunks/4bd1b696-ad4e26069d95d65e.js",
+      "static/chunks/517-bc37da7b8521f0c8.js",
+      "static/chunks/main-app-83646ff401f51deb.js",
+      "static/chunks/app/programs/page-104234e2b0285220.js"
     ]
   }
 }

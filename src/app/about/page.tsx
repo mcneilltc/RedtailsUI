@@ -28,12 +28,15 @@ const AboutUsPage = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Mission</h2>
           <p className="text-lg text-gray-700 max-w-3xl">
-          Red Tails Outdoors is an outdoor recreation company providing high-quality kayak and paddleboard rentals in western North Carolina. With a commitment to inclusivity, sustainability, and safety, the company offers self-guided tours, special events, and outdoor experiences that cater to families, tourists, and outdoor enthusiasts. Through innovative services, strategic partnerships, and an environmentally conscious approach, Red Tails Outdoors aims to become a trusted name in outdoor recreation.  
-          </p>
+          At Red Tails Outdoors, we’re passionate about helping people connect with nature, explore new adventures, and create unforgettable memories. Nestled in the beautiful landscapes of western North Carolina, we offer kayak and paddleboard rentals, self-guided tours, and special events designed for families, tourists, and outdoor enthusiasts of all kinds.          </p>
+          <p className="text-lg text-gray-700 max-w-3xl">
+          We’re all about making the outdoors accessible, safe, and welcoming for everyone. Inclusivity is at the heart of what we do, and we’re committed to protecting the environment through sustainable practices and following "Leave No Trace" principles. We take pride in creating experiences that let you enjoy the natural beauty around us while respecting it for future generations.          </p>
+          <p className="text-lg text-gray-700 max-w-3xl">
+          At Red Tails Outdoors, we’re not just a rental service: we’re your partners in adventure. Whether you’re gliding across calm waters, joining a fun group event, or discovering the serenity of nature on your own, we’re here to make sure your time outdoors is safe, enjoyable, and memorable. Come paddle with us and see why we love calling North Carolina home!          </p>
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Values Section
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-12">Our Values</h2>
@@ -58,7 +61,7 @@ const AboutUsPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Team Section */}
       <section className="py-16 bg-white">
@@ -77,6 +80,30 @@ const AboutUsPage = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900">Aaron McNeill</h3>
               <p className="text-gray-600">Owner</p>
+            </div>
+            <div className="text-center">
+              <div className="relative w-48 h-48 mx-auto mb-4">
+                <Image
+                  src="/images/headshots/aaron.png" // You'll need to add this image
+                  alt="Aaron McNeill"
+                  fill
+                  className="object-cover rounded-full"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900">Devin McNeill</h3>
+              <p className="text-gray-600">Guide</p>
+            </div>
+            <div className="text-center">
+              <div className="relative w-48 h-48 mx-auto mb-4">
+                <Image
+                  src="/images/headshots/aaron.png" // You'll need to add this image
+                  alt="Aaron McNeill"
+                  fill
+                  className="object-cover rounded-full"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900">Michelle McCurdy</h3>
+              <p className="text-gray-600">Guide</p>
             </div>
             {/* Add more team members as needed */}
           </div>

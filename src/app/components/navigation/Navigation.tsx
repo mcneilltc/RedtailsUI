@@ -1,51 +1,40 @@
 'use client';
 import Link from 'next/link'
 import { useCart } from '../../../context/CartContext'
-import { FaShoppingCart } from 'react-icons/fa'
-import ThemeToggle from '../ThemeToggle';
+// import { FaShoppingCart } from 'react-icons/fa'
+// import ThemeToggle from '../ThemeToggle';
+import './styles.css';
+import logo from '../../../../public/images/logos/logo2.png'
+import { AppBar, Toolbar, Typography, Button, IconButton, Badge } from '@mui/material';
+import { useTheme } from '../ThemeProvider'
+import { Brightness4, Brightness7 } from '@mui/icons-material';
 
 export default function Navigation() {
     const { cartItems } = useCart();
+    const { toggleTheme, darkMode } = useTheme();  
 
   return (
-    <nav className="bg-white shadow-md p-4 dark:bg-gray-800">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-foreground">
-          Red Tails Outdoors
-        </Link>
-        <div className="space-x-6 flex items-center">
-            <ThemeToggle />
-          <Link 
-            href="/" 
-            className="text-foreground hover:text-gray-600 transition-colors"
-          >
-            Home
-          </Link>
-          <Link 
-            href="/about" 
-            className="text-foreground hover:text-gray-600 transition-colors"
-          >
-            About Us
-          </Link>
-          <Link 
-            href="/book" 
-            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
-          >
-            Make a Reservation
-          </Link>
-          <Link 
-            href="/cart" 
-            className="relative text-foreground hover:text-gray-600 transition-colors"
-          >
-            <FaShoppingCart className="text-xl" />
-            {cartItems.length > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                {cartItems.length}
-              </span>
-            )}
-          </Link>
+    <AppBar position="static" color="default">
+      <Toolbar>
+        <div className="logo">
+          <img src={logo.src} alt="Red Tails Outdoors Logo" />
         </div>
-      </div>
-    </nav>
-  )
+        <Typography variant="h6" style={{ flexGrow: 1 }}>
+          Red Tails Outdoors
+        </Typography>
+        <Button color="inherit" href="/">
+          Home
+        </Button>
+        <Button color="inherit" href="/about">
+          About Us
+        </Button>
+        <Button variant="contained" color="primary" href="/book">
+          Make a Reservation
+        </Button>
+        <IconButton color="inherit" onClick={toggleTheme} aria-label={darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}>
+          {darkMode ? <Brightness7 /> : <Brightness4 />}
+        </IconButton>
+      </Toolbar>
+    </AppBar>
+  );
 }

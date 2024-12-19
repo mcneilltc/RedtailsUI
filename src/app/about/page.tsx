@@ -88,7 +88,7 @@ const AboutUsPage = () => {
             <div className="text-center">
               <div className="relative w-48 h-48 mx-auto mb-4">
                 <Image
-                  src="/images/logos/rt1.png" // You'll need to add this image
+                  src="/images/logos/logo2.png" // You'll need to add this image
                   alt="Aaron McNeill"
                   fill
                   className="object-cover rounded-full"

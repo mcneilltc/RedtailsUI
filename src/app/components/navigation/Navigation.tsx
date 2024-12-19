@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link'
-import { useCart } from '../../../context/CartContext'
+// import { useCart } from '../../../context/CartContext'
 // import { FaShoppingCart } from 'react-icons/fa'
 // import ThemeToggle from '../ThemeToggle';
 import './styles.css';
@@ -10,25 +10,27 @@ import { useTheme } from '../ThemeProvider'
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 
 export default function Navigation() {
-    const { cartItems } = useCart();
+    // const { cartItems } = useCart();
     const { toggleTheme, darkMode } = useTheme();  
 
   return (
-    <AppBar position="static" color="default">
+    <AppBar position="static" color='default'>
       <Toolbar>
-        <div className="logo">
-          <img src={logo.src} alt="Red Tails Outdoors Logo" />
-        </div>
-        <Typography variant="h6" style={{ flexGrow: 1 }}>
+        <Link href="/" passHref>
+          <div className="logo" style={{ cursor: 'pointer' }}>
+            <img src={logo.src} alt="Red Tails Outdoors Logo" />
+          </div>
+        </Link>
+        <Typography variant="h6" style={{ flexGrow: 1, fontFamily: 'Alkatra, sans-serif' }}>
           Red Tails Outdoors
         </Typography>
-        <Button color="inherit" href="/">
+        <Button color="inherit" href="/" style={{ fontFamily: 'Alkatra, sans-serif' }}>
           Home
         </Button>
-        <Button color="inherit" href="/about">
+        <Button color="inherit" href="/about" style={{ fontFamily: 'Alkatra, sans-serif' }}>
           About Us
         </Button>
-        <Button variant="contained" color="primary" href="/book">
+        <Button variant="contained" color="primary" href="/book" style={{ fontFamily: 'Alkatra, sans-serif' }}>
           Make a Reservation
         </Button>
         <IconButton color="inherit" onClick={toggleTheme} aria-label={darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}>

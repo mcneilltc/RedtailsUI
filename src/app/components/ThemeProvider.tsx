@@ -6,9 +6,9 @@ import { createTheme, ThemeProvider as MUIThemeProvider } from '@mui/material/st
 const ThemeContext = createContext<{
     toggleTheme: () => void;
     darkMode: boolean;
-}>({ 
-    toggleTheme: () => {}, 
-    darkMode: false 
+}>({
+    toggleTheme: () => {},
+    darkMode: false
 });
 
 export const useTheme = () => useContext(ThemeContext);
@@ -20,6 +20,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         palette: {
             mode: darkMode ? 'dark' : 'light',
         },
+        typography: {
+            "fontFamily": `"Alkatra", "system-ui", "sans-serif"`,
+        }
     });
 
     const toggleTheme = () => {

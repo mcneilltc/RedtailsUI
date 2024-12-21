@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="background">
       <Container>
-        <Typography variant="h1" className="title" style={{ fontFamily: 'Alkatra, sans-serif' }}>
+        <Typography variant="h1" className="title" >
           Welcome to Red Tails Outdoors
         </Typography>
         <br/>
@@ -21,13 +21,13 @@ export default function Home() {
                 alt="Kayaking"
               />
               <CardContent>
-                <Typography variant="h5" style={{ fontFamily: 'Alkatra, sans-serif' }}>
+                <Typography variant="h5" >
                   Kayaking
                 </Typography>
-                <Typography variant="body2" color="text.secondary" style={{ fontFamily: 'Alkatra, sans-serif' }}>
+                <Typography variant="body2" color="text.secondary" >
                   Experience the thrill of kayaking in beautiful waters.
                 </Typography>
-                <Button size="small" color="primary" style={{ fontFamily: 'Alkatra, sans-serif' }}>Learn More</Button>
+                <Button size="small" color="primary" >Learn More</Button>
               </CardContent>
             </Card>
           </Grid>
@@ -42,13 +42,13 @@ export default function Home() {
                 alt="Hiking"
               />
               <CardContent>
-                <Typography variant="h5" style={{ fontFamily: 'Alkatra, sans-serif' }}>
+                <Typography variant="h5" >
                   Hiking
                 </Typography>
-                <Typography variant="body2" color="text.secondary" style={{ fontFamily: 'Alkatra, sans-serif' }}>
+                <Typography variant="body2" color="text.secondary" >
                   Discover breathtaking trails and scenic views.
                 </Typography>
-                <Button size="small" color="primary" style={{ fontFamily: 'Alkatra, sans-serif' }}>Learn More</Button>
+                <Button size="small" color="primary" >Learn More</Button>
               </CardContent>
             </Card>
           </Grid>
@@ -63,13 +63,13 @@ export default function Home() {
                 alt="Camping"
               />
               <CardContent>
-                <Typography variant="h5" style={{ fontFamily: 'Alkatra, sans-serif' }}>
+                <Typography variant="h5" >
                   Camping
                 </Typography>
-                <Typography variant="body2" color="text.secondary" style={{ fontFamily: 'Alkatra, sans-serif' }}>
+                <Typography variant="body2" color="text.secondary" >
                   Enjoy the great outdoors with our camping experiences.
                 </Typography>
-                <Button size="small" color="primary" style={{ fontFamily: 'Alkatra, sans-serif' }}>Learn More</Button>
+                <Button size="small" color="primary" >Learn More</Button>
               </CardContent>
             </Card>
           </Grid>
@@ -84,13 +84,13 @@ export default function Home() {
                 alt="Events"
               />
               <CardContent>
-                <Typography variant="h5" style={{ fontFamily: 'Alkatra, sans-serif' }}>
+                <Typography variant="h5" >
                   Events
                 </Typography>
-                <Typography variant="body2" color="text.secondary" style={{ fontFamily: 'Alkatra, sans-serif' }}>
+                <Typography variant="body2" color="text.secondary" >
                   Join us for exciting events and activities.
                 </Typography>
-                <Button size="small" color="primary" style={{ fontFamily: 'Alkatra, sans-serif' }}>Learn More</Button>
+                <Button size="small" color="primary" >Learn More</Button>
               </CardContent>
             </Card>
           </Grid>
@@ -99,4 +99,3 @@ export default function Home() {
     </div>
   );
 }
-

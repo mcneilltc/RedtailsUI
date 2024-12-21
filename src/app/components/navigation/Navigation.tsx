@@ -11,7 +11,7 @@ import { Brightness4, Brightness7 } from '@mui/icons-material';
 
 export default function Navigation() {
     // const { cartItems } = useCart();
-    const { toggleTheme, darkMode } = useTheme();  
+    const { toggleTheme, darkMode } = useTheme();
 
   return (
     <AppBar position="static" color='default'>
@@ -21,16 +21,16 @@ export default function Navigation() {
             <img src={logo.src} alt="Red Tails Outdoors Logo" />
           </div>
         </Link>
-        <Typography variant="h6" style={{ flexGrow: 1, fontFamily: 'Alkatra, sans-serif' }}>
+        <Typography variant="h6" style={{ flexGrow: 1 }}>
           Red Tails Outdoors
         </Typography>
-        <Button color="inherit" href="/" style={{ fontFamily: 'Alkatra, sans-serif' }}>
+        <Button color="inherit" href="/">
           Home
         </Button>
-        <Button color="inherit" href="/about" style={{ fontFamily: 'Alkatra, sans-serif' }}>
+        <Button color="inherit" href="/about">
           About Us
         </Button>
-        <Button variant="contained" color="primary" href="/book" style={{ fontFamily: 'Alkatra, sans-serif' }}>
+        <Button variant="contained" color="primary" href="/book">
           Make a Reservation
         </Button>
         <IconButton color="inherit" onClick={toggleTheme} aria-label={darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}>

@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/tiquilamcneill/Desktop/Projects/RedtailsUI/src/app/layout":["static/media/1adce7d391cd5774-s.p.ttf"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';

@@ -4,35 +4,35 @@
 
 @font-face {
   font-family: 'Alkatra';
-  src: url('/fonts/Alkatra-Regular.ttf') format('truetype'); /* Regular weight */
+  src: url('./fonts/Alkatra-Regular.ttf') format('truetype'); /* Regular weight */
   font-weight: 400; /* Normal weight */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Alkatra';
-  src: url('/fonts/Alkatra-Bold.ttf') format('truetype'); /* Bold weight */
+  src: url('./fonts/Alkatra-Bold.ttf') format('truetype'); /* Bold weight */
   font-weight: 700; /* Bold weight */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Alkatra';
-  src: url('/fonts/Alkatra-SemiBold.ttf') format('truetype'); /* SemiBold weight */
+  src: url('./fonts/Alkatra-SemiBold.ttf') format('truetype'); /* SemiBold weight */
   font-weight: 600; /* SemiBold weight */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Alkatra';
-  src: url('/fonts/Alkatra-Medium.ttf') format('truetype'); /* Medium weight */
+  src: url('./fonts/Alkatra-Medium.ttf') format('truetype'); /* Medium weight */
   font-weight: 500; /* Medium weight */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Alkatra';
-  src: url('/fonts/Alkatra-VariableFont_wght.ttf') format('truetype'); /* Variable weight */
+  src: url('./fonts/Alkatra-VariableFont_wght.ttf') format('truetype'); /* Variable weight */
   font-weight: 100 900; /* Variable weight range */
   font-style: normal;
 }

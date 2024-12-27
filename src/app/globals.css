@@ -43,22 +43,26 @@
   --background-secondary: #f3f4f6;
   --foreground: #111827;
   --foreground-secondary: #4b5563;
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
-  --accent: #7c3aed;
-  --accent-hover: #6d28d9;
+  --primary: #b03030; /* Maroon */
+  --primary-hover: #8a2424;
+  --secondary: #007d4a; /* Dark green */
+  --secondary-hover: #005f39;
+  --accent: #d2b48c; /* Tan */
+  --accent-hover: #c2a47c;
 }
 
 .dark {
   /* Dark theme variables */
   --background: #111827;
   --background-secondary: #1f2937;
-  --foreground: #057ef8;
-  --foreground-secondary: #045b12;
-  --primary: #3b82f6;
-  --primary-hover: #60a5fa;
-  --accent: #8b5cf6;
-  --accent-hover: #a78bfa;
+  --foreground: #ffffff;
+  --foreground-secondary: #9ca3af;
+  --primary: #800000; /* Maroon */
+  --primary-hover: #a80000;
+  --secondary: #004d26; /* Dark green */
+  --secondary-hover: #006837;
+  --accent: #8b5e3c; /* Dark tan */
+  --accent-hover: #6e462e;
 }
 
 body {

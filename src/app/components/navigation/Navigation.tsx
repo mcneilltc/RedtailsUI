@@ -16,14 +16,20 @@ export default function Navigation() {
 
   return (
     <>
-    <AppBar position="static" color='default'>
+    <AppBar position="static"  sx={{
+                    bgcolor: 'background.paper', // Dynamic background based on the theme
+                    color: 'text.primary', // Text color from the theme
+                }}>
       <Toolbar>
         <Link href="/" passHref>
           <div className="logo" style={{ cursor: 'pointer' }}>
-            <img src={logo.src} alt="Red Tails Outdoors Logo" />
+            <img src={logo.src} alt="Red Tails Outdoors Logo" style={{ maxHeight: '40px' }} />
           </div>
         </Link>
-        <Typography variant="h6" style={{ flexGrow: 1 }}>
+        <Typography variant="h6" sx={{
+                            flexGrow: 1,
+                            ml: 2, // Add margin-left for spacing
+                        }}>
           Red Tails Outdoors
         </Typography>
         <Button color="inherit" href="/">
@@ -35,7 +41,7 @@ export default function Navigation() {
         <Button variant="contained" color="primary" href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/2XyOP">
           Make a Reservation
         </Button>
-        <IconButton color="inherit" onClick={toggleTheme} aria-label={darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}>
+        <IconButton color="inherit" onClick={toggleTheme} aria-label={darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'} sx={{ ml: 2 }}>
           {darkMode ? <Brightness7 /> : <Brightness4 />}
         </IconButton>
       </Toolbar>

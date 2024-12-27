@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "./components/navigation/Navigation";
-// import { CartProvider } from "../context/CartContext";
 import { ThemeProvider } from "./components/ThemeProvider";
 
 const alkatra = localFont({

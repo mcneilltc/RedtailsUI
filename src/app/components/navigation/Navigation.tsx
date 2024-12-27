@@ -8,12 +8,14 @@ import logo from '../../../../public/images/logos/logo2.png'
 import { AppBar, Toolbar, Typography, Button, IconButton, Badge } from '@mui/material';
 import { useTheme } from '../ThemeProvider'
 import { Brightness4, Brightness7 } from '@mui/icons-material';
+import PeekScript from '../PeekScript';
 
 export default function Navigation() {
     // const { cartItems } = useCart();
     const { toggleTheme, darkMode } = useTheme();
 
   return (
+    <>
     <AppBar position="static" color='default'>
       <Toolbar>
         <Link href="/" passHref>
@@ -30,7 +32,7 @@ export default function Navigation() {
         <Button color="inherit" href="/about">
           About Us
         </Button>
-        <Button variant="contained" color="primary" href="/book">
+        <Button variant="contained" color="primary" href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/2XyOP">
           Make a Reservation
         </Button>
         <IconButton color="inherit" onClick={toggleTheme} aria-label={darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}>
@@ -38,5 +40,7 @@ export default function Navigation() {
         </IconButton>
       </Toolbar>
     </AppBar>
+    <PeekScript />
+    </>
   );
 }

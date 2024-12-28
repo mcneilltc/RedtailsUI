@@ -10,6 +10,7 @@ import {
   Avatar,
   Button,
   IconButton,
+  Grid,
 } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook'; // Import Facebook icon
 import InstagramIcon from '@mui/icons-material/Instagram'; // Import Instagram icon
@@ -23,7 +24,7 @@ const AboutUsPage = () => {
       <Box
         sx={{
           position: 'relative',
-          height: '400px',
+          height: { xs: '300px', md: '400px' }, // Adjust for mobile and desktop
           backgroundColor: 'background.default',
         }}
       >
@@ -41,6 +42,7 @@ const AboutUsPage = () => {
           fill
           className="object-cover"
           priority
+          style={{ objectFit: 'cover' }}
         />
         <Container
           sx={{
@@ -49,13 +51,17 @@ const AboutUsPage = () => {
             height: '100%',
             display: 'flex',
             alignItems: 'center',
+            justifyContent: { xs: 'center', md: 'flex-start' },
+            textAlign: { xs: 'center', md: 'left' },
+            px: 2, // Padding for smaller screens
           }}
         >
           <Typography
-            variant="h2"
+            variant="h4"
             sx={{
               fontWeight: 'bold',
               color: 'primary.main',
+              fontSize: { xs: '1.5rem', md: '2.5rem' }, // Responsive font size
             }}
           >
             About Red Tails Outdoors
@@ -64,7 +70,7 @@ const AboutUsPage = () => {
       </Box>
 
       {/* Mission Statement */}
-      <Box sx={{ py: 8, backgroundColor: 'background.default' }}>
+      <Box sx={{ py: 8, backgroundColor: 'background.default', px: 2 }}>
         <Container>
           <Typography
             variant="h3"
@@ -72,6 +78,7 @@ const AboutUsPage = () => {
               fontWeight: 'bold',
               color: 'primary.main',
               mb: 4,
+              fontSize: { xs: '1.75rem', md: '2.5rem' }, // Responsive font size
             }}
           >
             Our Mission
@@ -100,11 +107,12 @@ const AboutUsPage = () => {
             enjoyable, and memorable. Come paddle with us and see why we love
             calling North Carolina home!
           </Typography>
+          {/* Additional mission content */}
         </Container>
       </Box>
 
       {/* Team Section */}
-      <Box sx={{ py: 8, backgroundColor: 'background.default' }}>
+      <Box sx={{ py: 8, backgroundColor: 'background.default', px: 2 }}>
         <Container>
           <Typography
             variant="h3"
@@ -112,24 +120,20 @@ const AboutUsPage = () => {
               fontWeight: 'bold',
               color: 'primary.main',
               mb: 6,
+              fontSize: { xs: '1.75rem', md: '2.5rem' },
             }}
           >
             Our Team
           </Typography>
-          <Box
-            display="flex"
-            flexWrap="wrap"
-            justifyContent="space-between"
-            gap={4}
-          >
+          <Grid container spacing={4}>
             {/* Team Member 1 */}
-            <Box sx={{ width: '100%', maxWidth: '300px', textAlign: 'center' }}>
+            <Grid item xs={12} sm={6} md={4} textAlign="center">
               <Avatar
                 alt="Aaron McNeill"
                 src="/images/headshots/aaron1.png"
                 sx={{ width: 200, height: 200, mx: 'auto', mb: 2 }}
               />
-              <Typography variant="h5" color="text.primary" fontWeight="bold">
+              <Typography variant="h5" fontWeight="bold" color="text.primary">
                 Aaron McNeill
               </Typography>
               <Typography color="text.secondary">Owner</Typography>
@@ -137,38 +141,37 @@ const AboutUsPage = () => {
                 Owner and founder of Red Tails Outdoors, Aaron is passionate
                 about connecting people with nature. An Eagle Scout with over
                 10 years of experience, he’s a true adventurer at heart!
-                Whether it’s hiking, camping, or kayaking, the great outdoors
-                is his playground.
               </Typography>
-            </Box>
+            </Grid>
+
             {/* Team Member 2 */}
-            <Box sx={{ width: '100%', maxWidth: '300px', textAlign: 'center' }}>
+            <Grid item xs={12} sm={6} md={4} textAlign="center">
               <Avatar
                 alt="Devin McNeill"
-                src="/images/headshots/devin.png"
+                src="/images/headshots/devin2.png"
                 sx={{ width: 200, height: 200, mx: 'auto', mb: 2 }}
               />
-              <Typography variant="h5" color="text.primary" fontWeight="bold">
+              <Typography variant="h5" fontWeight="bold" color="text.primary">
                 Devin McNeill
               </Typography>
-              <Typography color="text.secondary">Guide</Typography>
+              <Typography color="text.secondary">Owner</Typography>
               <Typography variant="body2" color="text.secondary" mt={1}>
                 A skilled guide, Devin is a sports enthusiast who’s always
                 ready to dive into action. Whether poolside or courtside, he
                 brings energy and a splash of fun to the team.
               </Typography>
-            </Box>
+            </Grid>
             {/* Team Member 3 */}
-            <Box sx={{ width: '100%', maxWidth: '300px', textAlign: 'center' }}>
+            <Grid item xs={12} sm={6} md={4} textAlign="center">
               <Avatar
                 alt="Michelle McCurdy"
                 src="/images/headshots/michelle.png"
                 sx={{ width: 200, height: 200, mx: 'auto', mb: 2 }}
               />
-              <Typography variant="h5" color="text.primary" fontWeight="bold">
-                Michelle McCurdy
+              <Typography variant="h5" fontWeight="bold" color="text.primary">
+              Michelle McCurdy
               </Typography>
-              <Typography color="text.secondary">Guide</Typography>
+              <Typography color="text.secondary">Owner</Typography>
               <Typography variant="body2" color="text.secondary" mt={1}>
                 A nature-loving mom who’s always up for an adventure! From
                 hiking trails to outdoor games, Michelle has a knack for
@@ -176,8 +179,10 @@ const AboutUsPage = () => {
                 providing memorable experiences and fostering a love for the
                 outdoors.
               </Typography>
-            </Box>
-          </Box>
+            </Grid>
+
+            {/* Repeat for other team members */}
+          </Grid>
         </Container>
       </Box>
 
@@ -187,6 +192,7 @@ const AboutUsPage = () => {
           py: 8,
           textAlign: 'center',
           backgroundColor: 'background.paper',
+          px: 2,
         }}
       >
         <Container>
@@ -196,6 +202,7 @@ const AboutUsPage = () => {
               fontWeight: 'bold',
               color: 'text.primary',
               mb: 4,
+              fontSize: { xs: '1.75rem', md: '2.5rem' },
             }}
           >
             Get in Touch
@@ -203,20 +210,11 @@ const AboutUsPage = () => {
           <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
             Have questions about our services? We&apos;d love to hear from you.
           </Typography>
-          <Typography
-              variant="h6"
-              sx={{
-                textAlign: 'center',
-                fontWeight: 'bold',
-              }}
-            >
-              Contact Us
-            </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
             <IconButton
               color="primary"
               component="a"
-              href="https://www.facebook.com/yourpage" // Replace with actual Facebook link
+              href="https://www.facebook.com/yourpage"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -225,7 +223,7 @@ const AboutUsPage = () => {
             <IconButton
               color="primary"
               component="a"
-              href="https://www.instagram.com/yourprofile" // Replace with actual Instagram link
+              href="https://www.instagram.com/yourprofile"
               target="_blank"
               rel="noopener noreferrer"
             >

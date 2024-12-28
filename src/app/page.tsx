@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Container,
@@ -8,142 +8,194 @@ import {
   CardContent,
   Typography,
   Button,
-} from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-import './styles.css'; // Import your custom CSS if needed
+  Box,
+} from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import Image from "next/image"; // Optimize images
+import "./styles.css";
 
 export default function Home() {
-  const theme = useTheme(); // Access the current theme
+  const theme = useTheme();
 
   return (
-    <div
+    <Box
       className="background"
-      style={{
-        position: 'relative', // To allow absolute positioning inside
+      sx={{
         backgroundColor: theme.palette.background.default,
         color: theme.palette.text.primary,
-        minHeight: '100vh', // Ensure the background covers the viewport
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "2rem 0",
       }}
     >
       {/* Title Section */}
-      <Container
-        style={{
-          position: 'absolute', // Positioning the title at the top
-          top: 0, // Align to the top of the background
-          left: '50%', // Center horizontally
-          transform: 'translateX(-50%)', // Center correctly
-          textAlign: 'center',
-          padding: '16px 0', // Add some padding for spacing
-        }}
-      >
+      <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography
           variant="h1"
-          style={{
+          // style={{
+          //   color: theme.palette.text.primary,
+          //   margin: 0,
+          // }}
+          component="h1"
+          sx={{
             color: theme.palette.text.primary,
-            // fontSize: '3rem', // Adjust size for visibility
-            margin: 0,
+            fontWeight: "bold",
           }}
         >
           Welcome to Red Tails Outdoors
         </Typography>
-      </Container>
+        
+      </Box>
+      <Box sx={{ textAlign: "center", mb: 4 }}>
+      <Typography
+          variant="h6"
+          sx={{
+            color: theme.palette.text.secondary,
+            mt: 1,
+          }}
+        >
+          Explore nature with us—kayaking, hiking, camping, and more!
+        </Typography>
+      </Box>
 
       {/* Cards Section */}
-      <Container style={{ paddingTop: '150px' }}> {/* Add padding below the title */}
+      <Container maxWidth="lg" style={{ paddingTop: '150px' }}>
         <Grid container spacing={4} justifyContent="center">
           {/* Kayaking Card */}
           <Grid item xs={12} sm={6} md={3}>
-            <Card className="card">
-              <CardMedia
-                component="img"
-                height="140"
-                image="/images/kayaks/dapo-olusola.jpg"
-                alt="Kayaking"
-              />
+            <Card
+              sx={{
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <CardMedia>
+                <Image
+                  src="/images/kayaks/dapo-olusola.jpg"
+                  alt="Kayaking"
+                  width={400}
+                  height={140}
+                  style={{ objectFit: "cover" }}
+                />
+              </CardMedia>
               <CardContent>
-                <Typography variant="h5" color={theme.palette.text.primary}>
+                <Typography variant="h5" gutterBottom>
                   Kayaking
                 </Typography>
-                <Typography variant="body2" color={theme.palette.text.secondary}>
+                <Typography variant="body2" color="text.secondary">
                   Experience the thrill of kayaking in beautiful waters.
                 </Typography>
-                <Button size="small" color="primary">
-                  Learn More
-                </Button>
+                <Button size="small" color="primary" aria-label="Learn more about kayaking">
+                Learn More
+              </Button>
               </CardContent>
+              
             </Card>
           </Grid>
 
           {/* Hiking Card */}
           <Grid item xs={12} sm={6} md={3}>
-            <Card className="card">
-              <CardMedia
-                component="img"
-                height="140"
-                image="/images/hiking/nichiking.jpg"
-                alt="Hiking"
-              />
+            <Card
+              sx={{
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <CardMedia>
+                <Image
+                  src="/images/hiking/nichiking.jpg"
+                  alt="Hiking"
+                  width={400}
+                  height={140}
+                  style={{ objectFit: "cover" }}
+                />
+              </CardMedia>
               <CardContent>
-                <Typography variant="h5" color={theme.palette.text.primary}>
+                <Typography variant="h5" gutterBottom>
                   Hiking
                 </Typography>
-                <Typography variant="body2" color={theme.palette.text.secondary}>
+                <Typography variant="body2" color="text.secondary">
                   Discover breathtaking trails and scenic views.
                 </Typography>
-                <Button size="small" color="primary">
-                  Learn More
-                </Button>
+                <Button size="small" color="primary" aria-label="Learn more about hiking">
+                Learn More
+              </Button>
               </CardContent>
+              
             </Card>
           </Grid>
 
           {/* Camping Card */}
           <Grid item xs={12} sm={6} md={3}>
-            <Card className="card">
-              <CardMedia
-                component="img"
-                height="140"
-                image="/images/camping/camp1.png"
-                alt="Camping"
-              />
+            <Card
+              sx={{
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <CardMedia>
+                <Image
+                  src="/images/camping/camp1.png"
+                  alt="Camping"
+                  width={400}
+                  height={140}
+                  style={{ objectFit: "cover" }}
+                />
+              </CardMedia>
               <CardContent>
-                <Typography variant="h5" color={theme.palette.text.primary}>
+                <Typography variant="h5" gutterBottom>
                   Camping
                 </Typography>
-                <Typography variant="body2" color={theme.palette.text.secondary}>
+                <Typography variant="body2" color="text.secondary">
                   Enjoy the great outdoors with our camping experiences.
                 </Typography>
-                <Button size="small" color="primary">
-                  Learn More
-                </Button>
+                <Button size="small" color="primary" aria-label="Learn more about camping">
+                Learn More
+              </Button>
               </CardContent>
+              
             </Card>
           </Grid>
 
           {/* Events Card */}
           <Grid item xs={12} sm={6} md={3}>
-            <Card className="card">
-              <CardMedia
-                component="img"
-                height="140"
-                image="/images/people/ian-schneider-event.jpg"
-                alt="Events"
-              />
+            <Card
+              sx={{
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <CardMedia>
+                <Image
+                  src="/images/people/ian-schneider-event.jpg"
+                  alt="Events"
+                  width={400}
+                  height={140}
+                  style={{ objectFit: "cover" }}
+                />
+              </CardMedia>
               <CardContent>
-                <Typography variant="h5" color={theme.palette.text.primary}>
+                <Typography variant="h5" gutterBottom>
                   Events
                 </Typography>
-                <Typography variant="body2" color={theme.palette.text.secondary}>
+                <Typography variant="body2" color="text.secondary">
                   Join us for exciting events and activities.
                 </Typography>
-                <Button size="small" color="primary">
-                  Learn More
-                </Button>
+                <Button size="small" color="primary" aria-label="Learn more about events">
+                Learn More
+              </Button>
               </CardContent>
+              
             </Card>
           </Grid>
         </Grid>
       </Container>
-    </div>
+    </Box>
   );
 }

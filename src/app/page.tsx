@@ -19,30 +19,41 @@ export default function Home() {
     <div
       className="background"
       style={{
+        position: 'relative', // To allow absolute positioning inside
         backgroundColor: theme.palette.background.default,
         color: theme.palette.text.primary,
+        minHeight: '100vh', // Ensure the background covers the viewport
       }}
     >
-      <Container>
+      {/* Title Section */}
+      <Container
+        style={{
+          position: 'absolute', // Positioning the title at the top
+          top: 0, // Align to the top of the background
+          left: '50%', // Center horizontally
+          transform: 'translateX(-50%)', // Center correctly
+          textAlign: 'center',
+          padding: '16px 0', // Add some padding for spacing
+        }}
+      >
         <Typography
           variant="h1"
           style={{
-            textAlign: 'center',
             color: theme.palette.text.primary,
+            // fontSize: '3rem', // Adjust size for visibility
+            margin: 0,
           }}
         >
           Welcome to Red Tails Outdoors
         </Typography>
-        <br />
+      </Container>
+
+      {/* Cards Section */}
+      <Container style={{ paddingTop: '150px' }}> {/* Add padding below the title */}
         <Grid container spacing={4} justifyContent="center">
           {/* Kayaking Card */}
           <Grid item xs={12} sm={6} md={3}>
-            <Card
-              sx={{
-                backgroundColor: theme.palette.background.paper,
-                boxShadow: theme.shadows[3],
-              }}
-            >
+            <Card className="card">
               <CardMedia
                 component="img"
                 height="140"
@@ -65,12 +76,7 @@ export default function Home() {
 
           {/* Hiking Card */}
           <Grid item xs={12} sm={6} md={3}>
-            <Card
-              sx={{
-                backgroundColor: theme.palette.background.paper,
-                boxShadow: theme.shadows[3],
-              }}
-            >
+            <Card className="card">
               <CardMedia
                 component="img"
                 height="140"
@@ -93,12 +99,7 @@ export default function Home() {
 
           {/* Camping Card */}
           <Grid item xs={12} sm={6} md={3}>
-            <Card
-              sx={{
-                backgroundColor: theme.palette.background.paper,
-                boxShadow: theme.shadows[3],
-              }}
-            >
+            <Card className="card">
               <CardMedia
                 component="img"
                 height="140"
@@ -121,12 +122,7 @@ export default function Home() {
 
           {/* Events Card */}
           <Grid item xs={12} sm={6} md={3}>
-            <Card
-              sx={{
-                backgroundColor: theme.palette.background.paper,
-                boxShadow: theme.shadows[3],
-              }}
-            >
+            <Card className="card">
               <CardMedia
                 component="img"
                 height="140"

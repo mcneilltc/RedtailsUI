@@ -2,119 +2,220 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { useTheme } from '../components/ThemeProvider'; // Import your custom theme provider
+import {
+  Box,
+  Container,
+  Typography,
+  Avatar,
+  Button,
+} from '@mui/material';
 
 const AboutUsPage = () => {
+  const { darkMode, toggleTheme } = useTheme(); // Access theme toggle and state
+
   return (
-    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+    <Box>
       {/* Hero Section */}
-      <div className="relative h-[400px] bg-[var(--background-secondary)]">
-        <div className="absolute inset-0 bg-black/50 z-10" />
+      <Box
+        sx={{
+          position: 'relative',
+          height: '400px',
+          backgroundColor: 'background.default',
+        }}
+      >
+        <Box
+          sx={{
+            position: 'absolute',
+            inset: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            zIndex: 10,
+          }}
+        />
         <Image
-          src="/images/scenes/shoreshot.png" // Ensure this image exists
+          src="/images/scenes/shoreshot.png"
           alt="Red Tails Outdoors"
           fill
           className="object-cover"
           priority
         />
-        <div className="relative z-20 container mx-auto px-4 h-full flex items-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-[var(--primary)]">
+        <Container
+          sx={{
+            position: 'relative',
+            zIndex: 20,
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <Typography
+            variant="h2"
+            sx={{
+              fontWeight: 'bold',
+              color: 'primary.main',
+            }}
+          >
             About Red Tails Outdoors
-          </h1>
-        </div>
-      </div>
+          </Typography>
+        </Container>
+      </Box>
 
       {/* Mission Statement */}
-      <section className="py-16 bg-[var(--background)]">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[var(--primary)] mb-8">Our Mission</h2>
-          <p className="text-lg text-[var(--foreground-secondary)] max-w-3xl">
-            At Red Tails Outdoors, we’re passionate about helping people connect with nature, explore new adventures, and create unforgettable memories. 
-            Nestled in the beautiful landscapes of western North Carolina, we offer kayak and paddleboard rentals, self-guided tours, and special events designed for families, tourists, and outdoor enthusiasts of all kinds.
-          </p>
-          <br />
-          <p className="text-lg text-[var(--foreground-secondary)] max-w-3xl">
-            We’re all about making the outdoors accessible, safe, and welcoming for everyone. Inclusivity is at the heart of what we do, and we’re committed to protecting the environment through sustainable practices and following "Leave No Trace" principles. 
-            We take pride in creating experiences that let you enjoy the natural beauty around us while respecting it for future generations.
-          </p>
-          <br />
-          <p className="text-lg text-[var(--foreground-secondary)] max-w-3xl">
-            At Red Tails Outdoors, we’re not just a rental service: we’re your partners in adventure. 
-            Whether you’re gliding across calm waters, joining a fun group event, or discovering the serenity of nature on your own, we’re here to make sure your time outdoors is safe, enjoyable, and memorable. 
-            Come paddle with us and see why we love calling North Carolina home!
-          </p>
-        </div>
-      </section>
+      <Box sx={{ py: 8, backgroundColor: 'background.default' }}>
+        <Container>
+          <Typography
+            variant="h3"
+            sx={{
+              fontWeight: 'bold',
+              color: 'primary.main',
+              mb: 4,
+            }}
+          >
+            Our Mission
+          </Typography>
+          <Typography variant="body1" sx={{ color: 'text.secondary', mb: 3 }}>
+            At Red Tails Outdoors, we’re passionate about helping people connect
+            with nature, explore new adventures, and create unforgettable
+            memories. Nestled in the beautiful landscapes of western North
+            Carolina, we offer kayak and paddleboard rentals, self-guided
+            tours, and special events designed for families, tourists, and
+            outdoor enthusiasts of all kinds.
+          </Typography>
+          <Typography variant="body1" sx={{ color: 'text.secondary', mb: 3 }}>
+            We’re all about making the outdoors accessible, safe, and welcoming
+            for everyone. Inclusivity is at the heart of what we do, and we’re
+            committed to protecting the environment through sustainable
+            practices and following "Leave No Trace" principles. We take pride
+            in creating experiences that let you enjoy the natural beauty
+            around us while respecting it for future generations.
+          </Typography>
+          <Typography variant="body1" sx={{ color: 'text.secondary' }}>
+            At Red Tails Outdoors, we’re not just a rental service: we’re your
+            partners in adventure. Whether you’re gliding across calm waters,
+            joining a fun group event, or discovering the serenity of nature on
+            your own, we’re here to make sure your time outdoors is safe,
+            enjoyable, and memorable. Come paddle with us and see why we love
+            calling North Carolina home!
+          </Typography>
+        </Container>
+      </Box>
 
       {/* Team Section */}
-      <section className="py-16 bg-[var(--background)]">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[var(--primary)] mb-12">Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <Box sx={{ py: 8, backgroundColor: 'background.default' }}>
+        <Container>
+          <Typography
+            variant="h3"
+            sx={{
+              fontWeight: 'bold',
+              color: 'primary.main',
+              mb: 6,
+            }}
+          >
+            Our Team
+          </Typography>
+          <Box
+            display="flex"
+            flexWrap="wrap"
+            justifyContent="space-between"
+            gap={4}
+          >
             {/* Team Member 1 */}
-            <div className="text-center">
-              <div className="relative w-48 h-48 mx-auto mb-4">
-                <Image
-                  src="/images/headshots/aaron1.png" // Ensure this image exists
-                  alt="Aaron McNeill"
-                  fill
-                  className="object-cover rounded-full"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-[var(--forground)]">Aaron McNeill</h3>
-              <p className="text-[var(--foreground-secondary)]">Owner</p>
-              <p className="text-[var(--foreground-secondary)]">
-            Owner and founder of Red Tails Outdoors, Aaron is passionate about connecting people with nature.
-            An Eagle Scout with over 10 years of experience, I'm a true adventurer at heart! Whether it’s hiking, camping, or kayaking, the great outdoors is my playground.
-          </p>
-            </div>
+            <Box sx={{ width: '100%', maxWidth: '300px', textAlign: 'center' }}>
+              <Avatar
+                alt="Aaron McNeill"
+                src="/images/headshots/aaron1.png"
+                sx={{ width: 120, height: 120, mx: 'auto', mb: 2 }}
+              />
+              <Typography variant="h5" color="text.primary" fontWeight="bold">
+                Aaron McNeill
+              </Typography>
+              <Typography color="text.secondary">Owner</Typography>
+              <Typography variant="body2" color="text.secondary" mt={1}>
+                Owner and founder of Red Tails Outdoors, Aaron is passionate
+                about connecting people with nature. An Eagle Scout with over
+                10 years of experience, he’s a true adventurer at heart!
+                Whether it’s hiking, camping, or kayaking, the great outdoors
+                is his playground.
+              </Typography>
+            </Box>
             {/* Team Member 2 */}
-            <div className="text-center">
-              <div className="relative w-48 h-48 mx-auto mb-4">
-                <Image
-                  src="/images/logos/logo2.png" // Ensure this image exists
-                  alt="Devin McNeill"
-                  fill
-                  className="object-cover rounded-full"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-[var(--foreground)]">Devin McNeill</h3>
-              <p className="text-[var(--foreground-secondary)]">Guide</p>
-              <p className="text-[var(--foreground-secondary)]"> A skilled guide, Devin is a sports enthusiast who’s always ready to dive into action. Whether poolside or courtside, he brings energy and a splash of fun to the team.
-              </p>
-            </div>
+            <Box sx={{ width: '100%', maxWidth: '300px', textAlign: 'center' }}>
+              <Avatar
+                alt="Devin McNeill"
+                src="/images/logos/logo2.png"
+                sx={{ width: 120, height: 120, mx: 'auto', mb: 2 }}
+              />
+              <Typography variant="h5" color="text.primary" fontWeight="bold">
+                Devin McNeill
+              </Typography>
+              <Typography color="text.secondary">Guide</Typography>
+              <Typography variant="body2" color="text.secondary" mt={1}>
+                A skilled guide, Devin is a sports enthusiast who’s always
+                ready to dive into action. Whether poolside or courtside, he
+                brings energy and a splash of fun to the team.
+              </Typography>
+            </Box>
             {/* Team Member 3 */}
-            <div className="text-center">
-              <div className="relative w-48 h-48 mx-auto mb-4">
-                <Image
-                  src="/images/headshots/michelle.png" // Ensure this image exists
-                  alt="Michelle McCurdy"
-                  fill
-                  className="object-cover rounded-full"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-[var(--foreground)]">Michelle McCurdy</h3>
-              <p className="text-[var(--foreground-secondary)]">Guide</p>
-              <p className="text-[var(--foreground-secondary)]">As a guide, Michelle is nature-loving mom who’s always up for an adventure! From hiking trails to outdoor games, she’s got a knack for making every activity a family affair.
-            She is dedicated to providing memorable experiences and fostering a love for the outdoors.
-</p>
-            </div>
-          </div>
-        </div>
-      </section>
+            <Box sx={{ width: '100%', maxWidth: '300px', textAlign: 'center' }}>
+              <Avatar
+                alt="Michelle McCurdy"
+                src="/images/headshots/michelle.png"
+                sx={{ width: 120, height: 120, mx: 'auto', mb: 2 }}
+              />
+              <Typography variant="h5" color="text.primary" fontWeight="bold">
+                Michelle McCurdy
+              </Typography>
+              <Typography color="text.secondary">Guide</Typography>
+              <Typography variant="body2" color="text.secondary" mt={1}>
+                A nature-loving mom who’s always up for an adventure! From
+                hiking trails to outdoor games, Michelle has a knack for
+                making every activity a family affair. She’s dedicated to
+                providing memorable experiences and fostering a love for the
+                outdoors.
+              </Typography>
+            </Box>
+          </Box>
+        </Container>
+      </Box>
 
       {/* Contact Section */}
-      <section className="py-16 bg-[var(--background-secondary)]">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-[var(--foreground)] mb-8">Get in Touch</h2>
-          <p className="text-lg text-[var(--foreground-secondary)] mb-8">
+      <Box
+        sx={{
+          py: 8,
+          textAlign: 'center',
+          backgroundColor: 'background.paper',
+        }}
+      >
+        <Container>
+          <Typography
+            variant="h3"
+            sx={{
+              fontWeight: 'bold',
+              color: 'text.primary',
+              mb: 4,
+            }}
+          >
+            Get in Touch
+          </Typography>
+          <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
             Have questions about our services? We&apos;d love to hear from you.
-          </p>
-          <button className="bg-[var(--primary)] text-[var(--background)] px-8 py-3 rounded-lg hover:bg-[var(--primary-hover)] transition-colors">
+          </Typography>
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{
+              px: 4,
+              py: 1.5,
+              textTransform: 'none',
+              fontWeight: 'bold',
+            }}
+            onClick={toggleTheme}
+          >
             Contact Us
-          </button>
-        </div>
-      </section>
-    </div>
+          </Button>
+        </Container>
+      </Box>
+    </Box>
   );
 };
 

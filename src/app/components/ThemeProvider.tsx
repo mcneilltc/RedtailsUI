@@ -21,18 +21,18 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         palette: {
             mode: darkMode ? 'dark' : 'light',
             primary: {
-                main: darkMode ? '#800000' : '#b03030', // Maroon
+                main: darkMode ? '#b03030' : '#ffffff', // Maroon /white
             },
             secondary: {
-                main: darkMode ? '#004d26' : '#007d4a', // Dark green
+                main: darkMode ? '#3380ff' : '#a2c5ff', // Dark blue / green was too military
             },
             background: {
-                default: darkMode ? '#1f2937' : '#f3f4f6', // Background color
-                paper: darkMode ? '#111827' : '#ffffff',
+                default: darkMode ? '#d2b48c' : '#8b5e3c', // Background color
+                paper: darkMode ? '#c2a47c' : '#3380ff',
             },
             text: {
-                primary: darkMode ? '#ffffff' : '#111827',
-                secondary: darkMode ? '#9ca3af' : '#4b5563', // Tan for light theme
+                primary: darkMode ? '#800000' : '#ffffff',
+                secondary: darkMode ? '#800000' : '#ffffff', // Tan for light theme
             },
         },
         typography: {

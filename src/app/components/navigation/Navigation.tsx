@@ -1,51 +1,77 @@
-'use client';
-import Link from 'next/link'
-import { useCart } from '../../../context/CartContext'
-import { FaShoppingCart } from 'react-icons/fa'
-import ThemeToggle from '../ThemeToggle';
+"use client";
+import Link from "next/link";
+import "./styles.css";
+import logo from "../../../../public/images/logos/logo2.png";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  IconButton,
+  Badge,
+} from "@mui/material";
+import { useTheme } from "../ThemeProvider";
+import { Brightness4, Brightness7 } from "@mui/icons-material";
+import PeekScript from "../PeekScript";
 
 export default function Navigation() {
-    const { cartItems } = useCart();
+  // const { cartItems } = useCart();
+  const { toggleTheme, darkMode } = useTheme();
 
   return (
-    <nav className="bg-white shadow-md p-4 dark:bg-gray-800">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-foreground">
-          Red Tails Outdoors
-        </Link>
-        <div className="space-x-6 flex items-center">
-            <ThemeToggle />
-          <Link 
-            href="/" 
-            className="text-foreground hover:text-gray-600 transition-colors"
+    <>
+      <AppBar
+        position="static"
+        sx={{
+          bgcolor: "background.paper", // Dynamic background based on the theme
+          color: "text.primary", // Text color from the theme
+        }}
+      >
+        <Toolbar>
+          <Link href="/" passHref>
+            <div className="logo" style={{ cursor: "pointer" }}>
+              <img
+                src={logo.src}
+                alt="Red Tails Outdoors Logo"
+                style={{ maxHeight: "40px" }}
+              />
+            </div>
+          </Link>
+          <Typography
+            variant="h6"
+            sx={{
+              flexGrow: 1,
+              ml: 2, // Add margin-left for spacing
+            }}
           >
+            Red Tails Outdoors
+          </Typography>
+          <Button color="inherit" href="/">
             Home
-          </Link>
-          <Link 
-            href="/about" 
-            className="text-foreground hover:text-gray-600 transition-colors"
-          >
+          </Button>
+          <Button color="inherit" href="/about">
             About Us
-          </Link>
-          <Link 
-            href="/book" 
-            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/2XyOP"
           >
             Make a Reservation
-          </Link>
-          <Link 
-            href="/cart" 
-            className="relative text-foreground hover:text-gray-600 transition-colors"
+          </Button>
+          <IconButton
+            color="inherit"
+            onClick={toggleTheme}
+            aria-label={
+              darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"
+            }
+            sx={{ ml: 2 }}
           >
-            <FaShoppingCart className="text-xl" />
-            {cartItems.length > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                {cartItems.length}
-              </span>
-            )}
-          </Link>
-        </div>
-      </div>
-    </nav>
-  )
+            {darkMode ? <Brightness7 /> : <Brightness4 />}
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+      <PeekScript />
+    </>
+  );
 }

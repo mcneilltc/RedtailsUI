@@ -1,47 +1,55 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
+import { createTheme, ThemeProvider as MUIThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 
-type Theme = 'light' | 'dark';
+const ThemeContext = createContext<{
+    toggleTheme: () => void;
+    darkMode: boolean;
+}>({
+    toggleTheme: () => {},
+    darkMode: false
+});
 
-type ThemeContextType = {
-  theme: Theme;
-  toggleTheme: () => void;
-};
-
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+export const useTheme = () => useContext(ThemeContext);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('light');
+    const [darkMode, setDarkMode] = useState(false);
 
-  useEffect(() => {
-    // Check local storage or system preference on initial load
-    const savedTheme = localStorage.getItem('theme') as Theme;
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    const initialTheme = savedTheme || systemTheme;
-    
-    setTheme(initialTheme);
-    document.documentElement.classList.toggle('dark', initialTheme === 'dark');
-  }, []);
+    const theme = createTheme({
+        palette: {
+            mode: darkMode ? 'dark' : 'light',
+            primary: {
+                main: darkMode ? '#b03030' : '#ffffff', // Maroon /white
+            },
+            secondary: {
+                main: darkMode ? '#3380ff' : '#a2c5ff', // Dark blue / green was too military
+            },
+            background: {
+                default: darkMode ? '#d2b48c' : '#8b5e3c', // Background color
+                paper: darkMode ? '#c2a47c' : '#3380ff',
+            },
+            text: {
+                primary: darkMode ? '#800000' : '#ffffff',
+                secondary: darkMode ? '#800000' : '#ffffff', // Tan for light theme
+            },
+        },
+        typography: {
+            "fontFamily": `"Alkatra", "system-ui", "sans-serif"`,
+        }
+    });
 
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    document.documentElement.classList.toggle('dark');
-    localStorage.setItem('theme', newTheme);
-  };
+    const toggleTheme = () => {
+        setDarkMode((prevMode) => !prevMode);
+    };
 
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
-}
-
-export function useTheme() {
-  const context = useContext(ThemeContext);
-  if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider');
-  }
-  return context;
+    return (
+        <ThemeContext.Provider value={{ toggleTheme, darkMode }}>
+            <MUIThemeProvider theme={theme}>
+            <CssBaseline />
+                {children}
+            </MUIThemeProvider>
+        </ThemeContext.Provider>
+    );
 }

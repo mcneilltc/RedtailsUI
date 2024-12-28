@@ -9,7 +9,10 @@ import {
   Typography,
   Avatar,
   Button,
+  IconButton,
 } from '@mui/material';
+import FacebookIcon from '@mui/icons-material/Facebook'; // Import Facebook icon
+import InstagramIcon from '@mui/icons-material/Instagram'; // Import Instagram icon
 
 const AboutUsPage = () => {
   const { darkMode, toggleTheme } = useTheme(); // Access theme toggle and state
@@ -124,7 +127,7 @@ const AboutUsPage = () => {
               <Avatar
                 alt="Aaron McNeill"
                 src="/images/headshots/aaron1.png"
-                sx={{ width: 120, height: 120, mx: 'auto', mb: 2 }}
+                sx={{ width: 200, height: 200, mx: 'auto', mb: 2 }}
               />
               <Typography variant="h5" color="text.primary" fontWeight="bold">
                 Aaron McNeill
@@ -142,8 +145,8 @@ const AboutUsPage = () => {
             <Box sx={{ width: '100%', maxWidth: '300px', textAlign: 'center' }}>
               <Avatar
                 alt="Devin McNeill"
-                src="/images/logos/logo2.png"
-                sx={{ width: 120, height: 120, mx: 'auto', mb: 2 }}
+                src="/images/headshots/devin.png"
+                sx={{ width: 200, height: 200, mx: 'auto', mb: 2 }}
               />
               <Typography variant="h5" color="text.primary" fontWeight="bold">
                 Devin McNeill
@@ -160,7 +163,7 @@ const AboutUsPage = () => {
               <Avatar
                 alt="Michelle McCurdy"
                 src="/images/headshots/michelle.png"
-                sx={{ width: 120, height: 120, mx: 'auto', mb: 2 }}
+                sx={{ width: 200, height: 200, mx: 'auto', mb: 2 }}
               />
               <Typography variant="h5" color="text.primary" fontWeight="bold">
                 Michelle McCurdy
@@ -200,19 +203,35 @@ const AboutUsPage = () => {
           <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
             Have questions about our services? We&apos;d love to hear from you.
           </Typography>
-          <Button
-            variant="contained"
-            color="primary"
-            sx={{
-              px: 4,
-              py: 1.5,
-              textTransform: 'none',
-              fontWeight: 'bold',
-            }}
-            onClick={toggleTheme}
-          >
-            Contact Us
-          </Button>
+          <Typography
+              variant="h6"
+              sx={{
+                textAlign: 'center',
+                fontWeight: 'bold',
+              }}
+            >
+              Contact Us
+            </Typography>
+          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
+            <IconButton
+              color="primary"
+              component="a"
+              href="https://www.facebook.com/yourpage" // Replace with actual Facebook link
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FacebookIcon />
+            </IconButton>
+            <IconButton
+              color="primary"
+              component="a"
+              href="https://www.instagram.com/yourprofile" // Replace with actual Instagram link
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <InstagramIcon />
+            </IconButton>
+          </Box>
         </Container>
       </Box>
     </Box>

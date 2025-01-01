@@ -87,7 +87,7 @@ export default function Navigation() {
             }
             sx={{ ml: 2 }}
           >
-            {darkMode ? <Brightness7 /> : <Brightness4 />}
+            {darkMode ? <Brightness4 /> : <Brightness7 />}
           </IconButton>
 
           {/* Hamburger menu for mobile screens */}

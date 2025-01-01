@@ -154,7 +154,7 @@ const AboutUsPage = () => {
               <Typography variant="h5" fontWeight="bold" color="text.primary">
                 Devin McNeill
               </Typography>
-              <Typography color="text.secondary">Owner</Typography>
+              <Typography color="text.secondary">Guide</Typography>
               <Typography variant="body2" color="text.secondary" mt={1}>
                 A skilled guide, Devin is a sports enthusiast who’s always
                 ready to dive into action. Whether poolside or courtside, he
@@ -171,7 +171,7 @@ const AboutUsPage = () => {
               <Typography variant="h5" fontWeight="bold" color="text.primary">
               Michelle McCurdy
               </Typography>
-              <Typography color="text.secondary">Owner</Typography>
+              <Typography color="text.secondary">Guide</Typography>
               <Typography variant="body2" color="text.secondary" mt={1}>
                 A nature-loving mom who’s always up for an adventure! From
                 hiking trails to outdoor games, Michelle has a knack for

@@ -51,3 +51,30 @@ const theme = createTheme({
         }
     });
 ```
+
+## Color Palette
+
+To create color palettes for this site, I used [Canva's color palette generator](https://www.canva.com/colors/color-palette-generator/) and [Adobe Color](https://color.adobe.com/create/image) on the site logo to come up with suggestions:
+
+Main theme:
+
+- Outer space (`#23312F`)
+- Pavlova (`#DBC49C`)
+- Tradewind (`#5DAEA7`)
+- Eastern Blue (`#20899E`)
+
+**Second theme:**
+
+- `#D90718`
+- `#898C20`
+- `#D9C077`
+- `#A65C1C`
+- `#0D0D0D` (or `#000000`)
+
+**Dark mode theme:**
+
+- `#022340`
+- `#031C26`
+- `#485922`
+- `#898C20`
+- `#0D0D0D`

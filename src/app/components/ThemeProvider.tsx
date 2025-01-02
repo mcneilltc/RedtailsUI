@@ -20,6 +20,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const theme = createTheme({
         palette: {
             mode: darkMode ? 'dark' : 'light',
+            // Material UI Color theme creation
+            // https://m2.material.io/design/color/the-color-system.html#color-theme-creation
             primary: {
                 main: darkMode ? '#b03030' : '#ffffff', // Maroon /white
             },

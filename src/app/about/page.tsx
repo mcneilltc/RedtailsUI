@@ -214,7 +214,8 @@ const AboutUsPage = () => {
             <IconButton
               color="primary"
               component="a"
-              href="https://www.facebook.com/yourpage"
+              href="#"
+              //   href="https://www.facebook.com/yourpage"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -223,7 +224,8 @@ const AboutUsPage = () => {
             <IconButton
               color="primary"
               component="a"
-              href="https://www.instagram.com/yourprofile"
+              href="#"
+            //   href="https://www.instagram.com/yourprofile"
               target="_blank"
               rel="noopener noreferrer"
             >

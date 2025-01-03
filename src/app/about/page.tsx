@@ -225,7 +225,7 @@ const AboutUsPage = () => {
               color="primary"
               component="a"
 
-              href="https://www.instagram.com/redtailsoutdoors/profilecard"
+              href="https://www.instagram.com/redtailsoutdoors/"
               target="_blank"
               rel="noopener noreferrer"
             >

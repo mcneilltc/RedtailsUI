@@ -214,8 +214,8 @@ const AboutUsPage = () => {
             <IconButton
               color="primary"
               component="a"
-              href="#"
-              //   href="https://www.facebook.com/yourpage"
+
+              href="https://www.facebook.com/people/Red-Tails-Outdoors/61570894457374/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -224,8 +224,8 @@ const AboutUsPage = () => {
             <IconButton
               color="primary"
               component="a"
-              href="#"
-            //   href="https://www.instagram.com/yourprofile"
+
+              href="https://www.instagram.com/redtailsoutdoors/profilecard"
               target="_blank"
               rel="noopener noreferrer"
             >

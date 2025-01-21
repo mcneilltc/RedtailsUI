@@ -57,7 +57,7 @@ const Kayaking = () => {
               <Typography variant="body2" color="text.secondary">
                 Join us for a guided kayak tour through beautiful landscapes.
               </Typography>
-              <Button size="small" color="primary" aria-label="Learn more about kayak tour" href="/kayak-tour">
+              <Button size="small" color="primary" aria-label="Learn more about kayak tour" href="/coming-soon">
                 Learn More
               </Button>
             </CardContent>
@@ -81,11 +81,13 @@ const Kayaking = () => {
                 Kayak Rentals
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Rent a kayak for a day and explore at your own pace.
+                Rent a kayak and explore at your own pace.
               </Typography>
-              <Button size="small" color="primary" aria-label="Learn more about kayak rentals" href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/2XyOP">
+              <Link href="/locations" passHref>
+              <Button size="small" color="primary" aria-label="Learn more about kayak rentals">
                 Learn More
               </Button>
+              </Link>
             </CardContent>
           </Card>
         </Grid>
@@ -109,7 +111,7 @@ const Kayaking = () => {
               <Typography variant="body2" color="text.secondary">
                 Experience the beauty of sunset while kayaking on the water.
               </Typography>
-              <Button size="small" color="primary" aria-label="Learn more about sunset kayaking" href="/sunset-kayaking">
+              <Button size="small" color="primary" aria-label="Learn more about sunset kayaking" href="/coming-soon">
                 Learn More
               </Button>
             </CardContent>
@@ -135,7 +137,7 @@ const Kayaking = () => {
               <Typography variant="body2" color="text.secondary">
                 Enjoy a thrilling experience of kayaking at night.
               </Typography>
-              <Button size="small" color="primary" aria-label="Learn more about family kayaking" href="/family-kayaking">
+              <Button size="small" color="primary" aria-label="Learn more about night paddles" href="/coming-soon">
                 Learn More
               </Button>
             </CardContent>

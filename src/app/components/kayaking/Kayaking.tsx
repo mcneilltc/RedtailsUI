@@ -12,9 +12,12 @@ import {
 import Image from "next/image"; // Optimize images
 import Link from 'next/link';
 
+/* Use a constant to set the height of the card images */
+const cardImageHeight = 176;
+
 const Kayaking = () => {
   return (
-    <Box 
+    <Box
     className="background"
     sx={{
     //   backgroundColor: theme.palette.background.default,
@@ -25,8 +28,9 @@ const Kayaking = () => {
       alignItems: "center",
       padding: "2rem 0",
     }}>
+
     <Container maxWidth="lg" style={{ paddingTop: '150px' }}>
-           <Link href="/" passHref>
+           {/* <Link href="/" passHref>
           <Button variant="outlined" sx={{ mb: 2 }}>
             ← Back to Home
           </Button>
@@ -35,21 +39,18 @@ const Kayaking = () => {
         <Typography variant="h1" component="h1" sx={{ fontWeight: "bold" }}>
           Kayaking Adventures
         </Typography>
-      </Box>
+      </Box> */}
 
+      {/* Cards Section */}
       <Grid container spacing={4} justifyContent="center">
         {/* Card 1 */}
         <Grid item xs={12} sm={6} md={3}>
           <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
-            <CardMedia>
-              <Image
-                src="/images/kayaks/autumn-kuney.jpg"
-                alt="Kayak Adventures"
-                width={400}
-                height={140}
-                style={{ objectFit: "cover" }}
-              />
-            </CardMedia>
+            <CardMedia
+                sx={{ height: cardImageHeight }}
+                image="/images/kayaks/autumn-kuney.jpg"
+                title="Kayak Adventures"
+            />
             <CardContent>
               <Typography variant="h5" gutterBottom>
                 Guided Adventures
@@ -67,15 +68,11 @@ const Kayaking = () => {
         {/* Card 2 */}
         <Grid item xs={12} sm={6} md={3}>
           <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
-            <CardMedia>
-              <Image
-                src="/images/kayaks/kelsey-dody.jpg"
-                alt="Kayak Rentals"
-                width={400}
-                height={140}
-                style={{ objectFit: "cover" }}
-              />
-            </CardMedia>
+            <CardMedia
+                sx={{ height: cardImageHeight }}
+                image="/images/kayaks/kelsey-dody.jpg"
+                title="Kayak Rentals"
+            />
             <CardContent>
               <Typography variant="h5" gutterBottom>
                 Kayak Rentals
@@ -93,15 +90,11 @@ const Kayaking = () => {
         {/* Card 3 */}
         <Grid item xs={12} sm={6} md={3}>
           <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
-            <CardMedia>
-              <Image
-                src="/images/scenes/sunshot.png"
-                alt="Sunset Kayaking"
-                width={400}
-                height={140}
-                style={{ objectFit: "cover" }}
-              />
-            </CardMedia>
+            <CardMedia
+                sx={{ height: cardImageHeight }}
+                image="/images/scenes/sunshot.png"
+                title="Sunset Kayaking"
+            />
             <CardContent>
               <Typography variant="h5" gutterBottom>
                 Sunset Kayaking
@@ -119,15 +112,11 @@ const Kayaking = () => {
         {/* Card 4 */}
         <Grid item xs={12} sm={6} md={3}>
           <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
-            <CardMedia>
-              <Image
-                src="/images/scenes/vincentiu-solomon.jpg"
-                alt="Night Kayaking"
-                width={400}
-                height={140}
-                style={{ objectFit: "cover" }}
-              />
-            </CardMedia>
+            <CardMedia
+                sx={{ height: cardImageHeight }}
+                image="/images/scenes/vincentiu-solomon.jpg"
+                title="Night Paddles"
+            />
             <CardContent>
               <Typography variant="h5" gutterBottom>
                 Night Paddles

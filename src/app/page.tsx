@@ -46,7 +46,7 @@ export default function Home() {
         >
           Welcome to Red Tails Outdoors
         </Typography>
-        
+
       </Box>
       <Box sx={{ textAlign: "center", mb: 4 }}>
       <Typography
@@ -60,8 +60,9 @@ export default function Home() {
         </Typography>
       </Box>
 
-      {/* Cards Section */}
+
       <Container maxWidth="lg" style={{ paddingTop: '150px' }}>
+        {/* Cards Section */}
         <Grid container spacing={4} justifyContent="center">
           {/* Kayaking Card */}
           <Grid item xs={12} sm={6} md={3}>
@@ -93,7 +94,7 @@ export default function Home() {
                 Learn More
               </Button>
               </CardContent>
-              
+
             </Card>
           </Grid>
 
@@ -126,7 +127,7 @@ export default function Home() {
                 Learn More
               </Button>
               </CardContent>
-              
+
             </Card>
           </Grid>
 
@@ -159,7 +160,7 @@ export default function Home() {
                 Learn More
               </Button>
               </CardContent>
-              
+
             </Card>
           </Grid>
 
@@ -192,7 +193,7 @@ export default function Home() {
                 Learn More
               </Button>
               </CardContent>
-              
+
             </Card>
           </Grid>
         </Grid>

@@ -8,10 +8,10 @@ const ComingSoon = () => {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          minHeight: '60vh',
+          justifyContent: 'flex-start',
+          alignItems: 'flex-start',
+          width: '100%',
+          padding: '1rem 0',
         }}
       >
         <Link href="/" passHref>
@@ -19,6 +19,16 @@ const ComingSoon = () => {
             ← Back to Home
           </Button>
         </Link>
+      </Box>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minHeight: '60vh',
+        }}
+      >
 
         <Typography variant="h4" sx={{ mb: 2 }}>
           Coming Soon!

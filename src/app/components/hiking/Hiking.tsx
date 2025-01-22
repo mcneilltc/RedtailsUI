@@ -5,11 +5,21 @@ import Link from 'next/link';
 const Hiking = () => {
   return (
     <Container>
-         <Link href="/" passHref>
+          <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'flex-start',
+          alignItems: 'flex-start',
+          width: '100%',
+          padding: '1rem 0',
+        }}
+      >
+        <Link href="/" passHref>
           <Button variant="outlined" sx={{ mb: 2 }}>
             ← Back to Home
           </Button>
         </Link>
+      </Box>
       <Box
         sx={{
           display: "flex",

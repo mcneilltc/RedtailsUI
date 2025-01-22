@@ -14,6 +14,22 @@ import Link from 'next/link';
 
 const Kayaking = () => {
   return (
+    <Container maxWidth="lg">
+       <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'flex-start',
+          alignItems: 'flex-start',
+          width: '100%',
+          padding: '2rem 0',
+        }}
+      >
+        <Link href="/" passHref>
+          <Button variant="outlined" sx={{ mb: 2 }}>
+            ← Back to Home
+          </Button>
+        </Link>
+      </Box>
     <Box 
     className="background"
     sx={{
@@ -24,12 +40,8 @@ const Kayaking = () => {
       flexDirection: "column",
       alignItems: "center",
       padding: "2rem 0",
+      paddingLeft: '1rem',
     }}>
-        <Link href="/" passHref>
-          <Button variant="outlined" sx={{ mb: 2 }}>
-            ← Back to Home
-          </Button>
-        </Link>
     <Container maxWidth="lg" style={{ paddingTop: '150px' }}>
            
       <Box sx={{ textAlign: "center", mb: 4 }}>
@@ -147,6 +159,7 @@ const Kayaking = () => {
       </Grid>
     </Container>
     </Box>
+    </Container>
   );
 };
 

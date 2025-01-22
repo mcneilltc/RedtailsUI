@@ -1,3 +1,4 @@
+"use client";
 import SpecialEvents from "../components/specialevents/SpecialEvents";
 
 const SpecialEventsPage = () => {

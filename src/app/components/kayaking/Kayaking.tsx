@@ -1,4 +1,5 @@
-import React from 'react';
+"use client";
+import React, { useEffect, useState } from 'react';
 import {
   Container,
   Grid,
@@ -13,6 +14,15 @@ import Image from "next/image"; // Optimize images
 import Link from 'next/link';
 
 const Kayaking = () => {
+  // const [isClient, setIsClient] = useState(false);
+  
+  //   useEffect(() => {
+  //     setIsClient(true);
+  //   }, []);
+  
+  //   if (!isClient) {
+  //     return null; // Render nothing on the server
+  //   }
   return (
     <Container maxWidth="lg">
        <Box

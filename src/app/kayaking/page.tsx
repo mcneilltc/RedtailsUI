@@ -1,3 +1,4 @@
+"use client";
 import Kayaking from "../components/kayaking/Kayaking";
 
 const KayakingPage = () => {

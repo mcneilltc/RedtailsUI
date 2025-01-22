@@ -29,8 +29,8 @@ const Kayaking = () => {
       padding: "2rem 0",
     }}>
 
-    <Container maxWidth="lg" style={{ paddingTop: '150px' }}>
-           {/* <Link href="/" passHref>
+    <Container maxWidth="lg">
+    <Link href="/" passHref>
           <Button variant="outlined" sx={{ mb: 2 }}>
             ← Back to Home
           </Button>
@@ -39,8 +39,10 @@ const Kayaking = () => {
         <Typography variant="h1" component="h1" sx={{ fontWeight: "bold" }}>
           Kayaking Adventures
         </Typography>
-      </Box> */}
+      </Box>
+    </Container>
 
+    <Container maxWidth="lg" style={{ paddingTop: '150px' }}>
       {/* Cards Section */}
       <Grid container spacing={4} justifyContent="center">
         {/* Card 1 */}

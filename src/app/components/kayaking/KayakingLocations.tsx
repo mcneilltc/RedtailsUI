@@ -84,7 +84,7 @@ const KayakingLocations = () => {
                     size="small"
                     color="primary"
                     aria-label="Learn more about Lake Norman"
-                    href="/location1-details"
+                    href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/O3ge6"
                   >
                     Learn More
                   </Button>
@@ -126,7 +126,7 @@ const KayakingLocations = () => {
                     size="small"
                     color="primary"
                     aria-label="Learn more about Mountain Island Lake"
-                    href="/location2-details"
+                    href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/ey4vb"
                   >
                     Learn More
                   </Button>
@@ -168,7 +168,7 @@ const KayakingLocations = () => {
                     size="small"
                     color="primary"
                     aria-label="Learn more about Lake Wylie"
-                    href="/location3-details"
+                    href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/6aZkj"
                   >
                     Learn More
                   </Button>

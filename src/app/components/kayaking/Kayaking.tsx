@@ -25,12 +25,13 @@ const Kayaking = () => {
       alignItems: "center",
       padding: "2rem 0",
     }}>
-    <Container maxWidth="lg" style={{ paddingTop: '150px' }}>
-           <Link href="/" passHref>
+        <Link href="/" passHref>
           <Button variant="outlined" sx={{ mb: 2 }}>
             ← Back to Home
           </Button>
         </Link>
+    <Container maxWidth="lg" style={{ paddingTop: '150px' }}>
+           
       <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography variant="h1" component="h1" sx={{ fontWeight: "bold" }}>
           Kayaking Adventures
@@ -40,17 +41,17 @@ const Kayaking = () => {
       <Grid container spacing={4} justifyContent="center">
         {/* Card 1 */}
         <Grid item xs={12} sm={6} md={3}>
-          <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
-            <CardMedia>
+          <Card sx={{ height: "100%", display: "flex", flexDirection: "column", width: '100%' }}>
+            <CardMedia sx={{ height: 140 }}>
               <Image
                 src="/images/kayaks/autumn-kuney.jpg"
                 alt="Kayak Adventures"
                 width={400}
                 height={140}
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "cover", height: "100%", width: "100%" }}
               />
             </CardMedia>
-            <CardContent>
+            <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="h5" gutterBottom>
                 Guided Adventures
               </Typography>
@@ -66,17 +67,17 @@ const Kayaking = () => {
 
         {/* Card 2 */}
         <Grid item xs={12} sm={6} md={3}>
-          <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
-            <CardMedia>
+          <Card sx={{ height: "100%", display: "flex", flexDirection: "column", width: '100%' }}>
+            <CardMedia sx={{ height: 140 }}>
               <Image
                 src="/images/kayaks/kelsey-dody.jpg"
                 alt="Kayak Rentals"
                 width={400}
                 height={140}
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "cover", height: "100%", width: "100%" }}
               />
             </CardMedia>
-            <CardContent>
+            <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="h5" gutterBottom>
                 Kayak Rentals
               </Typography>
@@ -94,17 +95,17 @@ const Kayaking = () => {
 
         {/* Card 3 */}
         <Grid item xs={12} sm={6} md={3}>
-          <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
-            <CardMedia>
+          <Card sx={{ height: "100%", display: "flex", flexDirection: "column", width: '100%' }}>
+            <CardMedia sx={{ height: 140 }}>
               <Image
                 src="/images/scenes/sunshot.png"
                 alt="Sunset Kayaking"
                 width={400}
                 height={140}
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "cover", height: "100%", width: "100%" }}
               />
             </CardMedia>
-            <CardContent>
+            <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="h5" gutterBottom>
                 Sunset Kayaking
               </Typography>
@@ -120,17 +121,17 @@ const Kayaking = () => {
 
         {/* Card 4 */}
         <Grid item xs={12} sm={6} md={3}>
-          <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
-            <CardMedia>
+          <Card sx={{ height: "100%", display: "flex", flexDirection: "column", width: '100%' }}>
+            <CardMedia sx={{ height: 140 }}>
               <Image
                 src="/images/scenes/vincentiu-solomon.jpg"
                 alt="Night Kayaking"
                 width={400}
                 height={140}
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "cover", height: "100%", width: "100%" }}
               />
             </CardMedia>
-            <CardContent>
+            <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="h5" gutterBottom>
                 Night Paddles
               </Typography>

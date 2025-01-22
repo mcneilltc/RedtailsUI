@@ -10,13 +10,22 @@ import {
   Box,
 } from "@mui/material";
 import Image from "next/image"; // Optimize images
+import Link from 'next/link';
 
 const KayakingLocations = () => {
   return (
     <Container maxWidth="lg" style={{ paddingTop: '150px' }}>
+        <Box sx={{ mb: 4, textAlign: "center" }}>
+        <Link href="/kayaking" passHref>
+          <Button variant="outlined" color="primary">
+            ← Back to Kayaking
+          </Button>
+        </Link>
+      </Box>
+
       <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography variant="h1" component="h1" sx={{ fontWeight: "bold" }}>
-          Kayaking Locations
+          Choose your Destination
         </Typography>
       </Box>
 

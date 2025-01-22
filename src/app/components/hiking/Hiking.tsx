@@ -19,7 +19,11 @@ const Hiking = () => {
           minHeight: "60vh",
         }}
       >
-
+        <Link href="/" passHref>
+          <Button variant="outlined" sx={{ mb: 2 }}>
+            ← Back to Home
+          </Button>
+        </Link>
         <Typography
           variant="h3"
           sx={{

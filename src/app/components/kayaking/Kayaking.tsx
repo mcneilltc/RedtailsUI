@@ -14,15 +14,6 @@ import Image from "next/image"; // Optimize images
 import Link from 'next/link';
 
 const Kayaking = () => {
-  // const [isClient, setIsClient] = useState(false);
-  
-  //   useEffect(() => {
-  //     setIsClient(true);
-  //   }, []);
-  
-  //   if (!isClient) {
-  //     return null; // Render nothing on the server
-  //   }
   return (
     <Container maxWidth="lg">
        <Box
@@ -147,7 +138,7 @@ const Kayaking = () => {
             <CardMedia sx={{ height: 140 }}>
               <Image
                 src="/images/scenes/vincentiu-solomon.jpg"
-                alt="Night Kayaking"
+                alt="Evening Kayaking"
                 width={400}
                 height={140}
                 style={{ objectFit: "cover", height: "100%", width: "100%" }}
@@ -155,12 +146,12 @@ const Kayaking = () => {
             </CardMedia>
             <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="h5" gutterBottom>
-                Night Paddles
+                Evening Paddles
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 Enjoy a thrilling experience of kayaking at night.
               </Typography>
-              <Button size="small" color="primary" aria-label="Learn more about night paddles" href="/coming-soon">
+              <Button size="small" color="primary" aria-label="Learn more about evening paddles" href="/night-paddle">
                 Learn More
               </Button>
             </CardContent>

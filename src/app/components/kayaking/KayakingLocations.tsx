@@ -14,15 +14,6 @@ import Image from "next/image"; // Optimize images
 import Link from "next/link";
 
 const KayakingLocations = () => {
-  // const [isClient, setIsClient] = useState(false);
-
-  // useEffect(() => {
-  //   setIsClient(true);
-  // }, []);
-
-  // if (!isClient) {
-  //   return null; // Render nothing on the server
-  // }
   return (
     <Container maxWidth="lg">
       <Box
@@ -85,15 +76,15 @@ const KayakingLocations = () => {
                 </CardMedia>
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography variant="h5" gutterBottom>
-                    Lake Norman
+                    Mountain Island Lake at Neck Road
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Description of Lake Norman.
+                    Description of Neck Road.
                   </Typography>
                   <Button
                     size="small"
                     color="primary"
-                    aria-label="Learn more about Lake Norman"
+                    aria-label="Learn more about Neck Road"
                     href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/O3ge6"
                   >
                     Learn More
@@ -103,7 +94,7 @@ const KayakingLocations = () => {
             </Grid>
 
             {/* Location 2 */}
-            <Grid item xs={12} sm={6} md={4}>
+            {/* <Grid item xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   height: "100%",
@@ -127,25 +118,25 @@ const KayakingLocations = () => {
                 </CardMedia>
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography variant="h5" gutterBottom>
-                    Mountain Island Lake
+                    Mountain Island Lake at Riverbend
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Description of Mountain Island Lake.
+                    Description of Riverbend.
                   </Typography>
                   <Button
                     size="small"
                     color="primary"
-                    aria-label="Learn more about Mountain Island Lake"
+                    aria-label="Learn more about Riverbend"
                     href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/ey4vb"
                   >
                     Learn More
                   </Button>
                 </CardContent>
               </Card>
-            </Grid>
+            </Grid> */}
 
             {/* Location 3 */}
-            <Grid item xs={12} sm={6} md={4}>
+            {/* <Grid item xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   height: "100%",
@@ -184,7 +175,7 @@ const KayakingLocations = () => {
                   </Button>
                 </CardContent>
               </Card>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Container>
       </Box>

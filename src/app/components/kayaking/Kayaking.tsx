@@ -12,11 +12,13 @@ import {
 } from "@mui/material";
 import Image from "next/image"; // Optimize images
 import Link from 'next/link';
+import Banner from '../banner/Banner';
 
 const Kayaking = () => {
   return (
-    <Container maxWidth="lg">
-       <Box
+    <>
+    <Container>
+<Box
         sx={{
           display: 'flex',
           justifyContent: 'flex-start',
@@ -31,6 +33,25 @@ const Kayaking = () => {
           </Button>
         </Link>
       </Box>
+</Container>
+          <Banner title="Kayaking Adventures" imageUrl="/images/scenes/shoreshot.png" />   
+
+    <Container maxWidth="lg">
+       {/* <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'flex-start',
+          alignItems: 'flex-start',
+          width: '100%',
+          padding: '2rem 0',
+        }}
+      >
+        <Link href="/" passHref>
+          <Button variant="outlined" sx={{ mb: 2 }}>
+            ← Back to Home
+          </Button>
+        </Link>
+      </Box> */}
     <Box 
     className="background"
     sx={{
@@ -44,12 +65,12 @@ const Kayaking = () => {
       paddingLeft: '1rem',
     }}>
     <Container maxWidth="lg" style={{ paddingTop: '150px' }}>
-           
-      <Box sx={{ textAlign: "center", mb: 4 }}>
+    {/* <Banner title="Kayaking Adventures" imageUrl="/images/scenes/shoreshot.png" />     */}
+      {/* <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography variant="h1" component="h1" sx={{ fontWeight: "bold" }}>
           Kayaking Adventures
         </Typography>
-      </Box>
+      </Box> */}
 
       <Grid container spacing={4} justifyContent="center">
         {/* Card 1 */}
@@ -161,6 +182,7 @@ const Kayaking = () => {
     </Container>
     </Box>
     </Container>
+    </>
   );
 };
 

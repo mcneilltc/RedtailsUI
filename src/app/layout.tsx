@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "./components/navigation/Navigation";
 import { ThemeProvider } from "./components/ThemeProvider";
+import ContactUs from "./components/contactus/ContactUs";
+import { Container } from "@mui/material";
 
 const alkatra = localFont({
   src: "./fonts/Alkatra-Regular.ttf",
@@ -26,6 +28,7 @@ export default function RootLayout({
         <ThemeProvider>
             <Navigation />
             {children}
+            <ContactUs />
         </ThemeProvider>
       </body>
     </html>

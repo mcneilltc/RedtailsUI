@@ -12,8 +12,9 @@ import {
   IconButton,
   Grid,
 } from '@mui/material';
-import FacebookIcon from '@mui/icons-material/Facebook'; // Import Facebook icon
-import InstagramIcon from '@mui/icons-material/Instagram'; // Import Instagram icon
+// import FacebookIcon from '@mui/icons-material/Facebook'; // Import Facebook icon
+// import InstagramIcon from '@mui/icons-material/Instagram'; // Import Instagram icon
+import Banner from '../components/banner/Banner';
 
 const AboutUsPage = () => {
   const { darkMode, toggleTheme } = useTheme(); // Access theme toggle and state
@@ -21,7 +22,7 @@ const AboutUsPage = () => {
   return (
     <Box>
       {/* Hero Section */}
-      <Box
+      {/* <Box
         sx={{
           position: 'relative',
           height: { xs: '300px', md: '400px' }, // Adjust for mobile and desktop
@@ -67,8 +68,8 @@ const AboutUsPage = () => {
             About Red Tails Outdoors
           </Typography>
         </Container>
-      </Box>
-
+      </Box> */}
+<Banner title="About Red Tails Outdoors" imageUrl="/images/scenes/shoreshot.png" />
       {/* Mission Statement */}
       <Box sx={{ py: 8, backgroundColor: 'background.default', px: 2 }}>
         <Container>
@@ -125,7 +126,7 @@ const AboutUsPage = () => {
           >
             Our Team
           </Typography>
-          <Grid container spacing={4}>
+          <Grid container spacing={4} justifyContent="center">
             {/* Team Member 1 */}
             <Grid item xs={12} sm={6} md={4} textAlign="center">
               <Avatar
@@ -161,33 +162,12 @@ const AboutUsPage = () => {
                 brings energy and a splash of fun to the team.
               </Typography>
             </Grid>
-            {/* Team Member 3 */}
-            <Grid item xs={12} sm={6} md={4} textAlign="center">
-              <Avatar
-                alt="Michelle McCurdy"
-                src="/images/headshots/michelle.png"
-                sx={{ width: 200, height: 200, mx: 'auto', mb: 2 }}
-              />
-              <Typography variant="h5" fontWeight="bold" color="text.primary">
-              Michelle McCurdy
-              </Typography>
-              <Typography color="text.secondary">Guide</Typography>
-              <Typography variant="body2" color="text.secondary" mt={1}>
-                A nature-loving mom who’s always up for an adventure! From
-                hiking trails to outdoor games, Michelle has a knack for
-                making every activity a family affair. She’s dedicated to
-                providing memorable experiences and fostering a love for the
-                outdoors.
-              </Typography>
-            </Grid>
-
-            {/* Repeat for other team members */}
           </Grid>
         </Container>
       </Box>
 
       {/* Contact Section */}
-      <Box
+      {/* <Box
         sx={{
           py: 8,
           textAlign: 'center',
@@ -233,7 +213,7 @@ const AboutUsPage = () => {
             </IconButton>
           </Box>
         </Container>
-      </Box>
+      </Box> */}
     </Box>
   );
 };

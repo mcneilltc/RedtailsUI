@@ -31,6 +31,7 @@ export default function Home() {
         padding: "2rem 0",
       }}
     >
+      <main>
       {/* Title Section */}
       <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography
@@ -53,7 +54,7 @@ export default function Home() {
       </Box>
       <Box sx={{ textAlign: "center", mb: 4 }}>
       <Typography
-          variant="h6"
+          variant="h4"
           sx={{
             color: theme.palette.text.secondary,
             mt: 1,
@@ -193,7 +194,7 @@ export default function Home() {
                 <Typography variant="body2" color="text.secondary">
                   Join us for exciting events and activities.
                 </Typography>
-                <Button size="small" variant="outlined" color="primary" aria-label="Learn more about events" href="/coming-soon">
+                <Button size="small" variant="outlined" color="primary" aria-label="Learn more about our upcoming events" href="/coming-soon">
                 Learn More
               </Button>
               </CardContent>
@@ -202,6 +203,7 @@ export default function Home() {
           </Grid>
         </Grid>
       </Container>
+      </main>
     </Box>
   );
 }

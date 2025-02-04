@@ -31,7 +31,7 @@ const KayakingLocations = () => {
             }}
           >
             <Link href="/kayaking" passHref>
-              <Button variant="contained" color="primary" sx={{ mb: 2 }}>
+              <Button variant="contained" color="primary" sx={{ mb: 2 }} aria-label="Back to Kayaking">
                 ← Back to Kayaking
               </Button>
             </Link>
@@ -60,7 +60,7 @@ const KayakingLocations = () => {
         </Box> */}
       </Container>
       <Container maxWidth="lg">
-        
+        <main>
         <Box
           sx={{
             minHeight: "100vh",
@@ -113,7 +113,7 @@ const KayakingLocations = () => {
                       size="small"
                       color="primary"
                       variant="contained"
-                      aria-label="Learn more about Neck Road"
+                      aria-label="Make a Reservation for Mountain Island Lake at Neck Road"
                       href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/O3ge6"
                     >
                       Make a Reservation
@@ -208,6 +208,7 @@ const KayakingLocations = () => {
             </Grid>
           </Container>
         </Box>
+        </main>
       </Container>
     </>
   );

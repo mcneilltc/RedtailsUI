@@ -28,11 +28,12 @@ const KayakingLocations = () => {
       >
         {" "}
         <Link href="/kayaking" passHref>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" aria-label="Back to Kayaking">
             ← Back to Kayaking
           </Button>
         </Link>
       </Box>
+      <main>
       <Box
         sx={{
           minHeight: "100vh",
@@ -86,7 +87,7 @@ const KayakingLocations = () => {
                     size="small"
                     color="primary"
                     variant="contained"
-                    aria-label="Learn more about Riverbend"
+                    aria-label="Make a Reservations at Mountain Island Lake at Riverbend"
                     href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/vPr12"
                   >
                     Make a Reservation
@@ -98,6 +99,7 @@ const KayakingLocations = () => {
           </Grid>
         </Container>
       </Box>
+      </main>
     </Container>
   );
 };

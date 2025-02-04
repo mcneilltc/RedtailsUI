@@ -16,11 +16,12 @@ const ComingSoon = () => {
         }}
       >
         <Link href="/" passHref>
-          <Button variant="contained" sx={{ mb: 2 }}>
+          <Button variant="contained" sx={{ mb: 2 }} aria-label="Back to Home">
             ← Back to Home
           </Button>
         </Link>
       </Box>
+      <main>
       <Box
         sx={{
           display: 'flex',
@@ -39,11 +40,12 @@ const ComingSoon = () => {
         </Typography>
 
         {/* <Link href="/events" passHref>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" aria-label="See our upcoming  events">
             See Events
           </Button>
         </Link> */}
       </Box>
+      </main>
     </Container>
   );
 };

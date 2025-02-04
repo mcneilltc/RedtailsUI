@@ -23,13 +23,14 @@ const Hiking = () => {
         }}
       >
         <Link href="/" passHref>
-          <Button variant="contained" sx={{ mb: 2 }}>
+          <Button variant="contained" sx={{ mb: 2 }} aria-label="Back to Home">
             ← Back to Home
           </Button>
         </Link>
       </Box>
     </Box>
     <Container maxWidth="lg">
+      <main>
       <Box
         sx={{
           display: "flex",
@@ -77,11 +78,12 @@ const Hiking = () => {
                 </Typography>
         
         <Link href="/coming-soon" passHref>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" aria-label="See our Upcoming Hiking Events">
             See Events
           </Button>
         </Link>
       </Box>
+      </main>
       </Container>
     {/* </Container> */}
     </>

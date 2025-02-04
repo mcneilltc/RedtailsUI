@@ -33,20 +33,22 @@ const ContactUs = () => {
         <IconButton
           color="primary"
           component="a"
-
           href="https://www.facebook.com/people/Red-Tails-Outdoors/61570894457374/"
           target="_blank"
           rel="noopener noreferrer"
+          title='Visit our Facebook page'
+          aria-label='Visit our Facebook page'
         >
           <FacebookIcon />
         </IconButton>
         <IconButton
           color="primary"
           component="a"
-
           href="https://www.instagram.com/redtailsoutdoors/"
           target="_blank"
           rel="noopener noreferrer"
+          title='Visit our Instagram page'
+          aria-label='Visit our Instagram page'
         >
           <InstagramIcon />
         </IconButton>

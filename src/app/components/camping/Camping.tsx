@@ -16,11 +16,12 @@ const Camping = () => {
         }}
       >
         <Link href="/" passHref>
-          <Button variant="contained" sx={{ mb: 2 }}>
+          <Button variant="contained" sx={{ mb: 2 }} aria-label="Back to Home">
             ← Back to Home
           </Button>
         </Link>
       </Box>
+      <main>
       <Box
         sx={{
           display: "flex",
@@ -55,11 +56,12 @@ const Camping = () => {
           about our upcoming camping trips!
         </Typography>
         <Link href="/coming-soon" passHref>
-          <Button variant="contained" color="primary">
+          <Button variant="contained" color="primary" aria-label="See our upcoming camping events">
             See Events
           </Button>
         </Link>
       </Box>
+      </main>
     </Container>
   );
 };

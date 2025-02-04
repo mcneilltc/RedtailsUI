@@ -12,6 +12,7 @@ const Banner: React.FC<BannerProps> = ({ title, imageUrl }) => {
     <Box
       sx={{
         position: 'relative',
+        width: '100%',
         height: { xs: '300px', md: '400px' }, // Adjust for mobile and desktop
         backgroundColor: 'background.default',
       }}
@@ -50,6 +51,9 @@ const Banner: React.FC<BannerProps> = ({ title, imageUrl }) => {
             fontWeight: 'bold',
             color: 'primary.main',
             fontSize: { xs: '1.5rem', md: '2.5rem' }, // Responsive font size
+            textShadow: '2px 2px 4px rgba(7, 7, 7, 0.7)',
+            padding: '0.5rem 1rem', // Add padding
+            // borderRadius: '4px',
           }}
         >
           {title}

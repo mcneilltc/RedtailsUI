@@ -28,7 +28,7 @@ const KayakingLocations = () => {
       >
         {" "}
         <Link href="/kayaking" passHref>
-          <Button variant="outlined" color="primary">
+          <Button variant="contained" color="primary">
             ← Back to Kayaking
           </Button>
         </Link>
@@ -80,15 +80,16 @@ const KayakingLocations = () => {
                     Mountain Island Lake at Riverbend
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Description of Riverbend.
+                    Eddie Nichols Drive, Mount Holly, NC 28120
                   </Typography>
                   <Button
                     size="small"
                     color="primary"
+                    variant="contained"
                     aria-label="Learn more about Riverbend"
                     href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/vPr12"
                   >
-                    Learn More
+                    Make a Reservation
                   </Button>
                 </CardContent>
               </Card>

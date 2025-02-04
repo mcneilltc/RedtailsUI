@@ -16,7 +16,7 @@ const Camping = () => {
         }}
       >
         <Link href="/" passHref>
-          <Button variant="outlined" sx={{ mb: 2 }}>
+          <Button variant="contained" sx={{ mb: 2 }}>
             ← Back to Home
           </Button>
         </Link>
@@ -54,7 +54,7 @@ const Camping = () => {
           community and a deeper connection to nature. Stay tuned for details
           about our upcoming camping trips!
         </Typography>
-        <Link href="/events" passHref>
+        <Link href="/coming-soon" passHref>
           <Button variant="contained" color="primary">
             See Events
           </Button>

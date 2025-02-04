@@ -17,104 +17,113 @@ import Banner from "../banner/Banner";
 const KayakingLocations = () => {
   return (
     <>
-    <Container>
-<Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'flex-start',
-          alignItems: 'flex-start',
-          width: '100%',
-          padding: '2rem 0',
-        }}
-      >
-        <Link href="/kayaking" passHref>
-          <Button variant="outlined" color="primary" sx={{ mb: 2 }}>
-            ← Back to Kayaking
-          </Button>
-        </Link>
-      </Box>
-</Container>
-          <Banner title="Choose your Destination" imageUrl="/images/scenes/shoreshot.png" />  
-    <Container maxWidth="lg">
-      {/* <Box
-        sx={{
-          display: "flex",
-          justifyContent: "flex-start",
-          alignItems: "flex-start",
-          width: "100%",
-          padding: "1rem 0",
-          paddingLeft: "1rem",
-        }}
-      >
-        {" "}
-        <Link href="/kayaking" passHref>
-          <Button variant="outlined" color="primary">
-            ← Back to Kayaking
-          </Button>
-        </Link>
-      </Box> */}
-      <Box
-        sx={{
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          padding: "2rem 0",
-          paddingLeft: "1rem",
-        }}
-      >
-        <Container maxWidth="lg" >
-          {/* <Box sx={{ textAlign: "center", mb: 4 }}>
+     <Box sx={{ position: "relative" }}>
+          <Banner
+            title="Choose your Destination"
+            imageUrl="/images/kayaks/kayaking.png"
+          />
+          <Box
+            sx={{
+              position: "absolute",
+              top: "1rem", // Adjust as needed
+              left: "1rem", // Adjust as needed
+              zIndex: 30, // Ensure the button is above the banner
+            }}
+          >
+            <Link href="/kayaking" passHref>
+              <Button variant="contained" color="primary" sx={{ mb: 2 }}>
+                ← Back to Kayaking
+              </Button>
+            </Link>
+          </Box>
+        </Box>
+      <Container>
+        {/* <Box sx={{ position: "relative" }}>
+          <Banner
+            title="Choose your Destination"
+            imageUrl="/images/kayaks/kayaking.png"
+          />
+          <Box
+            sx={{
+              position: "absolute",
+              top: "1rem", // Adjust as needed
+              left: "1rem", // Adjust as needed
+              zIndex: 30, // Ensure the button is above the banner
+            }}
+          >
+            <Link href="/kayaking" passHref>
+              <Button variant="contained" color="primary" sx={{ mb: 2 }}>
+                ← Back to Kayaking
+              </Button>
+            </Link>
+          </Box>
+        </Box> */}
+      </Container>
+      <Container maxWidth="lg">
+        
+        <Box
+          sx={{
+            minHeight: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            padding: "2rem 0",
+            paddingLeft: "1rem",
+          }}
+        >
+          <Container maxWidth="lg">
+            {/* <Box sx={{ textAlign: "center", mb: 4 }}>
             <Typography variant="h1" component="h1" sx={{ fontWeight: "bold" }}>
               Choose your Destination
             </Typography>
           </Box> */}
 
-          <Grid container spacing={4} justifyContent="center">
-            {/* Location 1 */}
-            <Grid item xs={12} sm={6} md={4}>
-              <Card
-                sx={{
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  width: "100%",
-                }}
-              >
-                <CardMedia sx={{ height: 140 }}>
-                  <Image
-                    src="/images/scenes/lake-norman.png" // Replace with actual image path
-                    alt="Lake Norman"
-                    width={400}
-                    height={140}
-                    style={{
-                      objectFit: "cover",
-                      height: "100%",
-                      width: "100%",
-                    }}
-                  />
-                </CardMedia>
-                <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography variant="h5" gutterBottom>
-                    Mountain Island Lake at Neck Road
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Description of Neck Road.
-                  </Typography>
-                  <Button
-                    size="small"
-                    color="primary"
-                    aria-label="Learn more about Neck Road"
-                    href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/O3ge6"
-                  >
-                    Learn More
-                  </Button>
-                </CardContent>
-              </Card>
-            </Grid>
+            <Grid container spacing={4} justifyContent="center">
+              {/* Location 1 */}
+              <Grid item xs={12} sm={6} md={4}>
+                <Card
+                  sx={{
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "100%",
+                  }}
+                >
+                  <CardMedia sx={{ height: 140 }}>
+                    <Image
+                      src="/images/scenes/lake-norman.png" // Replace with actual image path
+                      alt="Lake Norman"
+                      width={400}
+                      height={140}
+                      style={{
+                        objectFit: "cover",
+                        height: "100%",
+                        width: "100%",
+                      }}
+                    />
+                  </CardMedia>
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography variant="h5" gutterBottom>
+                      Mountain Island Lake at Neck Road
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      5898 Neck Road, Huntersville, NC 28078
+                    </Typography>
+                    <Button
+                      size="small"
+                      color="primary"
+                      variant="contained"
+                      aria-label="Learn more about Neck Road"
+                      href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/O3ge6"
+                    >
+                      Make a Reservation
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Grid>
 
-            {/* Location 2 */}
-            {/* <Grid item xs={12} sm={6} md={4}>
+              {/* Location 2 */}
+              {/* <Grid item xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   height: "100%",
@@ -155,8 +164,8 @@ const KayakingLocations = () => {
               </Card>
             </Grid> */}
 
-            {/* Location 3 */}
-            {/* <Grid item xs={12} sm={6} md={4}>
+              {/* Location 3 */}
+              {/* <Grid item xs={12} sm={6} md={4}>
               <Card
                 sx={{
                   height: "100%",
@@ -196,10 +205,10 @@ const KayakingLocations = () => {
                 </CardContent>
               </Card>
             </Grid> */}
-          </Grid>
-        </Container>
-      </Box>
-    </Container>
+            </Grid>
+          </Container>
+        </Box>
+      </Container>
     </>
   );
 };

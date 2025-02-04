@@ -2,25 +2,34 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Button, Container, Typography } from '@mui/material';
 import Link from 'next/link';
+import Banner from '../banner/Banner';
 
 const Hiking = () => {
   return (
-    <Container>
+    <>
+    {/* <Container> */}
+    <Box sx={{ position: 'relative' }}>
+      <Banner
+        title="Hiking Adventures"
+        imageUrl="/images/hiking/hiking.png"
+      />
+    
           <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'flex-start',
-          alignItems: 'flex-start',
-          width: '100%',
-          padding: '1rem 0',
+         sx={{
+          position: 'absolute',
+          top: '1rem', // Adjust as needed
+          left: '1rem', // Adjust as needed
+          zIndex: 30, // Ensure the button is above the banner
         }}
       >
         <Link href="/" passHref>
-          <Button variant="outlined" sx={{ mb: 2 }}>
+          <Button variant="contained" sx={{ mb: 2 }}>
             ← Back to Home
           </Button>
         </Link>
       </Box>
+    </Box>
+    <Container maxWidth="lg">
       <Box
         sx={{
           display: "flex",
@@ -30,11 +39,7 @@ const Hiking = () => {
           minHeight: "60vh",
         }}
       >
-        {/* <Link href="/" passHref>
-          <Button variant="outlined" sx={{ mb: 2 }}>
-            ← Back to Home
-          </Button>
-        </Link> */}
+        
         <Typography
           variant="h3"
           sx={{
@@ -47,20 +52,39 @@ const Hiking = () => {
           Hiking
         </Typography>
         <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-          Explore the wonders of the outdoors with our guided hiking
-          experiences. Our knowledgeable guides are familiar with the area's
-          trails and dedicated to ensuring your safety and enjoyment. Whether
-          you’re seeking a peaceful nature walk or an adventurous trek, our
-          hiking events are designed to connect you with the beauty of the
-          natural world.{" "}
-        </Typography>
-        <Link href="/events" passHref>
+                  At Red Tails Outdoors, we create tailored experiences that blend
+                  outdoor adventure with education and skill-building. Our special
+                  events include:
+                </Typography>
+                <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
+                  Outdoor Education Workshops: Develop essential skills like
+                  fire-building, navigation, and Leave No Trace practices.
+                </Typography>
+                <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
+                  Scouting Adventures: Designed specifically for Scouts working to
+                  complete rank requirements or earn merit badges, particularly those
+                  related to paddle sports. We provide the necessary gear, including
+                  kayaks, paddleboards, and life jackets, along with expert guidance to
+                  help Scouts achieve their goals in a safe and supportive environment.
+                </Typography>
+                <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
+                  Private Group Rentals: Customize a day on the water with private kayak
+                  or paddleboard rentals, perfect for team-building or family outings.
+                </Typography>
+                <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
+                  Whether you’re a Scout troop, a nature enthusiast, or a group of
+                  friends, our special events offer something for everyone.
+                </Typography>
+        
+        <Link href="/coming-soon" passHref>
           <Button variant="contained" color="primary">
             See Events
           </Button>
         </Link>
       </Box>
-    </Container>
+      </Container>
+    {/* </Container> */}
+    </>
   );
 };
 

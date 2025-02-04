@@ -16,7 +16,7 @@ const ComingSoon = () => {
         }}
       >
         <Link href="/" passHref>
-          <Button variant="outlined" sx={{ mb: 2 }}>
+          <Button variant="contained" sx={{ mb: 2 }}>
             ← Back to Home
           </Button>
         </Link>
@@ -38,11 +38,11 @@ const ComingSoon = () => {
           Stay tuned for updates on our upcoming adventures and events.
         </Typography>
 
-        <Link href="/events" passHref>
+        {/* <Link href="/events" passHref>
           <Button variant="contained" color="primary">
             See Events
           </Button>
-        </Link>
+        </Link> */}
       </Box>
     </Container>
   );

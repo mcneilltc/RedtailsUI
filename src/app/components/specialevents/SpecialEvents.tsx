@@ -16,7 +16,7 @@ const SpecialEvents = () => {
         }}
       >
         <Link href="/" passHref>
-          <Button variant="outlined" sx={{ mb: 2 }}>
+          <Button variant="contained" sx={{ mb: 2 }}>
             ← Back to Home
           </Button>
         </Link>
@@ -40,31 +40,15 @@ const SpecialEvents = () => {
             fontSize: { xs: "1.75rem", md: "2.5rem" }, // Responsive font size
           }}
         >
-          Hiking
+          Special Events
         </Typography>
         <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-          At Red Tails Outdoors, we create tailored experiences that blend
-          outdoor adventure with education and skill-building. Our special
-          events include:
-        </Typography>
-        <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-          Outdoor Education Workshops: Develop essential skills like
-          fire-building, navigation, and Leave No Trace practices.
-        </Typography>
-        <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-          Scouting Adventures: Designed specifically for Scouts working to
-          complete rank requirements or earn merit badges, particularly those
-          related to paddle sports. We provide the necessary gear, including
-          kayaks, paddleboards, and life jackets, along with expert guidance to
-          help Scouts achieve their goals in a safe and supportive environment.
-        </Typography>
-        <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-          Private Group Rentals: Customize a day on the water with private kayak
-          or paddleboard rentals, perfect for team-building or family outings.
-        </Typography>
-        <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-          Whether you’re a Scout troop, a nature enthusiast, or a group of
-          friends, our special events offer something for everyone.
+          Explore the wonders of the outdoors with our guided hiking
+          experiences. Our knowledgeable guides are familiar with the area's
+          trails and dedicated to ensuring your safety and enjoyment. Whether
+          you’re seeking a peaceful nature walk or an adventurous trek, our
+          hiking events are designed to connect you with the beauty of the
+          natural world.{" "}
         </Typography>
         <Link href="/events" passHref>
           <Button variant="contained" color="primary">

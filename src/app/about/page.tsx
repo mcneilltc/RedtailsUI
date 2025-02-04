@@ -69,7 +69,7 @@ const AboutUsPage = () => {
           </Typography>
         </Container>
       </Box> */}
-<Banner title="About Red Tails Outdoors" imageUrl="/images/scenes/shoreshot.png" />
+<Banner title="About Red Tails Outdoors" imageUrl="/images/scenes/river.png" />
       {/* Mission Statement */}
       <Box sx={{ py: 8, backgroundColor: 'background.default', px: 2 }}>
         <Container>

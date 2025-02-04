@@ -2,18 +2,23 @@
 import React from 'react';
 import { Box, Button, Container, Typography } from '@mui/material';
 import Link from 'next/link';
+import Banner from '../banner/Banner';
 
 const Camping = () => {
   return (
-    <Container>
-          <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'flex-start',
-          alignItems: 'flex-start',
-          width: '100%',
-          padding: '1rem 0',
-        }}
+    <>
+     <Box sx={{ position: "relative" }}>
+      <Banner
+          title="Camping"
+          imageUrl="/images/camping/camp2.png"
+        />
+        <Box
+          sx={{
+            position: "absolute",
+            top: "1rem", // Adjust as needed
+            left: "1rem", // Adjust as needed
+            zIndex: 30, // Ensure the button is above the banner
+          }}
       >
         <Link href="/" passHref>
           <Button variant="contained" sx={{ mb: 2 }} aria-label="Back to Home">
@@ -21,22 +26,21 @@ const Camping = () => {
           </Button>
         </Link>
       </Box>
+      </Box>
+    <Container> 
       <main>
       <Box
-        sx={{
+         sx={{
+          minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
-          minHeight: "60vh",
+          padding: "2rem 0",
+          paddingLeft: "1rem",
         }}
       >
-         {/* <Link href="/" passHref>
-          <Button variant="outlined" sx={{ mb: 2 }}>
-            ← Back to Home
-          </Button>
-        </Link> */}
-        <Typography
+        
+        {/* <Typography
           variant="h3"
           sx={{
             fontWeight: "bold",
@@ -46,23 +50,27 @@ const Camping = () => {
           }}
         >
           Camping
-        </Typography>
-        <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-          Discover the joy of camping with Red Tails Outdoors! Our future group
+        </Typography> */}
+        <Typography variant="h5" sx={{ fontWeight: "bold", color: "text.secondary", mb: 3 }}>
+          Discover the joy of camping with Red Tails Outdoors!</Typography>
+          <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
+           Our future group
           camping opportunities will connect you with some of the most beautiful
           locations in the state. Whether you’re a seasoned camper or new to
           sleeping under the stars, we aim to create experiences that foster
-          community and a deeper connection to nature. Stay tuned for details
-          about our upcoming camping trips!
+          community and a deeper connection to nature. </Typography>
+          <Typography variant="h5" sx={{ fontWeight: "bold", color: "text.secondary", mb: 3 }}>
+          Stay tuned for details about our upcoming camping trips!
         </Typography>
-        <Link href="/coming-soon" passHref>
+        {/* <Link href="/coming-soon" passHref>
           <Button variant="contained" color="primary" aria-label="See our upcoming camping events">
             See Events
           </Button>
-        </Link>
+        </Link> */}
       </Box>
       </main>
     </Container>
+    </>
   );
 };
 

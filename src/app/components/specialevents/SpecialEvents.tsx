@@ -16,11 +16,12 @@ const SpecialEvents = () => {
         }}
       >
         <Link href="/" passHref>
-          <Button variant="contained" sx={{ mb: 2 }}>
+          <Button variant="contained" sx={{ mb: 2 }} aria-label="Back to Kayaking">
             ← Back to Home
           </Button>
         </Link>
       </Box>
+      <main>
       <Box
         sx={{
           display: "flex",
@@ -56,6 +57,7 @@ const SpecialEvents = () => {
           </Button>
         </Link>
       </Box>
+      </main>
     </Container>
   );
 };

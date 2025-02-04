@@ -41,7 +41,7 @@ const Kayaking = () => {
       {/* </Container> */}
 
       <Container maxWidth="lg">
-        
+        <main>
         <Box
           className="background"
           sx={{
@@ -98,7 +98,7 @@ const Kayaking = () => {
                     <Button
                       size="small"
                       color="primary"
-                      aria-label="Learn more about kayak tour"
+                      aria-label="Learn more about guided kayak tours"
                       href="/coming-soon"
                       variant="outlined"
                     >
@@ -241,6 +241,7 @@ const Kayaking = () => {
             </Grid>
           </Container>
         </Box>
+        </main>
       </Container>
     </>
   );

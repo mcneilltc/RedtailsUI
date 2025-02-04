@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import "./styles.css";
 import logo from "../../../../public/images/logos/logo2.png";
@@ -22,11 +22,19 @@ import PeekScript from "../PeekScript";
 export default function Navigation() {
   const { toggleTheme, darkMode } = useTheme();
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   // Toggle the drawer for mobile navigation
   const toggleDrawer = (open: boolean) => () => {
     setDrawerOpen(open);
   };
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // Render nothing on the server
+  }
 
   return (
     <>
@@ -69,13 +77,13 @@ export default function Navigation() {
             <Button color="inherit" href="/about">
               About Us
             </Button>
-            <Button
+            {/* <Button
               variant="contained"
               color="primary"
               href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/2XyOP"
             >
               Make a Reservation
-            </Button>
+            </Button> */}
           </Box>
 
           {/* Theme toggle button */}

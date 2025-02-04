@@ -13,6 +13,7 @@ import {
 import { useTheme } from "@mui/material/styles";
 import Image from "next/image"; // Optimize images
 import "./styles.css";
+import Link from "next/link";
 
 export default function Home() {
   const theme = useTheme();
@@ -42,6 +43,8 @@ export default function Home() {
           sx={{
             color: theme.palette.text.primary,
             fontWeight: "bold",
+            textShadow: '2px 2px 4px rgba(7, 7, 7, 0.7)',
+            padding: '0.5rem 1rem'
           }}
         >
           Welcome to Red Tails Outdoors
@@ -54,6 +57,8 @@ export default function Home() {
           sx={{
             color: theme.palette.text.secondary,
             mt: 1,
+            textShadow: '2px 2px 4px rgba(7, 7, 7, 0.7)',
+            padding: '0.5rem 1rem'
           }}
         >
           Explore nature with us—kayaking, hiking, camping, and more!
@@ -88,7 +93,8 @@ export default function Home() {
                 <Typography variant="body2" color="text.secondary">
                   Experience the thrill of kayaking in beautiful waters.
                 </Typography>
-                <Button size="small" color="primary" aria-label="Learn more about kayaking" href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/2XyOP">
+                {/* <Button size="small" color="primary" aria-label="Learn more about kayaking" href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/2XyOP"> */}
+                <Button size="small" variant="outlined" color="primary" aria-label="Learn more about kayaking" href="kayaking">
                 Learn More
               </Button>
               </CardContent>
@@ -121,7 +127,7 @@ export default function Home() {
                 <Typography variant="body2" color="text.secondary">
                   Discover breathtaking trails and scenic views.
                 </Typography>
-                <Button size="small" color="primary" aria-label="Learn more about hiking" href="/coming-soon">
+                <Button size="small" variant="outlined" color="primary" aria-label="Learn more about hiking" href="/hiking-events">
                 Learn More
               </Button>
               </CardContent>
@@ -154,7 +160,7 @@ export default function Home() {
                 <Typography variant="body2" color="text.secondary">
                   Enjoy the great outdoors with our camping experiences.
                 </Typography>
-                <Button size="small" color="primary" aria-label="Learn more about camping" href="/coming-soon">
+                <Button size="small" variant="outlined" color="primary" aria-label="Learn more about camping" href="/camping-events">
                 Learn More
               </Button>
               </CardContent>
@@ -187,7 +193,7 @@ export default function Home() {
                 <Typography variant="body2" color="text.secondary">
                   Join us for exciting events and activities.
                 </Typography>
-                <Button size="small" color="primary" aria-label="Learn more about events" href="/coming-soon">
+                <Button size="small" variant="outlined" color="primary" aria-label="Learn more about events" href="/coming-soon">
                 Learn More
               </Button>
               </CardContent>

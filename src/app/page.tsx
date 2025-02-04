@@ -91,7 +91,7 @@ export default function Home() {
                 <Typography variant="h5" gutterBottom>
                   Kayaking
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                   Experience the thrill of kayaking in beautiful waters.
                 </Typography>
                 {/* <Button size="small" color="primary" aria-label="Learn more about kayaking" href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/2XyOP"> */}
@@ -125,7 +125,7 @@ export default function Home() {
                 <Typography variant="h5" gutterBottom>
                   Hiking
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                   Discover breathtaking trails and scenic views.
                 </Typography>
                 <Button size="small" variant="outlined" color="primary" aria-label="Learn more about hiking" href="/hiking-events">
@@ -158,7 +158,7 @@ export default function Home() {
                 <Typography variant="h5" gutterBottom>
                   Camping
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                   Enjoy the great outdoors with our camping experiences.
                 </Typography>
                 <Button size="small" variant="outlined" color="primary" aria-label="Learn more about camping" href="/camping-events">
@@ -169,7 +169,7 @@ export default function Home() {
             </Card>
           </Grid>
 
-          {/* Events Card */}
+          {/* Special Events Card */}
           <Grid item xs={12} sm={6} md={3}>
             <Card
               sx={{
@@ -189,12 +189,12 @@ export default function Home() {
               </CardMedia>
               <CardContent>
                 <Typography variant="h5" gutterBottom>
-                  Events
+                  Special Events
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                   Join us for exciting events and activities.
                 </Typography>
-                <Button size="small" variant="outlined" color="primary" aria-label="Learn more about our upcoming events" href="/coming-soon">
+                <Button size="small" variant="outlined" color="primary" aria-label="Learn more about our upcoming special events" href="/special-events">
                 Learn More
               </Button>
               </CardContent>

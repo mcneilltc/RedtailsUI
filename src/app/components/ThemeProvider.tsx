@@ -1,21 +1,33 @@
 'use client';
 
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { createTheme, ThemeProvider as MUIThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 
-const ThemeContext = createContext<{
-    toggleTheme: () => void;
-    darkMode: boolean;
-}>({
+
+const ThemeContext = createContext({
     toggleTheme: () => {},
-    darkMode: false
+    darkMode: false,
 });
 
 export const useTheme = () => useContext(ThemeContext);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const [darkMode, setDarkMode] = useState(false);
+
+    useEffect(() => {
+        // Read the theme preference from local storage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            setDarkMode(savedTheme === 'dark');
+        }
+    }, []);
+
+    useEffect(() => {
+        // Save the theme preference to local storage
+        localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+    }, [darkMode]);
 
     const theme = createTheme({
         palette: {
@@ -47,8 +59,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     return (
         <ThemeContext.Provider value={{ toggleTheme, darkMode }}>
             <MUIThemeProvider theme={theme}>
-            <CssBaseline />
-                {children}
+            <EmotionThemeProvider theme={theme}>
+                    <CssBaseline />
+                    {children}
+                </EmotionThemeProvider>
             </MUIThemeProvider>
         </ThemeContext.Provider>
     );

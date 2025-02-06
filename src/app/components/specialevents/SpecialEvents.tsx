@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Button, Container, Typography, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import Link from "next/link";
 import Banner from "../banner/Banner";
+import CircleIcon from '@mui/icons-material/Circle';
 
 const SpecialEvents = () => {
   return (
@@ -56,13 +57,10 @@ const SpecialEvents = () => {
             Special Events
           </Typography> */}
           <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-            At Red Tails Outdoors, we create tailored experiences that blend
-            outdoor adventure with education and skill-building. Our special
-            events include:
+          Elevate your private gathering with an unforgettable outdoor experience. Our special events service provides kayak and stand-up paddle board rentals, perfect for family reunions, corporate outings, or special celebrations. 
           </Typography>
           <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-            Outdoor Education Workshops: Develop essential skills like
-            fire-building, navigation, and Leave No Trace practices.
+          We supply all necessary equipment and basic instruction to ensure a seamless and enjoyable adventure on the water. Whether your guests are seeking relaxation or exploration, our team is dedicated to creating a safe and memorable experience.
           </Typography>
           <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
             Scouting Adventures: Designed specifically for Scouts working to
@@ -72,15 +70,45 @@ const SpecialEvents = () => {
             to help Scouts achieve their goals in a safe and supportive
             environment.
           </Typography>
-          <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-            Private Group Rentals: Customize a day on the water with private
-            kayak or paddleboard rentals, perfect for team-building or family
-            outings.
-          </Typography>
-          <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-            Whether you’re a Scout troop, a nature enthusiast, or a group of
-            friends, our special events offer something for everyone.
-          </Typography>
+          <Box>
+          <Typography variant="h5" sx={{ mb: 2, }}>
+          Fees:
+        </Typography>
+        <List>
+          <ListItem>
+            <ListItemIcon>
+              <CircleIcon fontSize="inherit" sx={{ color: "text.secondary" }}/>
+            </ListItemIcon>
+            <Typography variant="body1" sx={{ color: "text.secondary" }}>
+              Base Package: $250 for a 3-hour session, including up to 6 single kayaks or stand-up paddle boards (mix and match).
+            </Typography>
+          </ListItem>
+          <ListItem>
+          <ListItemIcon>
+              <CircleIcon fontSize="inherit" sx={{ color: "text.secondary" }}/>
+            </ListItemIcon>
+            <Typography variant="body1" sx={{ color: "text.secondary" }}>
+              Additional Kayaks or Paddle boards: $30 per kayak or paddle board.
+            </Typography>
+          </ListItem>
+          <ListItem>
+          <ListItemIcon>
+              <CircleIcon fontSize="inherit" sx={{ color: "text.secondary" }}/>
+            </ListItemIcon>
+            <Typography variant="body1" sx={{ color: "text.secondary" }}>
+              Extended Time: $75 per additional hour.
+            </Typography>
+          </ListItem>
+          <ListItem>
+          <ListItemIcon>
+              <CircleIcon fontSize="inherit" sx={{ color: "text.secondary" }}/>
+            </ListItemIcon>
+            <Typography variant="body1" sx={{ color: "text.secondary" }}>
+              A deposit is required at the time of booking to secure your event. For more details or to customize your experience, please contact us directly.
+            </Typography>
+          </ListItem>
+        </List>
+        </Box>
           {/* <Link href="/events" passHref>
             <Button variant="contained" color="primary">
               See Events

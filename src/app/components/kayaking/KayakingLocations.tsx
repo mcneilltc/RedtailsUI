@@ -14,6 +14,7 @@ import Image from "next/image"; // Optimize images
 import Link from "next/link";
 import Banner from "../banner/Banner";
 
+
 const KayakingLocations = () => {
   return (
     <>

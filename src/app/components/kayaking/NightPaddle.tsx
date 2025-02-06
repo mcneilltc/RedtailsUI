@@ -118,6 +118,13 @@ const NightPaddles = () => {
                         <Typography variant="body2" color="text.secondary">
                         Amenities:
                         </Typography>
+                         <Box
+                                          sx={{
+                                            alignItems: "center",
+                                            display: "flex",
+                                            flexDirection: "column",
+                                          }}
+                                        >
                         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}> 
                         - Restrooms: There is no definitive information confirming the presence of
                         restrooms at this location. Plan accordingly before your
@@ -130,6 +137,7 @@ const NightPaddles = () => {
                         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                         - Launch Area: The ramp accommodates various watercraft, including kayaks. 
                         </Typography>
+                        </Box>
                         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                         Enjoy your time on the water, and please adhere to all
                         local guidelines and regulations to ensure a safe and

@@ -1,17 +1,14 @@
 "use client";
-import React from 'react';
-import { Box, Button, Container, Typography } from '@mui/material';
-import Link from 'next/link';
-import Banner from '../banner/Banner';
+import React from "react";
+import { Box, Button, Container, Typography } from "@mui/material";
+import Link from "next/link";
+import Banner from "../banner/Banner";
 
 const Camping = () => {
   return (
     <>
-     <Box sx={{ position: "relative" }}>
-      <Banner
-          title="Camping"
-          imageUrl="/images/camping/camp2.png"
-        />
+      <Box sx={{ position: "relative" }}>
+        <Banner title="Camping" imageUrl="/images/camping/camp2.png" />
         <Box
           sx={{
             position: "absolute",
@@ -19,28 +16,31 @@ const Camping = () => {
             left: "1rem", // Adjust as needed
             zIndex: 30, // Ensure the button is above the banner
           }}
-      >
-        <Link href="/" passHref>
-          <Button variant="contained" sx={{ mb: 2 }} aria-label="Back to Home">
-            ← Back to Home
-          </Button>
-        </Link>
+        >
+          <Link href="/" passHref>
+            <Button
+              variant="contained"
+              sx={{ mb: 2 }}
+              aria-label="Back to Home"
+            >
+              ← Back to Home
+            </Button>
+          </Link>
+        </Box>
       </Box>
-      </Box>
-    <Container> 
-      <main>
-      <Box
-         sx={{
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          padding: "2rem 0",
-          paddingLeft: "1rem",
-        }}
-      >
-        
-        {/* <Typography
+      <Container>
+        <main>
+          <Box
+            sx={{
+              minHeight: "100vh",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              padding: "2rem 0",
+              paddingLeft: "1rem",
+            }}
+          >
+            {/* <Typography
           variant="h3"
           sx={{
             fontWeight: "bold",
@@ -51,25 +51,37 @@ const Camping = () => {
         >
           Camping
         </Typography> */}
-        <Typography variant="h5" sx={{ fontWeight: "bold", color: "text.secondary", mb: 3 }}>
-          Discover the joy of camping with Red Tails Outdoors!</Typography>
-          <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-           Our future group
-          camping opportunities will connect you with some of the most beautiful
-          locations in the state. Whether you’re a seasoned camper or new to
-          sleeping under the stars, we aim to create experiences that foster
-          community and a deeper connection to nature. </Typography>
-          <Typography variant="h5" sx={{ fontWeight: "bold", color: "text.secondary", mb: 3 }}>
-          Stay tuned for details about our upcoming camping trips!
-        </Typography>
-        {/* <Link href="/coming-soon" passHref>
+            <Typography
+              variant="h5"
+              sx={{ fontWeight: "bold", color: "text.secondary", mb: 3 }}
+            >
+              Discover the joy of camping with Red Tails Outdoors!
+            </Typography>
+            <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
+              Escape the noise and reconnect with the wild. Our camping events
+              are designed to provide a true outdoor experience, allowing you to
+              immerse yourself in nature at your own pace. With minimal
+              structured activities, you’ll have the freedom to explore the
+              trails, watch the sunrise over the treetops, or simply unwind by
+              the fire under a sky full of stars. Whether you're seeking
+              solitude, quality time with loved ones, or a deeper connection
+              with the land, our camping opportunities create the perfect
+              setting for an authentic outdoor retreat.{" "}
+            </Typography>
+            <Typography
+              variant="h5"
+              sx={{ fontWeight: "bold", color: "text.secondary", mb: 3 }}
+            >
+              Stay tuned for details about our upcoming camping trips!
+            </Typography>
+            {/* <Link href="/coming-soon" passHref>
           <Button variant="contained" color="primary" aria-label="See our upcoming camping events">
             See Events
           </Button>
         </Link> */}
-      </Box>
-      </main>
-    </Container>
+          </Box>
+        </main>
+      </Container>
     </>
   );
 };

@@ -129,12 +129,12 @@ export default function Navigation() {
             <ListItem component="a" href="/about">
               <ListItemText primary="About Us" />
             </ListItem>
-            <ListItem
+            {/* <ListItem
               component="a"
               href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/2XyOP"
             >
               <ListItemText primary="Make a Reservation" />
-            </ListItem>
+            </ListItem> */}
           </List>
         </Box>
       </Drawer>

@@ -4,6 +4,7 @@ import { Box, Button, Container, Typography, List, ListItem, ListItemIcon, ListI
 import Link from "next/link";
 import Banner from "../banner/Banner";
 import CircleIcon from '@mui/icons-material/Circle';
+import ContactUsForm from "../contactus/ContactUsForm";
 
 const SpecialEvents = () => {
   return (
@@ -109,11 +110,7 @@ const SpecialEvents = () => {
           </ListItem>
         </List>
         </Box>
-          {/* <Link href="/events" passHref>
-            <Button variant="contained" color="primary">
-              See Events
-            </Button>
-          </Link> */}
+          <ContactUsForm/>
         </Box>
       </main>
     </Container>

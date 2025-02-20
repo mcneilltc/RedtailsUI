@@ -3,6 +3,8 @@ import React from 'react';
 import { Container, Typography, Box, IconButton } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import Link from 'next/link';
 
 const ContactUs = () => {
   return (
@@ -30,7 +32,18 @@ const ContactUs = () => {
         Have questions about our services? We&apos;d love to hear from you.
       </Typography>
       <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
-        <IconButton
+        <Link href="mailto:redtailsoutdoors@gmail.com" passHref>
+              <IconButton 
+              aria-label="Email us"
+              color="primary"
+              title="Email us"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+                <MailOutlineIcon />
+              </IconButton>
+            </Link>
+            <IconButton
           color="primary"
           component="a"
           href="https://www.facebook.com/people/Red-Tails-Outdoors/61570894457374/"
@@ -52,6 +65,7 @@ const ContactUs = () => {
         >
           <InstagramIcon />
         </IconButton>
+        
       </Box>
     </Container>
   </Box>

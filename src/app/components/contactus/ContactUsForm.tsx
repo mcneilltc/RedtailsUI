@@ -1,11 +1,24 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Box, Button, Container, TextField, Typography, Alert } from '@mui/material';
 import emailjs from '@emailjs/browser';
 import EmailjsScript from '../EmailjsScript';
 
-const ContactUsForm = () => {
-  const [formData, setFormData] = useState({
+interface FormData {
+  name: string;
+  phone: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+interface AlertState {
+  type: 'success' | 'error';
+  message: string;
+}
+
+const ContactUsForm: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     phone: '',
     email: '',
@@ -13,7 +26,8 @@ const ContactUsForm = () => {
     message: ''
   });
 
-  const [alert, setAlert] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+  const [alert, setAlert] = useState<AlertState | null>(null);
+  const formRef = useRef<HTMLFormElement | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -23,37 +37,38 @@ const ContactUsForm = () => {
     });
   };
 
+  const resetForm = () => {  // Separate reset function
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
+    formRef.current?.reset(); // Optional chaining: safe to call reset()
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const templateParams = {
-      name: formData.name,
-      phone: formData.phone,
-      email: formData.email,
-      subject: formData.subject,
-      message: formData.message,
+    if (process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID && process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID && formRef.current) {
+        emailjs.sendForm(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+          formRef.current
+        ).then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          setAlert({ type: 'success', message: 'Message sent successfully!' });
+          resetForm(); // Call the reset function
+        }).catch((err) => {
+          console.error('FAILED...', err);
+          setAlert({ type: 'error', message: 'Failed to send message. Please try again later.' });
+        });
+      } else {
+        console.error("EmailJS config or form ref is missing!");
+        setAlert({ type: 'error', message: 'An error occurred. Please try again later.' });
+      }
     };
-
-    emailjs.send(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // Use environment variable
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, // Use environment variable
-      templateParams, // Pass the form data
-    ).then((response) => {
-      console.log('SUCCESS!', response.status, response.text);
-      setAlert({ type: 'success', message: 'Message sent successfully!' });
-      e.target.reset(); // Reset the form
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-    }).catch((err) => {
-      console.error('FAILED...', err);
-      setAlert({ type: 'error', message: 'Failed to send message. Please try again later.' });
-    });
-  };
 
   return (
     <Box
@@ -81,8 +96,8 @@ const ContactUsForm = () => {
             {alert.message}
           </Alert>
         )}
-        <form id="contact-form" noValidate autoComplete="off" onSubmit={handleSubmit}>
-          <TextField
+        <form id="contact-form" ref={formRef} noValidate autoComplete="off" onSubmit={handleSubmit}>
+        <TextField
             fullWidth
             label="Name"
             name="name"
@@ -94,22 +109,22 @@ const ContactUsForm = () => {
           />
           <TextField
             fullWidth
-            label="Phone"
-            name="phone"
-            placeholder="Enter your phone number"
-            margin="normal"
-            variant="outlined"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-          <TextField
-            fullWidth
             label="Email"
             name="email"
             placeholder="Enter your email"
             margin="normal"
             variant="outlined"
             value={formData.email}
+            onChange={handleChange}
+          />
+          <TextField
+            fullWidth
+            label="Phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            margin="normal"
+            variant="outlined"
+            value={formData.phone}
             onChange={handleChange}
           />
           <TextField

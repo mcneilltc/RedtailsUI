@@ -66,6 +66,9 @@ const ContactUs = () => {
             <InstagramIcon />
           </IconButton>
         </Box>
+        <Typography variant="body2" color="text.secondary" sx={{ mt: 4 }}>
+          ©2024 by Red Tails Outdoors, LLC.
+        </Typography>
       </Container>
     </Box>
   );

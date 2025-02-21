@@ -104,6 +104,7 @@ export default function Navigation() {
             edge="end"
             sx={{ display: { xs: "flex", md: "none" } }}
             onClick={toggleDrawer(true)}
+            aria-label="Menu"
           >
             <MenuIcon />
           </IconButton>

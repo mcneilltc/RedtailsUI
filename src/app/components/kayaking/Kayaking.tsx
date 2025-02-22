@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import {
   Container,
-  Grid,
   Card,
   CardMedia,
   CardContent,
@@ -13,6 +12,7 @@ import {
   ListItem,
   ListItemIcon,
 } from "@mui/material";
+import Grid from '@mui/material/Grid2'; 
 import Image from "next/image"; // Optimize images
 import Link from "next/link";
 import Banner from "../banner/Banner";
@@ -154,7 +154,7 @@ const Kayaking = () => {
 
               <Grid container spacing={4} justifyContent="center">
                 {/* Guided Adventures Card 1 */}
-                {/* <Grid item xs={12} sm={6} md={3}>
+                {/* <Grid size={{ xs: 12, sm:6, md: 3 }}>
                 <Card
                   sx={{
                     height: "100%",
@@ -198,7 +198,7 @@ const Kayaking = () => {
               </Grid> */}
 
                 {/* Kayak Rentals Card 2 */}
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid size={{ xs: 12, sm:6, md: 3 }}>
                   <Card
                     sx={{
                       height: "100%",
@@ -247,7 +247,7 @@ const Kayaking = () => {
                 </Grid>
 
                 {/* Sunset Kayaking Card 3 */}
-                {/* <Grid item xs={12} sm={6} md={3}>
+                {/* <Grid size={{ xs: 12, sm:6, md: 3 }}>
                 <Card
                   sx={{
                     height: "100%",
@@ -291,7 +291,7 @@ const Kayaking = () => {
               </Grid> */}
 
                 {/* Evening Kayaking Card 4 */}
-                <Grid item xs={12} sm={6} md={3}>
+                <Grid size={{ xs: 12, sm:6, md: 3 }}>
                   <Card
                     sx={{
                       height: "100%",

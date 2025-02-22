@@ -2,7 +2,6 @@
 
 import {
   Container,
-  Grid,
   Card,
   CardMedia,
   CardContent,
@@ -10,6 +9,7 @@ import {
   Button,
   Box,
 } from "@mui/material";
+import Grid from '@mui/material/Grid2'; 
 import { useTheme } from "@mui/material/styles";
 import Image from "next/image"; // Optimize images
 import "./styles.css";
@@ -65,7 +65,7 @@ export default function Home() {
         <Container maxWidth="lg" style={{ paddingTop: '150px' }}>
           <Grid container spacing={4} justifyContent="center">
             {/* Kayaking Card */}
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid size={{ xs: 12, sm:6, md: 3 }}>
               <Card
                 sx={{
                   height: "100%",
@@ -98,7 +98,7 @@ export default function Home() {
             </Grid>
 
             {/* Hiking Card */}
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid size={{ xs: 12, sm:6, md: 3 }}>
               <Card
                 sx={{
                   height: "100%",
@@ -131,7 +131,7 @@ export default function Home() {
             </Grid>
 
             {/* Camping Card */}
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid size={{ xs: 12, sm:6, md: 3 }}>
               <Card
                 sx={{
                   height: "100%",
@@ -164,7 +164,7 @@ export default function Home() {
             </Grid>
 
             {/* Special Events Card */}
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid size={{ xs: 12, sm:6, md: 3 }}>
               <Card
                 sx={{
                   height: "100%",

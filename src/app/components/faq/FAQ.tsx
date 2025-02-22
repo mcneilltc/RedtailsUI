@@ -15,6 +15,7 @@ const FAQ = () => {
             justifyContent: 'center',
             minHeight: 'auto',
             marginBottom: '2rem',
+            marginTop: '8rem'
           }}
         >
           <Typography variant="h4" sx={{ mb: 2, mt: 3 }}>

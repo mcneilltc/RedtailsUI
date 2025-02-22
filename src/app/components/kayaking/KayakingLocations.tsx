@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import {
   Container,
-  Grid,
   Card,
   CardMedia,
   CardContent,
@@ -10,6 +9,7 @@ import {
   Button,
   Box,
 } from "@mui/material";
+import Grid from '@mui/material/Grid2'; 
 import Image from "next/image"; // Optimize images
 import Link from "next/link";
 import Banner from "../banner/Banner";
@@ -64,7 +64,7 @@ const KayakingLocations = () => {
 
               <Grid container spacing={4} justifyContent="center">
                 {/* Location 1 */}
-                <Grid item xs={12} sm={6} md={4}>
+                <Grid size={{ xs: 12, sm:6, md: 4 }}>
                   <Card
                     sx={{
                       height: "100%",
@@ -140,7 +140,7 @@ const KayakingLocations = () => {
                 </Grid>
 
                 {/* Location 2 */}
-                {/* <Grid item xs={12} sm={6} md={4}>
+                {/* <Grid size={{ xs: 12, sm:6, md: 4 }}>
               <Card
                 sx={{
                   height: "100%",
@@ -182,7 +182,7 @@ const KayakingLocations = () => {
             </Grid> */}
 
                 {/* Location 3 */}
-                {/* <Grid item xs={12} sm={6} md={4}>
+                {/* <Grid size={{ xs: 12, sm:6, md: 4 }}>
               <Card
                 sx={{
                   height: "100%",

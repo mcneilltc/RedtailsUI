@@ -205,6 +205,7 @@ const Kayaking = () => {
                       display: "flex",
                       flexDirection: "column",
                       width: "100%",
+                      borderRadius: "16px"
                     }}
                   >
                     <CardMedia sx={{ height: 140 }}>
@@ -297,6 +298,7 @@ const Kayaking = () => {
                       display: "flex",
                       flexDirection: "column",
                       width: "100%",
+                      borderRadius: "16px"
                     }}
                   >
                     <CardMedia sx={{ height: 140 }}>

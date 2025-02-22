@@ -91,6 +91,7 @@ const NightPaddles = () => {
                       display: "flex",
                       flexDirection: "column",
                       width: "100%",
+                      borderRadius: "16px"
                     }}
                   >
                     <CardMedia sx={{ height: 140 }}>

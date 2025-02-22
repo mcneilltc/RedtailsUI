@@ -69,6 +69,9 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Alkatra', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-alkatra-regular);
 }
 
 /* Add these styles to customize the calendar appearance */
@@ -88,4 +91,18 @@ body {
 
 .react-calendar__tile--now {
   background: #484849;
+}
+
+.navigation-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white; /* Adjust as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}
+
+.content-wrapper {
+  margin-top: 80px; /* Adjust based on the height of your navigation bar */
 }

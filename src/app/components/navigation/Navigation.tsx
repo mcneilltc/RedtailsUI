@@ -52,7 +52,7 @@ export default function Navigation() {
               <img
                 src={logo.src}
                 alt="Red Tails Outdoors Logo"
-                style={{ maxHeight: "60px" }}
+                style={{ maxHeight: "150px" }}
               />
             </div>
           </Link>

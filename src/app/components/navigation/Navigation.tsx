@@ -52,7 +52,7 @@ export default function Navigation() {
               <img
                 src={logo.src}
                 alt="Red Tails Outdoors Logo"
-                style={{ maxHeight: "60px" }}
+                style={{ maxHeight: "150px" }}
               />
             </div>
           </Link>
@@ -77,6 +77,9 @@ export default function Navigation() {
             <Button color="inherit" href="/about">
               About Us
             </Button>
+            <Button color="inherit" href="/faq">
+              FAQ
+              </Button>
             <Button color="inherit" href="/contactus-page">
               Contact Us
             </Button>
@@ -132,6 +135,9 @@ export default function Navigation() {
             <ListItem component="a" href="/about">
               <ListItemText primary="About Us" />
             </ListItem>
+            <ListItem component="a" href="/faq">
+              <ListItemText primary="FAQ" />
+               </ListItem>
             <ListItem component="a" href="/contactus-page">
               <ListItemText primary="Contact Us" />
             </ListItem>

@@ -24,13 +24,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <ThemeProvider>
-            <Navigation />
-            {children}
-            <ContactUs />
-        </ThemeProvider>
-      </body>
-    </html>
+    <body>
+      <ThemeProvider>
+        <div className="navigation-wrapper">
+          <Navigation />
+        </div>
+        <main className="content-wrapper">
+          {children}
+          <ContactUs />
+        </main>
+      </ThemeProvider>
+    </body>
+  </html>
   );
 }

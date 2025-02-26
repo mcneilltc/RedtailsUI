@@ -15,6 +15,7 @@ const Banner: React.FC<BannerProps> = ({ title, imageUrl }) => {
         width: '100%',
         height: { xs: '300px', md: '400px' }, // Adjust for mobile and desktop
         backgroundColor: 'background.default',
+        marginTop: '120px',
       }}
     >
       <Box

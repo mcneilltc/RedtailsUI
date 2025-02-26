@@ -79,6 +79,9 @@ export default function Navigation() {
             </Button>
             <Button color="inherit" href="/faq">
               FAQ
+              </Button>
+            <Button color="inherit" href="/contactus-page">
+              Contact Us
             </Button>
             {/* <Button
               variant="contained"
@@ -134,6 +137,9 @@ export default function Navigation() {
             </ListItem>
             <ListItem component="a" href="/faq">
               <ListItemText primary="FAQ" />
+               </ListItem>
+            <ListItem component="a" href="/contactus-page">
+              <ListItemText primary="Contact Us" />
             </ListItem>
             {/* <ListItem
               component="a"

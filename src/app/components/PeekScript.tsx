@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 export default function PeekScript() {
   useEffect(() => {
     const config = {
-      key: 'c76e9d6c-44fd-4cda-821d-fc3611e33423'
+      key: process.env.NEXT_PUBLIC_PEEK_KEY
     };
 
     (window as any)._peekConfig = config;

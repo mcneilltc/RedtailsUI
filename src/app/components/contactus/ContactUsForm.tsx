@@ -27,13 +27,42 @@ const ContactUsForm: React.FC = () => {
   });
 
   const [alert, setAlert] = useState<AlertState | null>(null);
+  const [errors, setErrors] = useState<FormData>({
+    name: '',
+    phone: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
   const formRef = useRef<HTMLFormElement | null>(null);
+
+  const validateName = (name: string) => /^[a-zA-Z\s]+$/.test(name);
+  const validateEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const validatePhone = (phone: string) =>  /^\d{3}-\d{3}-\d{4}$/.test(phone);
+  const validateText = (text: string) => /^[a-zA-Z0-9\s]+$/.test(text);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value
+    });
+
+    // Validate input
+    let error = '';
+    if (name === 'name' && !validateName(value)) {
+      error = 'Name can only contain letters and spaces.';
+    } else if (name === 'email' && !validateEmail(value)) {
+      error = 'Invalid email format.';
+    } else if (name === 'phone' && !validatePhone(value)) {
+      error = 'Phone number must be in the format xxx-xxx-xxxx.';
+    } else if ((name === 'subject' || name === 'message') && !validateText(value)) {
+      error = 'No special characters allowed.';
+    }
+
+    setErrors({
+      ...errors,
+      [name]: error
     });
   };
 
@@ -45,11 +74,24 @@ const ContactUsForm: React.FC = () => {
       subject: '',
       message: ''
     });
+    setErrors({
+      name: '',
+      phone: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
     formRef.current?.reset(); // Optional chaining: safe to call reset()
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // Check for errors before submitting
+    if (Object.values(errors).some(error => error !== '') || Object.values(formData).some(value => value === '')) {
+      setAlert({ type: 'error', message: 'Please fix the errors in the form.' });
+      return;
+    }
 
     if (process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID && process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID && formRef.current) {
         emailjs.sendForm(
@@ -97,7 +139,7 @@ const ContactUsForm: React.FC = () => {
           </Alert>
         )}
         <form id="contact-form" ref={formRef} noValidate autoComplete="off" onSubmit={handleSubmit}>
-        <TextField
+          <TextField
             fullWidth
             label="Name"
             name="name"
@@ -106,6 +148,8 @@ const ContactUsForm: React.FC = () => {
             variant="outlined"
             value={formData.name}
             onChange={handleChange}
+            error={!!errors.name}
+            helperText={errors.name}
           />
           <TextField
             fullWidth
@@ -116,6 +160,8 @@ const ContactUsForm: React.FC = () => {
             variant="outlined"
             value={formData.email}
             onChange={handleChange}
+            error={!!errors.email}
+            helperText={errors.email}
           />
           <TextField
             fullWidth
@@ -126,6 +172,8 @@ const ContactUsForm: React.FC = () => {
             variant="outlined"
             value={formData.phone}
             onChange={handleChange}
+            error={!!errors.phone}
+            helperText={errors.phone}
           />
           <TextField
             fullWidth
@@ -136,6 +184,8 @@ const ContactUsForm: React.FC = () => {
             variant="outlined"
             value={formData.subject}
             onChange={handleChange}
+            error={!!errors.subject}
+            helperText={errors.subject}
           />
           <TextField
             fullWidth
@@ -148,6 +198,8 @@ const ContactUsForm: React.FC = () => {
             rows={4}
             value={formData.message}
             onChange={handleChange}
+            error={!!errors.message}
+            helperText={errors.message}
           />
           <Button
             variant="contained"

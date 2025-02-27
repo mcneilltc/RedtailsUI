@@ -39,7 +39,7 @@ const ContactUsForm: React.FC = () => {
   const validateName = (name: string) => /^[a-zA-Z\s]+$/.test(name);
   const validateEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const validatePhone = (phone: string) =>  /^\d{3}-\d{3}-\d{4}$/.test(phone);
-  const validateText = (text: string) => /^[a-zA-Z0-9\s]+$/.test(text);
+  // const validateText = (text: string) => /^[a-zA-Z0-9\s]+$/.test(text);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -56,9 +56,7 @@ const ContactUsForm: React.FC = () => {
       error = 'Invalid email format.';
     } else if (name === 'phone' && !validatePhone(value)) {
       error = 'Phone number must be in the format xxx-xxx-xxxx.';
-    } else if ((name === 'subject' || name === 'message') && !validateText(value)) {
-      error = 'No special characters allowed.';
-    }
+    } 
 
     setErrors({
       ...errors,

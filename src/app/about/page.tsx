@@ -86,7 +86,7 @@ const AboutUsPage = () => {
               <Grid size={{ xs: 12, sm:6, md: 4 }} textAlign="center">
                 <Avatar
                   alt="Aaron McNeill"
-                  src="/images/headshots/aaron1.png"
+                  src="/images/logos/logo2.png"
                   sx={{ width: 200, height: 200, mx: "auto", mb: 2 }}
                 />
                 <Typography variant="h5" fontWeight="bold" color="text.primary">
@@ -104,7 +104,7 @@ const AboutUsPage = () => {
               <Grid size={{ xs: 12, sm:6, md: 4 }} textAlign="center">
                 <Avatar
                   alt="Devin McNeill"
-                  src="/images/headshots/devin2.png"
+                  src="/images/logos/logo2.png"
                   sx={{ width: 200, height: 200, mx: "auto", mb: 2 }}
                 />
                 <Typography variant="h5" fontWeight="bold" color="text.primary">

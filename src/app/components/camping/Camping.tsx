@@ -68,12 +68,30 @@ const Camping = () => {
               with the land, our camping opportunities create the perfect
               setting for an authentic outdoor retreat.{" "}
             </Typography>
-            <Typography
-              variant="h5"
-              sx={{ fontWeight: "bold", color: "text.secondary", mb: 3 }}
+            <Box
+  component="img"
+  src="/images/camping/Hanging Rock Camping.jpeg"
+  alt="Hanging Rock Camping"
+  sx={{
+    width: { xs: "100%", sm: "75%", md: "50%" }, // Adjust width based on screen size
+    height: "auto", // Maintain aspect ratio
+    border: "1px solid #ccc",
+    borderRadius: "8px",
+    objectFit: "contain", // Ensure the image fits within the box
+    mb: 3,
+  }}
+/>
+            <Button
+              variant="contained"
+              color="primary"
+              href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/Jkvkg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Book your camping trip"
             >
-              Stay tuned for details about our upcoming camping trips!
-            </Typography>
+              Book Now
+            </Button>
+          {/* </Box> */}
             {/* <Link href="/coming-soon" passHref>
           <Button variant="contained" color="primary" aria-label="See our upcoming camping events">
             See Events

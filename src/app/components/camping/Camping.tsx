@@ -84,7 +84,7 @@ const Camping = () => {
             <Button
               variant="contained"
               color="primary"
-              href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/Jkvkg"
+              href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/EM9P2"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Book your camping trip"

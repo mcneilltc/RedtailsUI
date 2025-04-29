@@ -3,6 +3,7 @@ import React from "react";
 import { Box, Button, Container, Typography } from "@mui/material";
 import Link from "next/link";
 import Banner from "../banner/Banner";
+import Grid from '@mui/material/Grid2'; 
 
 const Camping = () => {
   return (
@@ -68,35 +69,85 @@ const Camping = () => {
               with the land, our camping opportunities create the perfect
               setting for an authentic outdoor retreat.{" "}
             </Typography>
-            <Box
-  component="img"
-  src="/images/camping/Hanging Rock Camping.jpeg"
-  alt="Hanging Rock Camping"
-  sx={{
-    width: { xs: "100%", sm: "75%", md: "50%" }, // Adjust width based on screen size
-    height: "auto", // Maintain aspect ratio
-    border: "1px solid #ccc",
-    borderRadius: "8px",
-    objectFit: "contain", // Ensure the image fits within the box
-    mb: 3,
-  }}
-/>
-            <Button
-              variant="contained"
-              color="primary"
-              href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/EM9P2"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Book your camping trip"
+                       <Box
+              sx={{
+                display: "flex",
+                flexWrap: "wrap", // Allow wrapping to the next row
+                justifyContent: "center", // Center flyers horizontally
+                gap: 4, // Add spacing between flyers
+                mt: 4, // Add margin at the top
+              }}
             >
-              Book Now
-            </Button>
-          {/* </Box> */}
-            {/* <Link href="/coming-soon" passHref>
-          <Button variant="contained" color="primary" aria-label="See our upcoming camping events">
-            See Events
-          </Button>
-        </Link> */}
+              {/* Flyer 1 */}
+              <Box
+                sx={{
+                  width: { xs: "100%", sm: "65%", md: "40%" }, // Responsive width
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center",
+                }}
+              >
+                <Box
+                  component="img"
+                  src="/images/camping/Hanging Rock Camping.jpeg"
+                  alt="Hanging Rock Camping"
+                  sx={{
+                    width: "100%",
+                    height: "auto", // Maintain aspect ratio
+                    border: "1px solid #ccc",
+                    borderRadius: "8px",
+                    objectFit: "contain", // Ensure the image fits within the box
+                    mb: 2,
+                  }}
+                />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/EM9P2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Book your camping trip at Hanging Rock"
+                >
+                  Book Now
+                </Button>
+              </Box>
+            
+              {/* Flyer 2 */}
+              <Box
+                sx={{
+                  width: { xs: "100%", sm: "65%", md: "40%" }, // Responsive width
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center",
+                }}
+              >
+                <Box
+                  component="img"
+                  src="/images/camping/June 21-22.jpeg"
+                  alt="Stone Mountain State Park"
+                  sx={{
+                    width: "100%",
+                    height: "auto", // Maintain aspect ratio
+                    border: "1px solid #ccc",
+                    borderRadius: "8px",
+                    objectFit: "contain", // Ensure the image fits within the box
+                    mb: 2,
+                  }}
+                />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/Ag1jB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Book your camping trip at Stone Mountain State Park"
+                >
+                  Book Now
+                </Button>
+              </Box>
+            </Box>
           </Box>
         </main>
       </Container>

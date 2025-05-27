@@ -1,5 +1,5 @@
 "use client";
-import React  from "react";
+import React from "react";
 import {
   Container,
   Card,
@@ -72,9 +72,12 @@ const Kayaking = () => {
                   variant="body1"
                   sx={{ color: "text.secondary", mb: 3 }}
                 >
-                  Discover the beauty of nature on your terms with our self-guided kayak rentals. Whether you're seeking solitude or a shared experience, our flexible rental options let you explore at your own rhythm.
+                  Discover the beauty of nature on your terms with our
+                  self-guided kayak rentals. Whether you're seeking solitude or
+                  a shared experience, our flexible rental options let you
+                  explore at your own rhythm.
                 </Typography>
-                
+
                 <Box
                   sx={{
                     alignItems: "center",
@@ -95,7 +98,8 @@ const Kayaking = () => {
                         variant="body1"
                         sx={{ color: "text.secondary" }}
                       >
-                        Explore various scenic locations with the freedom to paddle your own route.
+                        Explore various scenic locations with the freedom to
+                        paddle your own route.
                       </Typography>
                     </ListItem>
                     <ListItem>
@@ -135,14 +139,25 @@ const Kayaking = () => {
                   sx={{ color: "text.secondary", mb: 3 }}
                 >
                   Featured Location: Neck Road Boat Ramp – Mountain Island Lake
-Launch from this easy-access ramp and enjoy calm waters, lush views, and the chance to see local wildlife. It’s a peaceful start to your adventure, especially during weekday mornings or quieter hours.
+                  Launch from this easy-access ramp and enjoy calm waters, lush
+                  views, and the chance to see local wildlife. It’s a peaceful
+                  start to your adventure, especially during weekday mornings or
+                  quieter hours.
                 </Typography>
+
                 <Typography
                   variant="h5"
                   sx={{ color: "text.secondary", mb: 3 }}
                 >
-                  Book your kayak rental today and explore the beauty of
-                  Mountain Island Lake!{" "}
+                  Looking for Something Special?{" "}
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ color: "text.secondary", mb: 3 }}
+                >
+                  Join one of our special kayaking events — including night
+                  paddles, early morning paddles, and group outings — designed
+                  for those who want a unique guided experience on the water.
                 </Typography>
               </Box>
 
@@ -239,28 +254,6 @@ Launch from this easy-access ramp and enjoy calm waters, lush views, and the cha
                     </CardContent>
                   </Card>
                 </Grid>
-                {/* <Box
-                sx={{
-                    alignItems: "center",
-                    mb: 3,
-                    display: "flex",
-                    flexDirection: "column",
-                  }}>
-                  <Typography
-                    variant="h5"
-                    sx={{ color: "text.secondary", mb: 3 }}
-                  >
-                    Looking for something special? 
-                  </Typography>
-                  <Typography
-                        variant="body1"
-                        sx={{ color: "text.secondary" }}
-                      >
-                        Join one of our special
-                    kayaking events designed for those who want a
-                    unique guided experience on the water{" "}
-                      </Typography>
-                </Box> */}
 
                 {/* Kayaking Events Card 5*/}
                 <Grid size={{ xs: 12, sm: 6, md: 3 }}>

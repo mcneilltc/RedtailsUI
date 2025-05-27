@@ -3,7 +3,7 @@ import React from "react";
 import { Box, Button, Container, Typography } from "@mui/material";
 import Link from "next/link";
 import Banner from "../banner/Banner";
-import Grid from '@mui/material/Grid2'; 
+// import Grid from '@mui/material/Grid2'; 
 
 const Camping = () => {
   return (

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React  from "react";
 import {
   Container,
   Card,
@@ -12,7 +12,7 @@ import {
   ListItem,
   ListItemIcon,
 } from "@mui/material";
-import Grid from '@mui/material/Grid2'; 
+import Grid from "@mui/material/Grid2";
 import Image from "next/image"; // Optimize images
 import Link from "next/link";
 import Banner from "../banner/Banner";
@@ -72,10 +72,9 @@ const Kayaking = () => {
                   variant="body1"
                   sx={{ color: "text.secondary", mb: 3 }}
                 >
-                  Explore various scenic locations with our self-guided kayaking
-                  tours. Enjoy the freedom to paddle at your own speed while we
-                  provide the equipment and maps.
+                  Discover the beauty of nature on your terms with our self-guided kayak rentals. Whether you're seeking solitude or a shared experience, our flexible rental options let you explore at your own rhythm.
                 </Typography>
+                
                 <Box
                   sx={{
                     alignItems: "center",
@@ -96,8 +95,7 @@ const Kayaking = () => {
                         variant="body1"
                         sx={{ color: "text.secondary" }}
                       >
-                        Flexible & Independent: Choose your route and explore
-                        different water spots.
+                        Explore various scenic locations with the freedom to paddle your own route.
                       </Typography>
                     </ListItem>
                     <ListItem>
@@ -136,12 +134,8 @@ const Kayaking = () => {
                   variant="body1"
                   sx={{ color: "text.secondary", mb: 3 }}
                 >
-                  The Neck Road Boat Ramp offers easy access to Mountain Island
-                  Lake, making it an ideal location to launch your rented kayak.
-                  Enjoy peaceful waters, scenic views, and opportunities to spot
-                  local wildlife as you paddle. While it's a popular launch
-                  point, especially on weekends, the ramp provides a calm
-                  starting point for your adventure.
+                  Featured Location: Neck Road Boat Ramp – Mountain Island Lake
+Launch from this easy-access ramp and enjoy calm waters, lush views, and the chance to see local wildlife. It’s a peaceful start to your adventure, especially during weekday mornings or quieter hours.
                 </Typography>
                 <Typography
                   variant="h5"
@@ -198,14 +192,14 @@ const Kayaking = () => {
               </Grid> */}
 
                 {/* Kayak Rentals Card 2 */}
-                <Grid size={{ xs: 12, sm:6, md: 3 }}>
+                <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                   <Card
                     sx={{
                       height: "100%",
                       display: "flex",
                       flexDirection: "column",
                       width: "100%",
-                      borderRadius: "16px"
+                      borderRadius: "16px",
                     }}
                   >
                     <CardMedia sx={{ height: 140 }}>
@@ -233,6 +227,77 @@ const Kayaking = () => {
                         Rent a kayak and explore at your own pace.
                       </Typography>
                       <Link href="/locations" passHref>
+                        <Button
+                          size="small"
+                          color="primary"
+                          aria-label="Learn more about kayak rentals"
+                          variant="outlined"
+                        >
+                          Learn More
+                        </Button>
+                      </Link>
+                    </CardContent>
+                  </Card>
+                </Grid>
+                {/* <Box
+                sx={{
+                    alignItems: "center",
+                    mb: 3,
+                    display: "flex",
+                    flexDirection: "column",
+                  }}>
+                  <Typography
+                    variant="h5"
+                    sx={{ color: "text.secondary", mb: 3 }}
+                  >
+                    Looking for something special? 
+                  </Typography>
+                  <Typography
+                        variant="body1"
+                        sx={{ color: "text.secondary" }}
+                      >
+                        Join one of our special
+                    kayaking events designed for those who want a
+                    unique guided experience on the water{" "}
+                      </Typography>
+                </Box> */}
+
+                {/* Kayaking Events Card 5*/}
+                <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                  <Card
+                    sx={{
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      width: "100%",
+                      borderRadius: "16px",
+                    }}
+                  >
+                    <CardMedia sx={{ height: 140 }}>
+                      <Image
+                        src="/images/kayaks/IMG_4950.jpeg"
+                        alt="Kayaking Events"
+                        width={400}
+                        height={140}
+                        style={{
+                          objectFit: "cover",
+                          height: "100%",
+                          width: "100%",
+                        }}
+                      />
+                    </CardMedia>
+                    <CardContent sx={{ flexGrow: 1 }}>
+                      <Typography variant="h5" gutterBottom>
+                        Kayaking Events
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        sx={{ mb: 2 }}
+                      >
+                        Where every paddle has a story!
+                      </Typography>
+                      <Link href="/kayaking-events" passHref>
                         <Button
                           size="small"
                           color="primary"

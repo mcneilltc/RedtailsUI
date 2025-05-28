@@ -93,7 +93,7 @@ const KayakingEvents = () => {
               >
                 <Box
                   component="img"
-                  src="/images/kayaks/July 14th.jpeg"
+                  src="/images/kayaks/June14thevent.jpeg"
                   alt="Reflection on Freedom Paddle"
                   sx={{
                     width: "100%",

@@ -67,8 +67,19 @@ const ContactUs = () => {
           </IconButton>
         </Box>
         <Typography variant="body2" color="text.secondary" sx={{ mt: 4 }}>
-          ©2024 by Red Tails Outdoors, LLC.
+          ©2025 by Red Tails Outdoors, LLC.
         </Typography>
+        <Box sx={{ mt: 2, display: "flex", justifyContent: "center" }}>
+          <Box
+            component="img"
+            src="/images/logos/leave-no-trace-logo.png"
+            alt="Leave No Trace Logo"
+            sx={{
+              height: 48,
+              width: "auto",
+            }}
+          />
+        </Box>
       </Container>
     </Box>
   );

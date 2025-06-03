@@ -195,6 +195,39 @@ export default function Home() {
                 </CardContent>
               </Card>
             </Grid>
+
+            {/* Summer Camp Card */}
+            <Grid size={{ xs: 12, sm:6, md: 3 }}>
+              <Card
+                sx={{
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  borderRadius: "16px", // Rounded corners
+                }}
+              >
+                <CardMedia>
+                  <Image
+                    src="/images/scenes/vincentiu-solomon.jpg"
+                    alt="Summer Camp"
+                    width={400}
+                    height={140}
+                    style={{ objectFit: "cover" }}
+                  />
+                </CardMedia>
+                <CardContent>
+                  <Typography variant="h5" gutterBottom>
+                    Summer Camp
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                    Join us for exciting events and activities.
+                  </Typography>
+                  <Button size="small" variant="outlined" color="primary" aria-label="Learn more about our upcoming special events" href="/summercamps">
+                    Learn More
+                  </Button>
+                </CardContent>
+              </Card>
+            </Grid>
           </Grid>
         </Container>
       </main>

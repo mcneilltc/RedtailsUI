@@ -79,7 +79,7 @@ const Camping = () => {
               }}
             >
               {/* Flyer 1 */}
-              <Box
+              {/* <Box
                 sx={{
                   width: { xs: "100%", sm: "65%", md: "40%" }, // Responsive width
                   display: "flex",
@@ -111,7 +111,7 @@ const Camping = () => {
                 >
                   Book Now
                 </Button>
-              </Box>
+              </Box> */}
             
               {/* Flyer 2 */}
               <Box

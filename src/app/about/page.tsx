@@ -120,7 +120,7 @@ const AboutUsPage = () => {
               </Grid> */}
 
               {/* Team Member 3 */}
-              <Grid size={{ xs: 12, sm: 6, md: 4 }} textAlign="center">
+              {/* <Grid size={{ xs: 12, sm: 6, md: 4 }} textAlign="center">
                 <Avatar
                   alt="Al "
                   src="/images/headshots/Al.png"
@@ -136,7 +136,7 @@ const AboutUsPage = () => {
                   he’s not on the water, you can find him behind the grill,
                   bringing people together with good food and great stories.
                 </Typography>
-              </Grid>
+              </Grid> */}
             </Grid>
           </Container>
         </Box>

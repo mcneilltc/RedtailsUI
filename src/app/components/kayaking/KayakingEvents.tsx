@@ -81,8 +81,8 @@ const KayakingEvents = () => {
                 mt: 4, // Add margin at the top
               }}
             >
-              {/* Flyer 1 */}
-              <Box
+              {/* Flyer 1: Freedom Paddle  */}
+              {/* <Box
                 sx={{
                   width: { xs: "100%", sm: "65%", md: "40%" }, // Responsive width
                   display: "flex",
@@ -108,6 +108,41 @@ const KayakingEvents = () => {
                   variant="contained"
                   color="primary"
                   href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/mzE4D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Book your paddle"
+                >
+                  Register Now
+                </Button>
+              </Box> */}
+
+{/* Flyer 2: Kayak and Camping  */}
+              <Box
+                sx={{
+                  width: { xs: "100%", sm: "65%", md: "40%" }, // Responsive width
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center",
+                }}
+              >
+                <Box
+                  component="img"
+                  src="/images/kayaks/Kayaking & Camping Adventure.jpeg"
+                  alt="Lake James State Park Kayaking & Camping"
+                  sx={{
+                    width: "100%",
+                    height: "auto", // Maintain aspect ratio
+                    border: "1px solid #ccc",
+                    borderRadius: "8px",
+                    objectFit: "contain", // Ensure the image fits within the box
+                    mb: 2,
+                  }}
+                />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/3bEg1"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Book your paddle"

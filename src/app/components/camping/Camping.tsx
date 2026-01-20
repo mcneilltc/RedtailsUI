@@ -125,8 +125,8 @@ const Camping = () => {
               >
                 <Box
                   component="img"
-                  src="/images/camping/June 21-22.jpeg"
-                  alt="Stone Mountain State Park"
+                  src="/images/camping/LakeJames-jun13-14.png"
+                  alt="Lake James State Park"
                   sx={{
                     width: "100%",
                     height: "auto", // Maintain aspect ratio
@@ -139,7 +139,7 @@ const Camping = () => {
                 <Button
                   variant="contained"
                   color="primary"
-                  href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/Ag1jB"
+                  href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/qjy6J"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Book your camping trip at Stone Mountain State Park"

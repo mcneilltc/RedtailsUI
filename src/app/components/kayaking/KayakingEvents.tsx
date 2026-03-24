@@ -128,8 +128,9 @@ const KayakingEvents = () => {
               >
                 <Box
                   component="img"
-                  src="/images/kayaks/Kayaking & Camping Adventure.jpeg"
-                  alt="Lake James State Park Kayaking & Camping"
+                  src="/images/kayaks/fliers/Kayak-abbots-creek.png
+                  "
+                  alt="Kayak Adventure at Abbots Creek"
                   sx={{
                     width: "100%",
                     height: "auto", // Maintain aspect ratio
@@ -142,7 +143,7 @@ const KayakingEvents = () => {
                 <Button
                   variant="contained"
                   color="primary"
-                  href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/3bEg1"
+                  href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/waxKe"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Book your paddle"

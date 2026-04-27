@@ -153,7 +153,7 @@ const KayakingEvents = () => {
               </Box>
 
               {/* Flyer 2 */}
-              {/* <Box
+              <Box
                 sx={{
                   width: { xs: "100%", sm: "65%", md: "40%" }, // Responsive width
                   display: "flex",
@@ -164,8 +164,8 @@ const KayakingEvents = () => {
               >
                 <Box
                   component="img"
-                  src="/images/camping/June 21-22.jpeg"
-                  alt="Stone Mountain State Park"
+                  src="/images/kayaks/fliers/Belews-Lake.png"
+                  alt="Belews Lake"
                   sx={{
                     width: "100%",
                     height: "auto", // Maintain aspect ratio
@@ -178,14 +178,14 @@ const KayakingEvents = () => {
                 <Button
                   variant="contained"
                   color="primary"
-                  href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/Ag1jB"
+                  href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/D0Ow9"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Book your camping trip at Stone Mountain State Park"
+                  aria-label="Book your kayaking trip at Belews Lake"
                 >
                   Book Now
                 </Button>
-              </Box> */}
+              </Box>
             </Box>
           </Box>
         </main>

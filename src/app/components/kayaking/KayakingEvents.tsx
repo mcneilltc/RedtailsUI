@@ -117,7 +117,7 @@ const KayakingEvents = () => {
               </Box> */}
 
 {/* Flyer 2: Kayak and Camping  */}
-              <Box
+              {/* <Box
                 sx={{
                   width: { xs: "100%", sm: "65%", md: "40%" }, // Responsive width
                   display: "flex",
@@ -150,7 +150,7 @@ const KayakingEvents = () => {
                 >
                   Register Now
                 </Button>
-              </Box>
+              </Box> */}
 
               {/* Flyer 2 */}
               <Box

@@ -2,65 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Alkatra';
-  src: url('./fonts/Alkatra-Regular.ttf') format('truetype'); /* Regular weight */
-  font-weight: 400; /* Normal weight */
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Alkatra';
-  src: url('./fonts/Alkatra-Bold.ttf') format('truetype'); /* Bold weight */
-  font-weight: 700; /* Bold weight */
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Alkatra';
-  src: url('./fonts/Alkatra-SemiBold.ttf') format('truetype'); /* SemiBold weight */
-  font-weight: 600; /* SemiBold weight */
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Alkatra';
-  src: url('./fonts/Alkatra-Medium.ttf') format('truetype'); /* Medium weight */
-  font-weight: 500; /* Medium weight */
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Alkatra';
-  src: url('./fonts/Alkatra-VariableFont_wght.ttf') format('truetype'); /* Variable weight */
-  font-weight: 100 900; /* Variable weight range */
-  font-style: normal;
-}
-
 :root {
-  /* Light theme variables */
-  --background: #ffffff;
-  --background-secondary: #f3f4f6;
-  --foreground: #111827;
-  --foreground-secondary: #4b5563;
-  --primary: #b03030; /* Maroon */
-  --primary-hover: #8a2424;
-  --secondary: #007d4a; /* Dark green */
-  --secondary-hover: #005f39;
+  /* Light theme variables - Accessible */
+  --background: #fdfaf6;
+  --background-secondary: #f3e8d6;
+  --foreground: #800000;
+  --foreground-secondary: #800000;
+  --primary: #9e2a2b; /* Accessible maroon */
+  --primary-hover: #7b2022;
+  --secondary: #006837; /* Accessible green */
+  --secondary-hover: #004d26;
   --accent: #d2b48c; /* Tan */
   --accent-hover: #c2a47c;
 }
 
 .dark {
-  /* Dark theme variables */
-  --background: #111827;
-  --background-secondary: #1f2937;
-  --foreground: #ffffff;
-  --foreground-secondary: #9ca3af;
-  --primary: #800000; /* Maroon */
-  --primary-hover: #a80000;
-  --secondary: #004d26; /* Dark green */
-  --secondary-hover: #006837;
+  /* Dark theme variables - Accessible */
+  --background: #1a1412;
+  --background-secondary: #2d241f;
+  --foreground: #fdfaf6;
+  --foreground-secondary: #d4c5b9;
+  --primary: #e05e5f; /* Accessible lighter maroon */
+  --primary-hover: #ef7677;
+  --secondary: #66bb6a; /* Accessible lighter green */
+  --secondary-hover: #81c784;
   --accent: #8b5e3c; /* Dark tan */
   --accent-hover: #6e462e;
 }
@@ -68,10 +33,9 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Alkatra', sans-serif;
+  font-family: var(--font-alkatra), sans-serif;
   margin: 0;
   padding: 0;
-  font-family: var(--font-alkatra-regular);
 }
 
 /* Add these styles to customize the calendar appearance */

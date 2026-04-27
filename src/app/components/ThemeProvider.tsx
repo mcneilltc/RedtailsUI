@@ -33,22 +33,22 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         palette: {
             mode: darkMode ? 'dark' : 'light',
             primary: {
-                main: darkMode ? '#ffffff' : '#b03030', // Maroon /white '#b03030' : '#ffffff'
+                main: darkMode ? '#e05e5f' : '#9e2a2b', // Accessible maroon variants
             },
             secondary: {
-                main: darkMode ? '#a2c5ff' : '#3380ff', // Dark blue / green was too military #3380ff' : '#a2c5ff'
+                main: darkMode ? '#66bb6a' : '#006837', // Accessible green variants
             },
             background: {
-                default: darkMode ? '#8b5e3c' : '#d2b48c', // Background color '#d2b48c' : '#8b5e3c'
-                paper: darkMode ? '#3380ff' : '#c2a47c', // '#c2a47c' : '#3380ff'
+                default: darkMode ? '#1a1412' : '#fdfaf6', // Dark/Light warm background
+                paper: darkMode ? '#2d241f' : '#f3e8d6', 
             },
             text: {
-                primary: darkMode ? '#ffffff' : '#800000',
-                secondary: darkMode ? '#ffffff' : '#800000', // Tan for light theme '#800000' : '#ffffff'
+                primary: darkMode ? '#fdfaf6' : '#800000', // Accessible text primary (original maroon)
+                secondary: darkMode ? '#d4c5b9' : '#800000', // Accessible text secondary (original maroon)
             },
         },
         typography: {
-            "fontFamily": `"Alkatra", "system-ui", "sans-serif"`,
+            "fontFamily": `var(--font-alkatra), "system-ui", "sans-serif"`,
         }
     });
 

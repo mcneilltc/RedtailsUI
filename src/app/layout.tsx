@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Alkatra } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/navigation/Navigation";
 import { ThemeProvider } from "./components/ThemeProvider";
 import ContactUs from "./components/contactus/ContactUs";
 import { Container } from "@mui/material";
 
-const alkatra = localFont({
-  src: "./fonts/Alkatra-Regular.ttf",
-  variable: "--font-alkatra-regular",
-  weight: "400 700",
+const alkatra = Alkatra({
+  subsets: ["latin"],
+  variable: "--font-alkatra",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={alkatra.variable}>
       <head>
         <link rel="icon" href="/images/logos/logo2.png" type="image/png" />
         {/* Or use favicon.ico */}

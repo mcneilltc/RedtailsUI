@@ -152,7 +152,7 @@ const KayakingEvents = () => {
                 </Button>
               </Box> */}
 
-              {/* Flyer 2 */}
+              {/* Flyer 1 */}
               <Box
                 sx={{
                   width: { xs: "100%", sm: "65%", md: "40%" }, // Responsive width
@@ -182,6 +182,41 @@ const KayakingEvents = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Book your kayaking trip at Belews Lake"
+                >
+                  Book Now
+                </Button>
+              </Box>
+
+              {/* Flyer 2 */}
+              <Box
+                sx={{
+                  width: { xs: "100%", sm: "65%", md: "40%" }, // Responsive width
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center",
+                }}
+              >
+                <Box
+                  component="img"
+                  src="/images/kayaks/fliers/beat-heat-meetup.PNG"
+                  alt="Dutchman's Creek Access"
+                  sx={{
+                    width: "100%",
+                    height: "auto", // Maintain aspect ratio
+                    border: "1px solid #ccc",
+                    borderRadius: "8px",
+                    objectFit: "contain", // Ensure the image fits within the box
+                    mb: 2,
+                  }}
+                />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/0bWP4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Book your kayaking trip at Dutchman's Creek"
                 >
                   Book Now
                 </Button>

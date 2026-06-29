@@ -164,8 +164,8 @@ const KayakingEvents = () => {
               >
                 <Box
                   component="img"
-                  src="/images/kayaks/fliers/Belews-Lake.png"
-                  alt="Belews Lake"
+                  src="/images/kayaks/fliers/mens-paddle.png"
+                  alt="York Hill Boat Ramp Men's Paddle Meetup"
                   sx={{
                     width: "100%",
                     height: "auto", // Maintain aspect ratio
@@ -181,7 +181,7 @@ const KayakingEvents = () => {
                   href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/D0Ow9"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Book your kayaking trip at Belews Lake"
+                  aria-label="Book your kayaking trip on the Yadkin River"
                 >
                   Book Now
                 </Button>

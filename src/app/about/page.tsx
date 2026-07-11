@@ -95,9 +95,24 @@ const AboutUsPage = () => {
                 </Typography>
                 <Typography color="text.secondary">Owner</Typography>
                 <Typography variant="body2" color="text.secondary" mt={1}>
-                  Owner and founder of Red Tails Outdoors, Aaron is passionate
-                  about connecting people with nature. An Eagle Scout with over
-                  10 years of experience, he’s a true adventurer at heart!
+                  Founder and Owner of Red Tails Outdoors, an Eagle Scout,
+                  outdoor educator, and lifelong outdoorsman with a passion for
+                  connecting people to the natural world. With more than a
+                  decade of experience leading outdoor programs, group
+                  adventures, and skills-based experiences, he is committed to
+                  creating opportunities for others to discover their own
+                  connection to the outdoors. Believing that nature should be
+                  welcoming, accessible, and experienced on your own terms,
+                  Aaron founded Red Tails Outdoors to help individuals,
+                  families, and communities explore new places, build
+                  confidence, and create lasting memories outdoors. Whether
+                  leading hikes through the mountains, paddling local waterways,
+                  teaching camping skills around the fire, or introducing
+                  someone to their first outdoor adventure, his focus is simple:
+                  open the door and let the experience become their own. Built
+                  on the belief that the outdoors is more than a destination,
+                  Red Tails Outdoors encourages people to slow down, step
+                  outside, and explore their wild.
                 </Typography>
               </Grid>
 

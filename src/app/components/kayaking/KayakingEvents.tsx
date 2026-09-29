@@ -190,37 +190,64 @@ const KayakingEvents = () => {
               {/* Flyer 2 */}
               <Box
                 sx={{
-                  width: { xs: "100%", sm: "65%", md: "40%" }, // Responsive width
+                  width: { xs: "100%", sm: "65%", md: "82%" }, // Wider to fit both flyers side by side
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
                   textAlign: "center",
                 }}
               >
+                {/* English and Spanish flyers side by side (stacked on mobile) */}
                 <Box
-                  component="img"
-                  src="/images/kayaks/fliers/beat-heat-meetup.PNG"
-                  alt="Dutchman's Creek Access"
                   sx={{
+                    display: "flex",
+                    flexDirection: { xs: "column", md: "row" },
+                    gap: 2,
                     width: "100%",
-                    height: "auto", // Maintain aspect ratio
-                    border: "1px solid #ccc",
-                    borderRadius: "8px",
-                    objectFit: "contain", // Ensure the image fits within the box
                     mb: 2,
                   }}
-                />
+                >
+                  <Box
+                    component="img"
+                    src="/images/kayaks/fliers/november-drift.png"
+                    alt="November Drift Fall Afternoon Kayaking"
+                    sx={{
+                      flex: 1,
+                      minWidth: 0,
+                      width: "100%",
+                      height: "auto", // Maintain aspect ratio
+                      border: "1px solid #ccc",
+                      borderRadius: "8px",
+                      objectFit: "contain", // Ensure the image fits within the box
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/images/kayaks/fliers/november-drift-es.png"
+                    alt="Evento de Kayak de Otoño: Drift de Noviembre"
+                    sx={{
+                      flex: 1,
+                      minWidth: 0,
+                      width: "100%",
+                      height: "auto", // Maintain aspect ratio
+                      border: "1px solid #ccc",
+                      borderRadius: "8px",
+                      objectFit: "contain", // Ensure the image fits within the box
+                    }}
+                  />
+                </Box>
                 <Button
                   variant="contained"
                   color="primary"
-                  href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/0bWP4"
+                  href="https://book.peek.com/s/c76e9d6c-44fd-4cda-821d-fc3611e33423/okka1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Book your kayaking trip at Dutchman's Creek"
+                  aria-label="Book your kayaking trip for the November Drift"
                 >
                   Book Now
                 </Button>
               </Box>
+              
             </Box>
           </Box>
         </main>

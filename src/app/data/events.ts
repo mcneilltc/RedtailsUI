@@ -9,6 +9,12 @@ export type EventCategory = "kayaking" | "camping" | "hiking" | "special";
 export type EventFlier = {
   src: string;
   alt: string;
+  /**
+   * Image size in pixels, used to show fliers at matching heights.
+   * Find it in Finder → Get Info → More Info. Defaults to 1024 x 1536 (2:3).
+   */
+  width?: number;
+  height?: number;
 };
 
 export type RedtailsEvent = {
@@ -40,6 +46,8 @@ export const events: RedtailsEvent[] = [
     fliers: [
       {
         src: "/images/kayaks/fliers/mens-paddle.png",
+        width: 1024,
+        height: 1536,
         alt: "Basecamp on Water men's paddle on the Yadkin River, October 24, 2026",
       },
     ],
@@ -57,10 +65,14 @@ export const events: RedtailsEvent[] = [
     fliers: [
       {
         src: "/images/kayaks/fliers/november-drift.png",
+        width: 1122,
+        height: 1402,
         alt: "November Drift Fall Afternoon Kayaking",
       },
       {
         src: "/images/kayaks/fliers/november-drift-es.png",
+        width: 1122,
+        height: 1402,
         alt: "Evento de Kayak de Otoño: Drift de Noviembre",
       },
     ],
@@ -78,6 +90,8 @@ export const events: RedtailsEvent[] = [
     fliers: [
       {
         src: "/images/camping/Family-campout.PNG",
+        width: 1024,
+        height: 1535,
         alt: "Family Campout at Lake Norman State Park",
       },
     ],

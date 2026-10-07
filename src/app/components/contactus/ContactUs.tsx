@@ -5,6 +5,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import Link from "next/link";
+import { social } from "../../data/social";
 
 const footerLinks = [
   { label: "Home", href: "/" },
@@ -49,7 +50,7 @@ const ContactUs = () => {
         <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
           <IconButton
             component="a"
-            href="mailto:redtailsoutdoors@gmail.com"
+            href={`mailto:${social.email}`}
             aria-label="Email us"
             color="primary"
             title="Email us"
@@ -61,7 +62,7 @@ const ContactUs = () => {
           <IconButton
             color="primary"
             component="a"
-            href="https://www.facebook.com/people/Red-Tails-Outdoors/61570894457374/"
+            href={social.facebookUrl}
             target="_blank"
             rel="noopener noreferrer"
             title="Visit our Facebook page"
@@ -72,7 +73,7 @@ const ContactUs = () => {
           <IconButton
             color="primary"
             component="a"
-            href="https://www.instagram.com/redtailsoutdoors/"
+            href={social.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
             title="Visit our Instagram page"

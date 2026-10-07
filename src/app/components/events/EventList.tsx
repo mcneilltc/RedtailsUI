@@ -5,19 +5,17 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import PlaceIcon from "@mui/icons-material/Place";
 import {
   EventCategory,
+  EventFlier,
   RedtailsEvent,
   getUpcomingEvents,
 } from "../../data/events";
+import { social } from "../../data/social";
 
-const flierSx = {
-  flex: 1,
-  minWidth: 0,
-  width: "100%",
-  height: "auto", // Maintain aspect ratio
-  border: "1px solid #ccc",
-  borderRadius: "8px",
-  objectFit: "contain", // Ensure the image fits within the box
-} as const;
+const DEFAULT_FLIER_RATIO = 1024 / 1536; // 2:3 portrait
+const FLIER_GAP_PX = 16; // space between side-by-side fliers
+
+const flierRatio = (flier: EventFlier) =>
+  flier.width && flier.height ? flier.width / flier.height : DEFAULT_FLIER_RATIO;
 
 type EventCardProps = {
   event: RedtailsEvent;
@@ -27,26 +25,33 @@ type EventCardProps = {
 
 export const EventCard = ({ event, compact = false }: EventCardProps) => {
   const fliers = compact ? event.fliers.slice(0, 1) : event.fliers;
-  const multiFlier = fliers.length > 1;
+
+  // Cards grow in proportion to their fliers' combined width-to-height ratio,
+  // so every flier in a row ends up the same height and fills its own box.
+  const ratioSum = fliers.reduce((sum, flier) => sum + flierRatio(flier), 0);
+  const gaps = FLIER_GAP_PX * (fliers.length - 1);
+  const baseHeight = compact ? 300 : 480; // flier height before wrapping
+  const maxHeight = compact ? 460 : 640; // flier height cap on wide screens
 
   return (
     <Box
       sx={{
-        width: compact
-          ? { xs: "100%", sm: "45%", md: "30%" }
-          : { xs: "100%", sm: "65%", md: multiFlier ? "82%" : "40%" }, // Responsive width
+        // Grow values are scaled by 100: flex-grow below 1 only claims part of the free space.
+        flex: `${ratioSum * 100} 1 ${ratioSum * baseHeight + gaps}px`,
+        maxWidth: `${ratioSum * maxHeight + gaps}px`,
+        minWidth: 0,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         textAlign: "center",
       }}
     >
-      {/* Multiple fliers (e.g. English + Spanish) sit side by side, stacked on mobile */}
+      {/* Multiple fliers (e.g. English + Spanish) sit side by side, stacked on phones */}
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", md: "row" },
-          gap: 2,
+          flexDirection: { xs: "column", sm: "row" },
+          gap: `${FLIER_GAP_PX}px`,
           width: "100%",
           mb: 2,
         }}
@@ -57,8 +62,18 @@ export const EventCard = ({ event, compact = false }: EventCardProps) => {
             component="img"
             src={flier.src}
             alt={flier.alt}
+            width={flier.width}
+            height={flier.height}
             loading="lazy"
-            sx={flierSx}
+            sx={{
+              flex: { xs: "none", sm: `${flierRatio(flier) * 100} 1 0` },
+              minWidth: 0,
+              display: "block",
+              width: "100%",
+              height: "auto", // Maintain aspect ratio
+              border: "1px solid #ccc",
+              borderRadius: "8px",
+            }}
           />
         ))}
       </Box>
@@ -80,6 +95,7 @@ export const EventCard = ({ event, compact = false }: EventCardProps) => {
       <Button
         variant="contained"
         color="primary"
+        sx={{ mt: "auto" }} // Keep buttons aligned when titles wrap differently
         href={event.bookingUrl}
         target="_blank"
         rel="noopener noreferrer"
@@ -116,12 +132,12 @@ const EventList = ({ category, limit, compact = false }: EventListProps) => {
         </Typography>
         <Typography variant="body1" sx={{ color: "text.secondary" }}>
           Follow us on{" "}
-          <Link href="https://www.instagram.com/redtailsoutdoors/" target="_blank" rel="noopener noreferrer">
+          <Link href={social.instagramUrl} target="_blank" rel="noopener noreferrer">
             Instagram
           </Link>{" "}
           or{" "}
           <Link
-            href="https://www.facebook.com/people/Red-Tails-Outdoors/61570894457374/"
+            href={social.facebookUrl}
             target="_blank"
             rel="noopener noreferrer"
           >

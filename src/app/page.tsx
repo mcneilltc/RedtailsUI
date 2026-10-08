@@ -14,6 +14,8 @@ import { useTheme } from "@mui/material/styles";
 import Image from "next/image"; // Optimize images
 import "./styles.css";
 import Link from "next/link";
+import EventList from "./components/events/EventList";
+import SocialFeeds from "./components/social/SocialFeeds";
 
 export default function Home() {
   const theme = useTheme();
@@ -196,6 +198,34 @@ export default function Home() {
               </Card>
             </Grid>
           </Grid>
+        </Container>
+
+        {/* Upcoming Events Section */}
+        <Container maxWidth="lg" sx={{ mt: 8 }}>
+          <Box
+            component="section"
+            aria-labelledby="upcoming-events-heading"
+            sx={{
+              backgroundColor: "background.paper",
+              borderRadius: "16px",
+              p: { xs: 2, md: 4 },
+            }}
+          >
+            <Typography
+              id="upcoming-events-heading"
+              variant="h4"
+              component="h2"
+              sx={{ textAlign: "center", fontWeight: "bold", color: "text.primary" }}
+            >
+              Upcoming Events
+            </Typography>
+            <EventList limit={3} compact />
+          </Box>
+        </Container>
+
+        {/* Social Media Section */}
+        <Container maxWidth="lg" sx={{ mt: 8 }}>
+          <SocialFeeds />
         </Container>
       </main>
     </Box>

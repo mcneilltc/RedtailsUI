@@ -133,3 +133,5 @@ dist
 
 #env variables
 .env.local
+.vercel
+.env*

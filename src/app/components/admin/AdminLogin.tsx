@@ -33,7 +33,7 @@ const AdminLogin = () => {
     <Box
       component="form"
       onSubmit={handleSubmit}
-      sx={{ maxWidth: 360, mx: "auto", my: 6, px: 2, display: "flex", flexDirection: "column", gap: 2 }}
+      sx={{ maxWidth: 360, mx: "auto", mb: 6, display: "flex", flexDirection: "column", gap: 2 }}
     >
       <Typography variant="h5" sx={{ fontWeight: "bold", color: "text.primary", textAlign: "center" }}>
         Shop Admin

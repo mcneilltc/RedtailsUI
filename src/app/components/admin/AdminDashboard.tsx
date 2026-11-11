@@ -33,7 +33,7 @@ const AdminDashboard = ({ items }: { items: ShopItem[] }) => {
   };
 
   return (
-    <Box sx={{ maxWidth: 800, mx: "auto", px: 2, py: 4 }}>
+    <Box sx={{ maxWidth: 800, mx: "auto", pb: 4 }}>
       <Box sx={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 1, mb: 3 }}>
         <Typography variant="h5" sx={{ fontWeight: "bold", color: "text.primary", flexGrow: 1 }}>
           Shop Admin

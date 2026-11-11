@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import "./styles.css";
 import logo from "../../../../public/images/logos/logo2.png";
@@ -22,20 +22,11 @@ import PeekScript from "../PeekScript";
 export default function Navigation() {
   const { toggleTheme, darkMode } = useTheme();
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [isClient, setIsClient] = useState(false);
 
   // Toggle the drawer for mobile navigation
   const toggleDrawer = (open: boolean) => () => {
     setDrawerOpen(open);
   };
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) {
-    return null; // Render nothing on the server
-  }
-
   return (
     <>
       <AppBar

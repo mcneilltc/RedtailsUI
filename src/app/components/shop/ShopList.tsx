@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Box, Button, Chip, Typography } from "@mui/material";
+import { Box, Button, Chip, Container, Typography } from "@mui/material";
 import type { ShopItem } from "../../lib/shop";
 
 export const formatPrice = (price: number) =>
@@ -132,7 +132,7 @@ const ShopList = ({ items }: { items: ShopItem[] }) => {
   const sorted = [...items].sort((a, b) => Number(a.sold) - Number(b.sold));
 
   return (
-    <Box sx={{ px: 2, py: 4 }}>
+    <Container maxWidth="lg" sx={{ py: 4 }}>
       <Typography
         variant="h4"
         sx={{ textAlign: "center", fontWeight: "bold", color: "text.primary", mb: 1 }}
@@ -165,7 +165,7 @@ const ShopList = ({ items }: { items: ShopItem[] }) => {
           ))}
         </Box>
       )}
-    </Box>
+    </Container>
   );
 };
 
